@@ -1,0 +1,10 @@
+{
+  "name": "@ivanvanderbyl/jira-client",
+  "version": "3.0.0",
+  "description": "Jira API v3 client generated from OpenAPI Schema",
+  "main": "index.ts",
+  "repository": "git@github.com:ivanvanderbyl/jira-client.git",
+  "author": "Ivan Vanderbyl <ivanvanderbyl@gmail.com>",
+  "license": "MIT",
+  "private": false
+}
