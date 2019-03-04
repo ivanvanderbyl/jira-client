@@ -223,7 +223,7 @@ export class DefaultApi {
      * Returns the application properties that are accessible on the _Advanced Settings_ page. To navigate to the _Advanced Settings_ page in Jira, choose the Jira icon > **Jira settings** \\> **System**, **General Configuration** and then click **Advanced Settings** (in the upper right).  **[Permissions](#permissions) required:** _Administer Jira_ [global permission](https://confluence.atlassian.com/x/x4dKLg).
      * @summary Get advanced settings
      */
-    public comAtlassianJiraRestV2AdminApplicationPropertiesResourceGetAdvancedSettingsGet (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Array<ApplicationProperty>;  }> {
+    public comAtlassianJiraRestV2AdminApplicationPropertiesResourceGetAdvancedSettingsGet (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<ApplicationProperty>;  }> {
         const localVarPath = this.basePath + '/api/3/application-properties/advanced-settings';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -251,7 +251,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: Array<ApplicationProperty>;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: Array<ApplicationProperty>;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -273,7 +273,7 @@ export class DefaultApi {
      * @param permissionLevel The permission level of all items being returned in the list.
      * @param keyFilter When a &#x60;key&#x60; isn&#39;t provided, this filters the list of results by the application property &#x60;key&#x60; using a regular expression. For example, using &#x60;jira.lf.*&#x60; will return all application properties with keys that start with _jira.lf._.
      */
-    public comAtlassianJiraRestV2AdminApplicationPropertiesResourceGetApplicationPropertyGet (key?: string, permissionLevel?: string, keyFilter?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Array<ApplicationProperty>;  }> {
+    public comAtlassianJiraRestV2AdminApplicationPropertiesResourceGetApplicationPropertyGet (key?: string, permissionLevel?: string, keyFilter?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<ApplicationProperty>;  }> {
         const localVarPath = this.basePath + '/api/3/application-properties';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -313,7 +313,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: Array<ApplicationProperty>;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: Array<ApplicationProperty>;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -334,7 +334,7 @@ export class DefaultApi {
      * @param id The key of the application property to update.
      * @param simpleApplicationPropertyBean
      */
-    public comAtlassianJiraRestV2AdminApplicationPropertiesResourceSetApplicationPropertyPut (id: string, simpleApplicationPropertyBean: SimpleApplicationPropertyBean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: ApplicationProperty;  }> {
+    public comAtlassianJiraRestV2AdminApplicationPropertiesResourceSetApplicationPropertyPut (id: string, simpleApplicationPropertyBean: SimpleApplicationPropertyBean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: ApplicationProperty;  }> {
         const localVarPath = this.basePath + '/api/3/application-properties/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -374,7 +374,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: ApplicationProperty;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: ApplicationProperty;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -393,7 +393,7 @@ export class DefaultApi {
      * Returns all application roles. In Jira, application roles are managed using the [Application access configuration](https://confluence.atlassian.com/x/3YxjL) page.  **[Permissions](#permissions) required:** _Administer Jira_ [global permission](https://confluence.atlassian.com/x/x4dKLg).
      * @summary Get all application roles
      */
-    public comAtlassianJiraRestV2AdminApplicationroleApplicationRoleResourceGetAllApplicationRolesGet (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Array<ApplicationRole>;  }> {
+    public comAtlassianJiraRestV2AdminApplicationroleApplicationRoleResourceGetAllApplicationRolesGet (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<ApplicationRole>;  }> {
         const localVarPath = this.basePath + '/api/3/applicationrole';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -421,7 +421,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: Array<ApplicationRole>;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: Array<ApplicationRole>;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -441,7 +441,7 @@ export class DefaultApi {
      * @summary Get application role
      * @param key The key of the application role. Use the [Get all application roles](#api-api-3-applicationrole-get) method to get the key for each application role.
      */
-    public comAtlassianJiraRestV2AdminApplicationroleApplicationRoleResourceGetApplicationRoleGet (key: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: ApplicationRole;  }> {
+    public comAtlassianJiraRestV2AdminApplicationroleApplicationRoleResourceGetApplicationRoleGet (key: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: ApplicationRole;  }> {
         const localVarPath = this.basePath + '/api/3/applicationrole/{key}'
             .replace('{' + 'key' + '}', encodeURIComponent(String(key)));
         let localVarQueryParameters: any = {};
@@ -475,7 +475,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: ApplicationRole;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: ApplicationRole;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -499,7 +499,7 @@ export class DefaultApi {
      * @param from The date and time on or after which returned audit records must have been created. If &#x60;to&#x60; is provided &#x60;from&#x60; must be before &#x60;to&#x60; or the result set will be empty.
      * @param to The date and time on or before which returned audit results must have been created. If &#x60;from&#x60; is provided &#x60;to&#x60; must be after &#x60;from&#x60; or the result set will be empty.
      */
-    public comAtlassianJiraRestV2AdminAuditingAuditingResourceGetAuditRecordsGet (offset?: number, limit?: number, filter?: string, from?: Date, to?: Date, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: AuditRecords;  }> {
+    public comAtlassianJiraRestV2AdminAuditingAuditingResourceGetAuditRecordsGet (offset?: number, limit?: number, filter?: string, from?: Date, to?: Date, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: AuditRecords;  }> {
         const localVarPath = this.basePath + '/api/3/auditing/record';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -547,7 +547,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: AuditRecords;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: AuditRecords;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -566,7 +566,7 @@ export class DefaultApi {
      * Returns the [global settings](https://confluence.atlassian.com/x/qYXKM) in Jira. These settings determine whether optional features (for example, sub-tasks, time tracking, and others) are enabled. If time tracking is enabled, this method also returns the time tracking configuration.  **[Permissions](#permissions) required:** Permission to access Jira .
      * @summary Get global settings
      */
-    public comAtlassianJiraRestV2AdminConfigurationResourceGetConfigurationGet (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Configuration;  }> {
+    public comAtlassianJiraRestV2AdminConfigurationResourceGetConfigurationGet (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Configuration;  }> {
         const localVarPath = this.basePath + '/api/3/configuration';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -594,7 +594,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: Configuration;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: Configuration;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -616,7 +616,7 @@ export class DefaultApi {
      * @param permissionGrant The permission grant to create.
      * @param expand Use expand to include additional information in the response. This parameter accepts multiple values separated by a comma. Note that permissions are always included when you specify any value:  *   &#x60;permissions&#x60; Returns all permission grants for each permission scheme. *   &#x60;user&#x60; Returns information about the user who is granted the permission. *   &#x60;group&#x60; Returns information about the group that is granted the permission. *   &#x60;projectRole&#x60; Returns information about the project role granted the permission. *   &#x60;field&#x60; Returns information about the custom field granted the permission. *   &#x60;all&#x60; Returns all expandable information.
      */
-    public comAtlassianJiraRestV2AdminPermissionschemePermissionSchemeResourceCreatePermissionGrantPost (schemeId: number, permissionGrant: PermissionGrant, expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: PermissionGrant;  }> {
+    public comAtlassianJiraRestV2AdminPermissionschemePermissionSchemeResourceCreatePermissionGrantPost (schemeId: number, permissionGrant: PermissionGrant, expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: PermissionGrant;  }> {
         const localVarPath = this.basePath + '/api/3/permissionscheme/{schemeId}/permission'
             .replace('{' + 'schemeId' + '}', encodeURIComponent(String(schemeId)));
         let localVarQueryParameters: any = {};
@@ -660,7 +660,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: PermissionGrant;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: PermissionGrant;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -681,7 +681,7 @@ export class DefaultApi {
      * @param permissionScheme The permission scheme to create.
      * @param expand Use expand to include additional information in the response. This parameter accepts multiple values separated by a comma. Note that permissions are always included when you specify any value:  *   &#x60;all&#x60; Returns all expandable information. *   &#x60;field&#x60; Returns information about the custom field granted the permission. *   &#x60;group&#x60; Returns information about the group that is granted the permission. *   &#x60;permissions&#x60; Returns all permission grants for each permission scheme. *   &#x60;projectRole&#x60; Returns information about the project role granted the permission. *   &#x60;user&#x60; Returns information about the user who is granted the permission.
      */
-    public comAtlassianJiraRestV2AdminPermissionschemePermissionSchemeResourceCreatePermissionSchemePost (permissionScheme: PermissionScheme, expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: PermissionScheme;  }> {
+    public comAtlassianJiraRestV2AdminPermissionschemePermissionSchemeResourceCreatePermissionSchemePost (permissionScheme: PermissionScheme, expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: PermissionScheme;  }> {
         const localVarPath = this.basePath + '/api/3/permissionscheme';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -719,7 +719,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: PermissionScheme;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: PermissionScheme;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -739,7 +739,7 @@ export class DefaultApi {
      * @summary Delete permission scheme
      * @param schemeId The ID of the permission scheme being deleted.
      */
-    public comAtlassianJiraRestV2AdminPermissionschemePermissionSchemeResourceDeletePermissionSchemeDelete (schemeId: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
+    public comAtlassianJiraRestV2AdminPermissionschemePermissionSchemeResourceDeletePermissionSchemeDelete (schemeId: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/permissionscheme/{schemeId}'
             .replace('{' + 'schemeId' + '}', encodeURIComponent(String(schemeId)));
         let localVarQueryParameters: any = {};
@@ -773,7 +773,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body?: any;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -793,7 +793,7 @@ export class DefaultApi {
      * @param schemeId The ID of the permission scheme to delete the permission grant from.
      * @param permissionId The ID of the permission grant to delete.
      */
-    public comAtlassianJiraRestV2AdminPermissionschemePermissionSchemeResourceDeletePermissionSchemeEntityDelete (schemeId: number, permissionId: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
+    public comAtlassianJiraRestV2AdminPermissionschemePermissionSchemeResourceDeletePermissionSchemeEntityDelete (schemeId: number, permissionId: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/permissionscheme/{schemeId}/permission/{permissionId}'
             .replace('{' + 'schemeId' + '}', encodeURIComponent(String(schemeId)))
             .replace('{' + 'permissionId' + '}', encodeURIComponent(String(permissionId)));
@@ -833,7 +833,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body?: any;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -852,7 +852,7 @@ export class DefaultApi {
      * @summary Get all permission schemes
      * @param expand Use expand to include additional information in the response. This parameter accepts multiple values separated by a comma. Note that permissions are included when you specify any value:  *   &#x60;all&#x60; Returns all expandable information. *   &#x60;field&#x60; Returns information about the custom field granted the permission. *   &#x60;group&#x60; Returns information about the group that is granted the permission. *   &#x60;permissions&#x60; Returns all permission grants for each permission scheme. *   &#x60;projectRole&#x60; Returns information about the project role granted the permission. *   &#x60;user&#x60; Returns information about the user who is granted the permission.
      */
-    public comAtlassianJiraRestV2AdminPermissionschemePermissionSchemeResourceGetAllPermissionSchemesGet (expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: PermissionSchemes;  }> {
+    public comAtlassianJiraRestV2AdminPermissionschemePermissionSchemeResourceGetAllPermissionSchemesGet (expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: PermissionSchemes;  }> {
         const localVarPath = this.basePath + '/api/3/permissionscheme';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -884,7 +884,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: PermissionSchemes;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: PermissionSchemes;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -905,7 +905,7 @@ export class DefaultApi {
      * @param schemeId The ID of the permission scheme to return.
      * @param expand Use expand to include additional information in the response. This parameter accepts multiple values separated by a comma. Note that permissions are included when you specify any value:  *   &#x60;all&#x60; Returns all expandable information. *   &#x60;field&#x60; Returns information about the custom field granted the permission. *   &#x60;group&#x60; Returns information about the group that is granted the permission. *   &#x60;permissions&#x60; Returns all permission grants for each permission scheme. *   &#x60;projectRole&#x60; Returns information about the project role granted the permission. *   &#x60;user&#x60; Returns information about the user who is granted the permission.
      */
-    public comAtlassianJiraRestV2AdminPermissionschemePermissionSchemeResourceGetPermissionSchemeGet (schemeId: number, expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: PermissionScheme;  }> {
+    public comAtlassianJiraRestV2AdminPermissionschemePermissionSchemeResourceGetPermissionSchemeGet (schemeId: number, expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: PermissionScheme;  }> {
         const localVarPath = this.basePath + '/api/3/permissionscheme/{schemeId}'
             .replace('{' + 'schemeId' + '}', encodeURIComponent(String(schemeId)));
         let localVarQueryParameters: any = {};
@@ -943,7 +943,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: PermissionScheme;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: PermissionScheme;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -965,7 +965,7 @@ export class DefaultApi {
      * @param permissionId The ID of the permission grant.
      * @param expand Use expand to include additional information in the response. This parameter accepts multiple values separated by a comma. Note that permissions are always included when you specify any value:  *   &#x60;all&#x60; Returns all expandable information. *   &#x60;field&#x60; Returns information about the custom field granted the permission. *   &#x60;group&#x60; Returns information about the group that is granted the permission. *   &#x60;permissions&#x60; Returns all permission grants for each permission scheme. *   &#x60;projectRole&#x60; Returns information about the project role granted the permission. *   &#x60;user&#x60; Returns information about the user who is granted the permission.
      */
-    public comAtlassianJiraRestV2AdminPermissionschemePermissionSchemeResourceGetPermissionSchemeGrantGet (schemeId: number, permissionId: number, expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: PermissionGrant;  }> {
+    public comAtlassianJiraRestV2AdminPermissionschemePermissionSchemeResourceGetPermissionSchemeGrantGet (schemeId: number, permissionId: number, expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: PermissionGrant;  }> {
         const localVarPath = this.basePath + '/api/3/permissionscheme/{schemeId}/permission/{permissionId}'
             .replace('{' + 'schemeId' + '}', encodeURIComponent(String(schemeId)))
             .replace('{' + 'permissionId' + '}', encodeURIComponent(String(permissionId)));
@@ -1009,7 +1009,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: PermissionGrant;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: PermissionGrant;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -1030,7 +1030,7 @@ export class DefaultApi {
      * @param schemeId The ID of the permission scheme.
      * @param expand Use expand to include additional information in the response. This parameter accepts multiple values separated by a comma. Note that permissions are always included when you specify any value:  *   &#x60;permissions&#x60; Returns all permission grants for each permission scheme. *   &#x60;user&#x60; Returns information about the user who is granted the permission. *   &#x60;group&#x60; Returns information about the group that is granted the permission. *   &#x60;projectRole&#x60; Returns information about the project role granted the permission. *   &#x60;field&#x60; Returns information about the custom field granted the permission. *   &#x60;all&#x60; Returns all expandable information.
      */
-    public comAtlassianJiraRestV2AdminPermissionschemePermissionSchemeResourceGetPermissionSchemeGrantsGet (schemeId: number, expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: PermissionGrants;  }> {
+    public comAtlassianJiraRestV2AdminPermissionschemePermissionSchemeResourceGetPermissionSchemeGrantsGet (schemeId: number, expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: PermissionGrants;  }> {
         const localVarPath = this.basePath + '/api/3/permissionscheme/{schemeId}/permission'
             .replace('{' + 'schemeId' + '}', encodeURIComponent(String(schemeId)));
         let localVarQueryParameters: any = {};
@@ -1068,7 +1068,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: PermissionGrants;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: PermissionGrants;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -1090,7 +1090,7 @@ export class DefaultApi {
      * @param permissionScheme
      * @param expand Use expand to include additional information in the response. This parameter accepts multiple values separated by a comma. Note that permissions are always included when you specify any value:  *   &#x60;all&#x60; Returns all expandable information. *   &#x60;field&#x60; Returns information about the custom field granted the permission. *   &#x60;group&#x60; Returns information about the group that is granted the permission. *   &#x60;permissions&#x60; Returns all permission grants for each permission scheme. *   &#x60;projectRole&#x60; Returns information about the project role granted the permission. *   &#x60;user&#x60; Returns information about the user who is granted the permission.
      */
-    public comAtlassianJiraRestV2AdminPermissionschemePermissionSchemeResourceUpdatePermissionSchemePut (schemeId: number, permissionScheme: PermissionScheme, expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: PermissionScheme;  }> {
+    public comAtlassianJiraRestV2AdminPermissionschemePermissionSchemeResourceUpdatePermissionSchemePut (schemeId: number, permissionScheme: PermissionScheme, expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: PermissionScheme;  }> {
         const localVarPath = this.basePath + '/api/3/permissionscheme/{schemeId}'
             .replace('{' + 'schemeId' + '}', encodeURIComponent(String(schemeId)));
         let localVarQueryParameters: any = {};
@@ -1134,7 +1134,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: PermissionScheme;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: PermissionScheme;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -1153,7 +1153,7 @@ export class DefaultApi {
      * Returns the default issue navigator columns.  **[Permissions](#permissions) required:** _Administer Jira_ [global permission](https://confluence.atlassian.com/x/x4dKLg).
      * @summary Get issue navigator default columns
      */
-    public comAtlassianJiraRestV2AdminSettingsResourceGetIssueNavigatorDefaultColumnsGet (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Array<ColumnItem>;  }> {
+    public comAtlassianJiraRestV2AdminSettingsResourceGetIssueNavigatorDefaultColumnsGet (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<ColumnItem>;  }> {
         const localVarPath = this.basePath + '/api/3/settings/columns';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -1181,7 +1181,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: Array<ColumnItem>;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: Array<ColumnItem>;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -1201,7 +1201,7 @@ export class DefaultApi {
      * @summary Set issue navigator default columns
      * @param columns A navigable field value.
      */
-    public comAtlassianJiraRestV2AdminSettingsResourceSetIssueNavigatorDefaultColumnsPut (columns: Array<string>, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
+    public comAtlassianJiraRestV2AdminSettingsResourceSetIssueNavigatorDefaultColumnsPut (columns: Array<string>, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/settings/columns';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -1238,7 +1238,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body?: any;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -1256,7 +1256,7 @@ export class DefaultApi {
      * Disables time tracking.  **[Permissions](#permissions) required:** _Administer Jira_ [global permission](https://confluence.atlassian.com/x/x4dKLg).
      * @summary Disable time tracking
      */
-    public comAtlassianJiraRestV2AdminTimetrackingTimeTrackingResourceDisableTimeTrackingDelete (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
+    public comAtlassianJiraRestV2AdminTimetrackingTimeTrackingResourceDisableTimeTrackingDelete (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/configuration/timetracking';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -1284,7 +1284,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body?: any;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -1302,7 +1302,7 @@ export class DefaultApi {
      * Returns all time tracking providers. By default, Jira only has one time tracking provider: _JIRA provided time tracking_. However, you can install other time tracking providers via apps from the Atlassian Marketplace. For more information on time tracking providers, see the documentation for the [Time Tracking Provider](https://developer.atlassian.com/cloud/jira/platform/modules/time-tracking-provider/) module.  **[Permissions](#permissions) required:** _Administer Jira_ [global permission](https://confluence.atlassian.com/x/x4dKLg).
      * @summary Get all time tracking providers
      */
-    public comAtlassianJiraRestV2AdminTimetrackingTimeTrackingResourceGetAvailableTimeTrackingImplementationsGet (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Array<TimeTrackingProvider>;  }> {
+    public comAtlassianJiraRestV2AdminTimetrackingTimeTrackingResourceGetAvailableTimeTrackingImplementationsGet (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<TimeTrackingProvider>;  }> {
         const localVarPath = this.basePath + '/api/3/configuration/timetracking/list';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -1330,7 +1330,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: Array<TimeTrackingProvider>;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: Array<TimeTrackingProvider>;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -1349,7 +1349,7 @@ export class DefaultApi {
      * Returns the time tracking provider that is currently selected. Note that if time tracking is disabled, then a successful but empty response is returned.  **[Permissions](#permissions) required:** _Administer Jira_ [global permission](https://confluence.atlassian.com/x/x4dKLg).
      * @summary Get selected time tracking provider
      */
-    public comAtlassianJiraRestV2AdminTimetrackingTimeTrackingResourceGetSelectedTimeTrackingImplementationGet (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: TimeTrackingProvider;  }> {
+    public comAtlassianJiraRestV2AdminTimetrackingTimeTrackingResourceGetSelectedTimeTrackingImplementationGet (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: TimeTrackingProvider;  }> {
         const localVarPath = this.basePath + '/api/3/configuration/timetracking';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -1377,7 +1377,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: TimeTrackingProvider;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: TimeTrackingProvider;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -1396,7 +1396,7 @@ export class DefaultApi {
      * Returns the time tracking settings. This includes settings such as the time format, default time unit, and others. For more information, see [Configuring time tracking](https://confluence.atlassian.com/x/qoXKM).  **[Permissions](#permissions) required:** _Administer Jira_ [global permission](https://confluence.atlassian.com/x/x4dKLg).
      * @summary Get time tracking settings
      */
-    public comAtlassianJiraRestV2AdminTimetrackingTimeTrackingResourceGetSharedTimeTrackingConfigurationGet (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: TimeTrackingConfiguration;  }> {
+    public comAtlassianJiraRestV2AdminTimetrackingTimeTrackingResourceGetSharedTimeTrackingConfigurationGet (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: TimeTrackingConfiguration;  }> {
         const localVarPath = this.basePath + '/api/3/configuration/timetracking/options';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -1424,7 +1424,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: TimeTrackingConfiguration;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: TimeTrackingConfiguration;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -1444,7 +1444,7 @@ export class DefaultApi {
      * @summary Select time tracking provider
      * @param timeTrackingProvider
      */
-    public comAtlassianJiraRestV2AdminTimetrackingTimeTrackingResourceSelectTimeTrackingImplementationPut (timeTrackingProvider: TimeTrackingProvider, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
+    public comAtlassianJiraRestV2AdminTimetrackingTimeTrackingResourceSelectTimeTrackingImplementationPut (timeTrackingProvider: TimeTrackingProvider, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/configuration/timetracking';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -1478,7 +1478,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body?: any;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -1497,7 +1497,7 @@ export class DefaultApi {
      * @summary Set time tracking settings
      * @param timeTrackingConfiguration
      */
-    public comAtlassianJiraRestV2AdminTimetrackingTimeTrackingResourceSetSharedTimeTrackingConfigurationPut (timeTrackingConfiguration: TimeTrackingConfiguration, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: TimeTrackingConfiguration;  }> {
+    public comAtlassianJiraRestV2AdminTimetrackingTimeTrackingResourceSetSharedTimeTrackingConfigurationPut (timeTrackingConfiguration: TimeTrackingConfiguration, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: TimeTrackingConfiguration;  }> {
         const localVarPath = this.basePath + '/api/3/configuration/timetracking/options';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -1531,7 +1531,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: TimeTrackingConfiguration;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: TimeTrackingConfiguration;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -1555,7 +1555,7 @@ export class DefaultApi {
      * @param workflowTransitionProperty
      * @param workflowMode The workflow status. Set to _live_ for inactive workflows or _draft_ for draft workflows. Active workflows cannot be edited.
      */
-    public comAtlassianJiraRestV2AdminWorkflowTransitionResourceCreateWorkflowTransitionPropertyPost (transitionId: number, key: string, workflowName: string, workflowTransitionProperty: WorkflowTransitionProperty, workflowMode?: 'live' | 'draft', options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: WorkflowTransitionProperty;  }> {
+    public comAtlassianJiraRestV2AdminWorkflowTransitionResourceCreateWorkflowTransitionPropertyPost (transitionId: number, key: string, workflowName: string, workflowTransitionProperty: WorkflowTransitionProperty, workflowMode?: 'live' | 'draft', options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: WorkflowTransitionProperty;  }> {
         const localVarPath = this.basePath + '/api/3/workflow/transitions/{transitionId}/properties'
             .replace('{' + 'transitionId' + '}', encodeURIComponent(String(transitionId)));
         let localVarQueryParameters: any = {};
@@ -1617,7 +1617,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: WorkflowTransitionProperty;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: WorkflowTransitionProperty;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -1640,7 +1640,7 @@ export class DefaultApi {
      * @param workflowName The name of the workflow that the transition belongs to.
      * @param workflowMode The workflow status. Set to &#x60;live&#x60; for inactive workflows or &#x60;draft&#x60; for draft workflows. Active workflows cannot be edited.
      */
-    public comAtlassianJiraRestV2AdminWorkflowTransitionResourceDeleteWorkflowTransitionPropertyDelete (transitionId: number, key: string, workflowName: string, workflowMode?: 'live' | 'draft', options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
+    public comAtlassianJiraRestV2AdminWorkflowTransitionResourceDeleteWorkflowTransitionPropertyDelete (transitionId: number, key: string, workflowName: string, workflowMode?: 'live' | 'draft', options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/workflow/transitions/{transitionId}/properties'
             .replace('{' + 'transitionId' + '}', encodeURIComponent(String(transitionId)));
         let localVarQueryParameters: any = {};
@@ -1696,7 +1696,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body?: any;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -1719,7 +1719,7 @@ export class DefaultApi {
      * @param key The key of the property being returned, also known as the name of the property. If this parameter is not specified, all properties on the transition are returned.
      * @param workflowMode The workflow status. Set to _live_ for active and inactive workflows, or _draft_ for draft workflows.
      */
-    public comAtlassianJiraRestV2AdminWorkflowTransitionResourceGetWorkflowTransitionPropertiesGet (transitionId: number, workflowName: string, includeReservedKeys?: boolean, key?: string, workflowMode?: 'live' | 'draft', options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: WorkflowTransitionProperty;  }> {
+    public comAtlassianJiraRestV2AdminWorkflowTransitionResourceGetWorkflowTransitionPropertiesGet (transitionId: number, workflowName: string, includeReservedKeys?: boolean, key?: string, workflowMode?: 'live' | 'draft', options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: WorkflowTransitionProperty;  }> {
         const localVarPath = this.basePath + '/api/3/workflow/transitions/{transitionId}/properties'
             .replace('{' + 'transitionId' + '}', encodeURIComponent(String(transitionId)));
         let localVarQueryParameters: any = {};
@@ -1776,7 +1776,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: WorkflowTransitionProperty;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: WorkflowTransitionProperty;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -1800,7 +1800,7 @@ export class DefaultApi {
      * @param workflowTransitionProperty
      * @param workflowMode The workflow status. Set to &#x60;live&#x60; for inactive workflows or &#x60;draft&#x60; for draft workflows. Active workflows cannot be edited.
      */
-    public comAtlassianJiraRestV2AdminWorkflowTransitionResourceUpdateWorkflowTransitionPropertyPut (transitionId: number, key: string, workflowName: string, workflowTransitionProperty: WorkflowTransitionProperty, workflowMode?: 'live' | 'draft', options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: WorkflowTransitionProperty;  }> {
+    public comAtlassianJiraRestV2AdminWorkflowTransitionResourceUpdateWorkflowTransitionPropertyPut (transitionId: number, key: string, workflowName: string, workflowTransitionProperty: WorkflowTransitionProperty, workflowMode?: 'live' | 'draft', options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: WorkflowTransitionProperty;  }> {
         const localVarPath = this.basePath + '/api/3/workflow/transitions/{transitionId}/properties'
             .replace('{' + 'transitionId' + '}', encodeURIComponent(String(transitionId)));
         let localVarQueryParameters: any = {};
@@ -1862,7 +1862,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: WorkflowTransitionProperty;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: WorkflowTransitionProperty;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -1882,7 +1882,7 @@ export class DefaultApi {
      * @summary Get all workflows
      * @param workflowName The name of the workflow to be returned. Only one workflow can be specified.
      */
-    public comAtlassianJiraRestV2AdminWorkflowsResourceGetAllWorkflowsGet (workflowName?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Array<Workflow>;  }> {
+    public comAtlassianJiraRestV2AdminWorkflowsResourceGetAllWorkflowsGet (workflowName?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<Workflow>;  }> {
         const localVarPath = this.basePath + '/api/3/workflow';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -1916,7 +1916,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: Array<Workflow>;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: Array<Workflow>;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -1936,7 +1936,7 @@ export class DefaultApi {
      * @summary Create draft workflow scheme
      * @param id The ID of the active workflow scheme that the draft is created from.
      */
-    public comAtlassianJiraRestV2AdminWorkflowschemeWorkflowSchemeResourceCreateWorkflowSchemeDraftFromParentPost (id: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: WorkflowScheme;  }> {
+    public comAtlassianJiraRestV2AdminWorkflowschemeWorkflowSchemeResourceCreateWorkflowSchemeDraftFromParentPost (id: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: WorkflowScheme;  }> {
         const localVarPath = this.basePath + '/api/3/workflowscheme/{id}/createdraft'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -1970,7 +1970,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: WorkflowScheme;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: WorkflowScheme;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -1990,7 +1990,7 @@ export class DefaultApi {
      * @summary Create workflow scheme
      * @param workflowScheme
      */
-    public comAtlassianJiraRestV2AdminWorkflowschemeWorkflowSchemeResourceCreateWorkflowSchemePost (workflowScheme: WorkflowScheme, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: WorkflowScheme;  }> {
+    public comAtlassianJiraRestV2AdminWorkflowschemeWorkflowSchemeResourceCreateWorkflowSchemePost (workflowScheme: WorkflowScheme, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: WorkflowScheme;  }> {
         const localVarPath = this.basePath + '/api/3/workflowscheme';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -2024,7 +2024,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: WorkflowScheme;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: WorkflowScheme;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -2045,7 +2045,7 @@ export class DefaultApi {
      * @param id The ID of the workflow scheme.
      * @param updateDraftIfNeeded Set to true to create or update the draft of a workflow scheme and delete the mapping from the draft, when the workflow scheme cannot be edited. Defaults to &#x60;false&#x60;.
      */
-    public comAtlassianJiraRestV2AdminWorkflowschemeWorkflowSchemeResourceDeleteDefaultWorkflowDelete (id: number, updateDraftIfNeeded?: boolean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: WorkflowScheme;  }> {
+    public comAtlassianJiraRestV2AdminWorkflowschemeWorkflowSchemeResourceDeleteDefaultWorkflowDelete (id: number, updateDraftIfNeeded?: boolean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: WorkflowScheme;  }> {
         const localVarPath = this.basePath + '/api/3/workflowscheme/{id}/default'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -2083,7 +2083,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: WorkflowScheme;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: WorkflowScheme;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -2103,7 +2103,7 @@ export class DefaultApi {
      * @summary Delete draft default workflow
      * @param id The ID of the workflow scheme that the draft belongs to.
      */
-    public comAtlassianJiraRestV2AdminWorkflowschemeWorkflowSchemeResourceDeleteDraftDefaultWorkflowDelete (id: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: WorkflowScheme;  }> {
+    public comAtlassianJiraRestV2AdminWorkflowschemeWorkflowSchemeResourceDeleteDraftDefaultWorkflowDelete (id: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: WorkflowScheme;  }> {
         const localVarPath = this.basePath + '/api/3/workflowscheme/{id}/draft/default'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -2137,7 +2137,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: WorkflowScheme;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: WorkflowScheme;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -2158,7 +2158,7 @@ export class DefaultApi {
      * @param id The ID of the workflow scheme that the draft belongs to.
      * @param workflowName The name of the workflow.
      */
-    public comAtlassianJiraRestV2AdminWorkflowschemeWorkflowSchemeResourceDeleteDraftWorkflowMappingDelete (id: number, workflowName: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
+    public comAtlassianJiraRestV2AdminWorkflowschemeWorkflowSchemeResourceDeleteDraftWorkflowMappingDelete (id: number, workflowName: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/workflowscheme/{id}/draft/workflow'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -2201,7 +2201,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body?: any;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -2222,7 +2222,7 @@ export class DefaultApi {
      * @param workflowName The name of the workflow.
      * @param updateDraftIfNeeded Set to true to create or update the draft of a workflow scheme and delete the mapping from the draft, when the workflow scheme cannot be edited. Defaults to &#x60;false&#x60;.
      */
-    public comAtlassianJiraRestV2AdminWorkflowschemeWorkflowSchemeResourceDeleteWorkflowMappingDelete (id: number, workflowName: string, updateDraftIfNeeded?: boolean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
+    public comAtlassianJiraRestV2AdminWorkflowschemeWorkflowSchemeResourceDeleteWorkflowMappingDelete (id: number, workflowName: string, updateDraftIfNeeded?: boolean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/workflowscheme/{id}/workflow'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -2269,7 +2269,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body?: any;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -2288,7 +2288,7 @@ export class DefaultApi {
      * @summary Delete workflow scheme
      * @param id The ID of the workflow scheme. Find this ID by editing the desired workflow scheme in Jira. The ID will be shown in the URL as &#x60;schemeId&#x60;. For example, _schemeId&#x3D;10301_.
      */
-    public comAtlassianJiraRestV2AdminWorkflowschemeWorkflowSchemeResourceDeleteWorkflowSchemeDelete (id: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
+    public comAtlassianJiraRestV2AdminWorkflowschemeWorkflowSchemeResourceDeleteWorkflowSchemeDelete (id: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/workflowscheme/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -2322,7 +2322,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body?: any;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -2341,7 +2341,7 @@ export class DefaultApi {
      * @summary Delete draft workflow scheme
      * @param id The ID of the active workflow scheme that the draft was originally created from.
      */
-    public comAtlassianJiraRestV2AdminWorkflowschemeWorkflowSchemeResourceDeleteWorkflowSchemeDraftDelete (id: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
+    public comAtlassianJiraRestV2AdminWorkflowschemeWorkflowSchemeResourceDeleteWorkflowSchemeDraftDelete (id: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/workflowscheme/{id}/draft'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -2375,7 +2375,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body?: any;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -2395,7 +2395,7 @@ export class DefaultApi {
      * @param id The ID of the workflow scheme that the draft belongs to.
      * @param issueType The ID of the issue type.
      */
-    public comAtlassianJiraRestV2AdminWorkflowschemeWorkflowSchemeResourceDeleteWorkflowSchemeDraftIssueTypeDelete (id: number, issueType: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: WorkflowScheme;  }> {
+    public comAtlassianJiraRestV2AdminWorkflowschemeWorkflowSchemeResourceDeleteWorkflowSchemeDraftIssueTypeDelete (id: number, issueType: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: WorkflowScheme;  }> {
         const localVarPath = this.basePath + '/api/3/workflowscheme/{id}/draft/issuetype/{issueType}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)))
             .replace('{' + 'issueType' + '}', encodeURIComponent(String(issueType)));
@@ -2435,7 +2435,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: WorkflowScheme;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: WorkflowScheme;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -2457,7 +2457,7 @@ export class DefaultApi {
      * @param issueType The ID of the issue type.
      * @param updateDraftIfNeeded Set to true to create or update the draft of a workflow scheme and update the mapping in the draft, when the workflow scheme cannot be edited. Defaults to &#x60;false&#x60;.
      */
-    public comAtlassianJiraRestV2AdminWorkflowschemeWorkflowSchemeResourceDeleteWorkflowSchemeIssueTypeDelete (id: number, issueType: string, updateDraftIfNeeded?: boolean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: WorkflowScheme;  }> {
+    public comAtlassianJiraRestV2AdminWorkflowschemeWorkflowSchemeResourceDeleteWorkflowSchemeIssueTypeDelete (id: number, issueType: string, updateDraftIfNeeded?: boolean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: WorkflowScheme;  }> {
         const localVarPath = this.basePath + '/api/3/workflowscheme/{id}/issuetype/{issueType}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)))
             .replace('{' + 'issueType' + '}', encodeURIComponent(String(issueType)));
@@ -2501,7 +2501,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: WorkflowScheme;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: WorkflowScheme;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -2522,7 +2522,7 @@ export class DefaultApi {
      * @param id The ID of the workflow scheme.
      * @param returnDraftIfExists Set to &#x60;true&#x60; to return the default workflow for the workflow scheme&#39;s draft rather than scheme itself. If the workflow scheme does not have a draft, then the default workflow for the workflow scheme is returned.
      */
-    public comAtlassianJiraRestV2AdminWorkflowschemeWorkflowSchemeResourceGetDefaultWorkflowGet (id: number, returnDraftIfExists?: boolean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: DefaultWorkflow;  }> {
+    public comAtlassianJiraRestV2AdminWorkflowschemeWorkflowSchemeResourceGetDefaultWorkflowGet (id: number, returnDraftIfExists?: boolean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: DefaultWorkflow;  }> {
         const localVarPath = this.basePath + '/api/3/workflowscheme/{id}/default'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -2560,7 +2560,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: DefaultWorkflow;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: DefaultWorkflow;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -2580,7 +2580,7 @@ export class DefaultApi {
      * @summary Get draft default workflow
      * @param id The ID of the workflow scheme that the draft belongs to.
      */
-    public comAtlassianJiraRestV2AdminWorkflowschemeWorkflowSchemeResourceGetDraftDefaultWorkflowGet (id: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: DefaultWorkflow;  }> {
+    public comAtlassianJiraRestV2AdminWorkflowschemeWorkflowSchemeResourceGetDraftDefaultWorkflowGet (id: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: DefaultWorkflow;  }> {
         const localVarPath = this.basePath + '/api/3/workflowscheme/{id}/draft/default'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -2614,7 +2614,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: DefaultWorkflow;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: DefaultWorkflow;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -2635,7 +2635,7 @@ export class DefaultApi {
      * @param id The ID of the workflow scheme that the draft belongs to.
      * @param workflowName The name of a workflow in the scheme. Limits the results to the workflow-issue type mapping for the specified workflow.
      */
-    public comAtlassianJiraRestV2AdminWorkflowschemeWorkflowSchemeResourceGetDraftWorkflowGet (id: number, workflowName?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: IssueTypesWorkflowMapping;  }> {
+    public comAtlassianJiraRestV2AdminWorkflowschemeWorkflowSchemeResourceGetDraftWorkflowGet (id: number, workflowName?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: IssueTypesWorkflowMapping;  }> {
         const localVarPath = this.basePath + '/api/3/workflowscheme/{id}/draft/workflow'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -2673,7 +2673,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: IssueTypesWorkflowMapping;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: IssueTypesWorkflowMapping;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -2695,7 +2695,7 @@ export class DefaultApi {
      * @param workflowName The name of a workflow in the scheme. Limits the results to the workflow-issue type mapping for the specified workflow.
      * @param returnDraftIfExists Returns the mapping from the workflow scheme&#39;s draft rather than the workflow scheme, if set to true. If no draft exists, the mapping from the workflow scheme is returned.
      */
-    public comAtlassianJiraRestV2AdminWorkflowschemeWorkflowSchemeResourceGetWorkflowGet (id: number, workflowName?: string, returnDraftIfExists?: boolean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: IssueTypesWorkflowMapping;  }> {
+    public comAtlassianJiraRestV2AdminWorkflowschemeWorkflowSchemeResourceGetWorkflowGet (id: number, workflowName?: string, returnDraftIfExists?: boolean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: IssueTypesWorkflowMapping;  }> {
         const localVarPath = this.basePath + '/api/3/workflowscheme/{id}/workflow'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -2737,7 +2737,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: IssueTypesWorkflowMapping;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: IssueTypesWorkflowMapping;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -2757,7 +2757,7 @@ export class DefaultApi {
      * @summary Get draft workflow scheme
      * @param id The ID of the active workflow scheme that the draft was originally created from.
      */
-    public comAtlassianJiraRestV2AdminWorkflowschemeWorkflowSchemeResourceGetWorkflowSchemeDraftGet (id: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: WorkflowScheme;  }> {
+    public comAtlassianJiraRestV2AdminWorkflowschemeWorkflowSchemeResourceGetWorkflowSchemeDraftGet (id: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: WorkflowScheme;  }> {
         const localVarPath = this.basePath + '/api/3/workflowscheme/{id}/draft'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -2791,7 +2791,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: WorkflowScheme;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: WorkflowScheme;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -2812,7 +2812,7 @@ export class DefaultApi {
      * @param id The ID of the workflow scheme that the draft belongs to.
      * @param issueType The ID of the issue type.
      */
-    public comAtlassianJiraRestV2AdminWorkflowschemeWorkflowSchemeResourceGetWorkflowSchemeDraftIssueTypeGet (id: number, issueType: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: IssueTypeWorkflowMapping;  }> {
+    public comAtlassianJiraRestV2AdminWorkflowschemeWorkflowSchemeResourceGetWorkflowSchemeDraftIssueTypeGet (id: number, issueType: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: IssueTypeWorkflowMapping;  }> {
         const localVarPath = this.basePath + '/api/3/workflowscheme/{id}/draft/issuetype/{issueType}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)))
             .replace('{' + 'issueType' + '}', encodeURIComponent(String(issueType)));
@@ -2852,7 +2852,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: IssueTypeWorkflowMapping;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: IssueTypeWorkflowMapping;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -2873,7 +2873,7 @@ export class DefaultApi {
      * @param id The ID of the workflow scheme. Find this ID by editing the desired workflow scheme in Jira. The ID will be shown in the URL as &#x60;schemeId&#x60;. For example, _schemeId&#x3D;10301_.
      * @param returnDraftIfExists Returns the workflow scheme&#39;s draft rather than scheme itself, if set to true. If the workflow scheme does not have a draft, then the workflow scheme is returned.
      */
-    public comAtlassianJiraRestV2AdminWorkflowschemeWorkflowSchemeResourceGetWorkflowSchemeGet (id: number, returnDraftIfExists?: boolean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: WorkflowScheme;  }> {
+    public comAtlassianJiraRestV2AdminWorkflowschemeWorkflowSchemeResourceGetWorkflowSchemeGet (id: number, returnDraftIfExists?: boolean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: WorkflowScheme;  }> {
         const localVarPath = this.basePath + '/api/3/workflowscheme/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -2911,7 +2911,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: WorkflowScheme;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: WorkflowScheme;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -2933,7 +2933,7 @@ export class DefaultApi {
      * @param issueType The ID of the issue type.
      * @param returnDraftIfExists Returns the mapping from the workflow scheme&#39;s draft rather than the workflow scheme, if set to true. If no draft exists, the mapping from the workflow scheme is returned.
      */
-    public comAtlassianJiraRestV2AdminWorkflowschemeWorkflowSchemeResourceGetWorkflowSchemeIssueTypeGet (id: number, issueType: string, returnDraftIfExists?: boolean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: IssueTypeWorkflowMapping;  }> {
+    public comAtlassianJiraRestV2AdminWorkflowschemeWorkflowSchemeResourceGetWorkflowSchemeIssueTypeGet (id: number, issueType: string, returnDraftIfExists?: boolean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: IssueTypeWorkflowMapping;  }> {
         const localVarPath = this.basePath + '/api/3/workflowscheme/{id}/issuetype/{issueType}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)))
             .replace('{' + 'issueType' + '}', encodeURIComponent(String(issueType)));
@@ -2977,7 +2977,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: IssueTypeWorkflowMapping;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: IssueTypeWorkflowMapping;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -2999,7 +2999,7 @@ export class DefaultApi {
      * @param issueType The ID of the issue type.
      * @param issueTypeWorkflowMapping The issue type-project mapping.
      */
-    public comAtlassianJiraRestV2AdminWorkflowschemeWorkflowSchemeResourceSetWorkflowSchemeDraftIssueTypePut (id: number, issueType: string, issueTypeWorkflowMapping: IssueTypeWorkflowMapping, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: WorkflowScheme;  }> {
+    public comAtlassianJiraRestV2AdminWorkflowschemeWorkflowSchemeResourceSetWorkflowSchemeDraftIssueTypePut (id: number, issueType: string, issueTypeWorkflowMapping: IssueTypeWorkflowMapping, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: WorkflowScheme;  }> {
         const localVarPath = this.basePath + '/api/3/workflowscheme/{id}/draft/issuetype/{issueType}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)))
             .replace('{' + 'issueType' + '}', encodeURIComponent(String(issueType)));
@@ -3045,7 +3045,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: WorkflowScheme;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: WorkflowScheme;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -3067,7 +3067,7 @@ export class DefaultApi {
      * @param issueType The ID of the issue type.
      * @param issueTypeWorkflowMapping The issue type-project mapping.
      */
-    public comAtlassianJiraRestV2AdminWorkflowschemeWorkflowSchemeResourceSetWorkflowSchemeIssueTypePut (id: number, issueType: string, issueTypeWorkflowMapping: IssueTypeWorkflowMapping, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: WorkflowScheme;  }> {
+    public comAtlassianJiraRestV2AdminWorkflowschemeWorkflowSchemeResourceSetWorkflowSchemeIssueTypePut (id: number, issueType: string, issueTypeWorkflowMapping: IssueTypeWorkflowMapping, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: WorkflowScheme;  }> {
         const localVarPath = this.basePath + '/api/3/workflowscheme/{id}/issuetype/{issueType}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)))
             .replace('{' + 'issueType' + '}', encodeURIComponent(String(issueType)));
@@ -3113,7 +3113,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: WorkflowScheme;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: WorkflowScheme;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -3134,7 +3134,7 @@ export class DefaultApi {
      * @param id The ID of the workflow scheme.
      * @param defaultWorkflow The new default workflow.
      */
-    public comAtlassianJiraRestV2AdminWorkflowschemeWorkflowSchemeResourceUpdateDefaultWorkflowPut (id: number, defaultWorkflow: DefaultWorkflow, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: WorkflowScheme;  }> {
+    public comAtlassianJiraRestV2AdminWorkflowschemeWorkflowSchemeResourceUpdateDefaultWorkflowPut (id: number, defaultWorkflow: DefaultWorkflow, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: WorkflowScheme;  }> {
         const localVarPath = this.basePath + '/api/3/workflowscheme/{id}/default'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -3174,7 +3174,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: WorkflowScheme;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: WorkflowScheme;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -3195,7 +3195,7 @@ export class DefaultApi {
      * @param id The ID of the workflow scheme that the draft belongs to.
      * @param defaultWorkflow The object for the new default workflow.
      */
-    public comAtlassianJiraRestV2AdminWorkflowschemeWorkflowSchemeResourceUpdateDraftDefaultWorkflowPut (id: number, defaultWorkflow: DefaultWorkflow, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: WorkflowScheme;  }> {
+    public comAtlassianJiraRestV2AdminWorkflowschemeWorkflowSchemeResourceUpdateDraftDefaultWorkflowPut (id: number, defaultWorkflow: DefaultWorkflow, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: WorkflowScheme;  }> {
         const localVarPath = this.basePath + '/api/3/workflowscheme/{id}/draft/default'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -3235,7 +3235,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: WorkflowScheme;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: WorkflowScheme;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -3257,7 +3257,7 @@ export class DefaultApi {
      * @param workflowName The name of the workflow.
      * @param issueTypesWorkflowMapping
      */
-    public comAtlassianJiraRestV2AdminWorkflowschemeWorkflowSchemeResourceUpdateDraftWorkflowMappingPut (id: number, workflowName: string, issueTypesWorkflowMapping: IssueTypesWorkflowMapping, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: WorkflowScheme;  }> {
+    public comAtlassianJiraRestV2AdminWorkflowschemeWorkflowSchemeResourceUpdateDraftWorkflowMappingPut (id: number, workflowName: string, issueTypesWorkflowMapping: IssueTypesWorkflowMapping, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: WorkflowScheme;  }> {
         const localVarPath = this.basePath + '/api/3/workflowscheme/{id}/draft/workflow'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -3306,7 +3306,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: WorkflowScheme;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: WorkflowScheme;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -3328,7 +3328,7 @@ export class DefaultApi {
      * @param workflowName The name of the workflow.
      * @param issueTypesWorkflowMapping
      */
-    public comAtlassianJiraRestV2AdminWorkflowschemeWorkflowSchemeResourceUpdateWorkflowMappingPut (id: number, workflowName: string, issueTypesWorkflowMapping: IssueTypesWorkflowMapping, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: WorkflowScheme;  }> {
+    public comAtlassianJiraRestV2AdminWorkflowschemeWorkflowSchemeResourceUpdateWorkflowMappingPut (id: number, workflowName: string, issueTypesWorkflowMapping: IssueTypesWorkflowMapping, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: WorkflowScheme;  }> {
         const localVarPath = this.basePath + '/api/3/workflowscheme/{id}/workflow'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -3377,7 +3377,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: WorkflowScheme;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: WorkflowScheme;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -3398,7 +3398,7 @@ export class DefaultApi {
      * @param id The ID of the active workflow scheme that the draft was originally created from.
      * @param workflowScheme
      */
-    public comAtlassianJiraRestV2AdminWorkflowschemeWorkflowSchemeResourceUpdateWorkflowSchemeDraftPut (id: number, workflowScheme: WorkflowScheme, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: WorkflowScheme;  }> {
+    public comAtlassianJiraRestV2AdminWorkflowschemeWorkflowSchemeResourceUpdateWorkflowSchemeDraftPut (id: number, workflowScheme: WorkflowScheme, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: WorkflowScheme;  }> {
         const localVarPath = this.basePath + '/api/3/workflowscheme/{id}/draft'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -3438,7 +3438,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: WorkflowScheme;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: WorkflowScheme;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -3459,7 +3459,7 @@ export class DefaultApi {
      * @param id The ID of the workflow scheme. Find this ID by editing the desired workflow scheme in Jira. The ID will be shown in the URL as &#x60;schemeId&#x60;. For example, _schemeId&#x3D;10301_.
      * @param workflowScheme
      */
-    public comAtlassianJiraRestV2AdminWorkflowschemeWorkflowSchemeResourceUpdateWorkflowSchemePut (id: number, workflowScheme: WorkflowScheme, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: WorkflowScheme;  }> {
+    public comAtlassianJiraRestV2AdminWorkflowschemeWorkflowSchemeResourceUpdateWorkflowSchemePut (id: number, workflowScheme: WorkflowScheme, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: WorkflowScheme;  }> {
         const localVarPath = this.basePath + '/api/3/workflowscheme/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -3499,7 +3499,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: WorkflowScheme;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: WorkflowScheme;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -3521,7 +3521,7 @@ export class DefaultApi {
      * @param itemId The ID of the dashboard item.
      * @param propertyKey The key of the dashboard item property.
      */
-    public comAtlassianJiraRestV2DashboardDashboardItemPropertyResourceDeleteDashboardItemPropertyDelete (dashboardId: string, itemId: string, propertyKey: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
+    public comAtlassianJiraRestV2DashboardDashboardItemPropertyResourceDeleteDashboardItemPropertyDelete (dashboardId: string, itemId: string, propertyKey: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/dashboard/{dashboardId}/items/{itemId}/properties/{propertyKey}'
             .replace('{' + 'dashboardId' + '}', encodeURIComponent(String(dashboardId)))
             .replace('{' + 'itemId' + '}', encodeURIComponent(String(itemId)))
@@ -3569,7 +3569,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body?: any;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -3590,7 +3590,7 @@ export class DefaultApi {
      * @param itemId The ID of the dashboard item.
      * @param propertyKey The key of the dashboard item property.
      */
-    public comAtlassianJiraRestV2DashboardDashboardItemPropertyResourceGetDashboardItemPropertyGet (dashboardId: string, itemId: string, propertyKey: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: EntityProperty;  }> {
+    public comAtlassianJiraRestV2DashboardDashboardItemPropertyResourceGetDashboardItemPropertyGet (dashboardId: string, itemId: string, propertyKey: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: EntityProperty;  }> {
         const localVarPath = this.basePath + '/api/3/dashboard/{dashboardId}/items/{itemId}/properties/{propertyKey}'
             .replace('{' + 'dashboardId' + '}', encodeURIComponent(String(dashboardId)))
             .replace('{' + 'itemId' + '}', encodeURIComponent(String(itemId)))
@@ -3638,7 +3638,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: EntityProperty;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: EntityProperty;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -3659,7 +3659,7 @@ export class DefaultApi {
      * @param dashboardId The ID of the dashboard.
      * @param itemId The ID of the dashboard item.
      */
-    public comAtlassianJiraRestV2DashboardDashboardItemPropertyResourceGetDashboardItemPropertyKeysGet (dashboardId: string, itemId: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: PropertyKeys;  }> {
+    public comAtlassianJiraRestV2DashboardDashboardItemPropertyResourceGetDashboardItemPropertyKeysGet (dashboardId: string, itemId: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: PropertyKeys;  }> {
         const localVarPath = this.basePath + '/api/3/dashboard/{dashboardId}/items/{itemId}/properties'
             .replace('{' + 'dashboardId' + '}', encodeURIComponent(String(dashboardId)))
             .replace('{' + 'itemId' + '}', encodeURIComponent(String(itemId)));
@@ -3701,7 +3701,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: PropertyKeys;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: PropertyKeys;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -3724,7 +3724,7 @@ export class DefaultApi {
      * @param propertyKey The key of the dashboard item property. The maximum length is 255 characters.
      * @param body
      */
-    public comAtlassianJiraRestV2DashboardDashboardItemPropertyResourceSetDashboardItemPropertyPut (dashboardId: string, itemId: string, propertyKey: string, body: any, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
+    public comAtlassianJiraRestV2DashboardDashboardItemPropertyResourceSetDashboardItemPropertyPut (dashboardId: string, itemId: string, propertyKey: string, body: any, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/dashboard/{dashboardId}/items/{itemId}/properties/{propertyKey}'
             .replace('{' + 'dashboardId' + '}', encodeURIComponent(String(dashboardId)))
             .replace('{' + 'itemId' + '}', encodeURIComponent(String(itemId)))
@@ -3778,7 +3778,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body?: any;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -3799,7 +3799,7 @@ export class DefaultApi {
      * @param startAt The index of the first item to return in a page of results (page offset).
      * @param maxResults The maximum number of items to return per page. The maximum is &#x60;1000&#x60;.
      */
-    public comAtlassianJiraRestV2DashboardDashboardResourceGetAllDashboardsGet (filter?: 'my' | 'favourite', startAt?: number, maxResults?: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: PageOfDashboards;  }> {
+    public comAtlassianJiraRestV2DashboardDashboardResourceGetAllDashboardsGet (filter?: 'my' | 'favourite', startAt?: number, maxResults?: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: PageOfDashboards;  }> {
         const localVarPath = this.basePath + '/api/3/dashboard';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -3839,7 +3839,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: PageOfDashboards;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: PageOfDashboards;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -3859,7 +3859,7 @@ export class DefaultApi {
      * @summary Get dashboard
      * @param id The ID of the dashboard.
      */
-    public comAtlassianJiraRestV2DashboardDashboardResourceGetDashboardGet (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Dashboard;  }> {
+    public comAtlassianJiraRestV2DashboardDashboardResourceGetDashboardGet (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Dashboard;  }> {
         const localVarPath = this.basePath + '/api/3/dashboard/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -3893,7 +3893,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: Dashboard;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: Dashboard;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -3921,7 +3921,7 @@ export class DefaultApi {
      * @param maxResults The maximum number of items to return per page. The maximum is &#x60;100&#x60;.
      * @param expand Use [expand](#expansion) to include additional information about dashboard in the response. This parameter accepts multiple values separated by a comma:  *   &#x60;description&#x60; Returns the description of the dashboard. *   &#x60;owner&#x60; Returns the owner of the dashboard. *   &#x60;viewUrl&#x60; Returns the URL that is used to view the dashboard. *   &#x60;favourite&#x60; Returns &#x60;isFavourite&#x60;, an indicator of whether the user has set the dashboard as a favorite. *   &#x60;favouritedCount&#x60; Returns &#x60;popularity&#x60;, a count of how many users have set this dashboard as a favorite. *   &#x60;sharePermissions&#x60; Returns details of the share permissions defined for the dashboard.
      */
-    public comAtlassianJiraRestV2DashboardDashboardResourceGetDashboardsPaginatedGet (dashboardName?: string, accountId?: string, owner?: string, groupname?: string, projectId?: number, orderBy?: 'id' | 'name' | 'description' | 'owner' | 'favorite_count' | 'is_favorite' | '-id' | '-name' | '-description' | '-owner' | '-favorite_count' | '-is_favorite', startAt?: number, maxResults?: number, expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: PageOfDashboard;  }> {
+    public comAtlassianJiraRestV2DashboardDashboardResourceGetDashboardsPaginatedGet (dashboardName?: string, accountId?: string, owner?: string, groupname?: string, projectId?: number, orderBy?: 'id' | 'name' | 'description' | 'owner' | 'favorite_count' | 'is_favorite' | '-id' | '-name' | '-description' | '-owner' | '-favorite_count' | '-is_favorite', startAt?: number, maxResults?: number, expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: PageOfDashboard;  }> {
         const localVarPath = this.basePath + '/api/3/dashboard/search';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -3987,7 +3987,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: PageOfDashboard;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: PageOfDashboard;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -4008,7 +4008,7 @@ export class DefaultApi {
      * @param jiraExpressionEvalRequestBean The Jira expression and the evaluation context.
      * @param expand Use [expand](#expansion) to include additional information in the response. This parameter accepts multiple values separated by a comma:  *   &#x60;meta.complexity&#x60; Returns information about the expression complexity (for example, the number of expensive operations used by the expression) and how close the expression is to reaching the complexity limit. Useful when designing and debugging your expressions.
      */
-    public comAtlassianJiraRestV2ExpressionJiraExpressionsResourceEvaluateJiraExpressionPost (jiraExpressionEvalRequestBean: JiraExpressionEvalRequestBean, expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: JiraExpressionResult;  }> {
+    public comAtlassianJiraRestV2ExpressionJiraExpressionsResourceEvaluateJiraExpressionPost (jiraExpressionEvalRequestBean: JiraExpressionEvalRequestBean, expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: JiraExpressionResult;  }> {
         const localVarPath = this.basePath + '/api/3/expression/eval';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -4048,7 +4048,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: JiraExpressionResult;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: JiraExpressionResult;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -4068,7 +4068,7 @@ export class DefaultApi {
      * @summary Get all metadata for an expanded attachment
      * @param id The ID of the attachment.
      */
-    public comAtlassianJiraRestV2IssueAttachmentAttachmentResourceExpandAttachmentForHumansGet (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: AttachmentArchiveMetadataReadable;  }> {
+    public comAtlassianJiraRestV2IssueAttachmentAttachmentResourceExpandAttachmentForHumansGet (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: AttachmentArchiveMetadataReadable;  }> {
         const localVarPath = this.basePath + '/api/3/attachment/{id}/expand/human'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -4104,7 +4104,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: AttachmentArchiveMetadataReadable;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: AttachmentArchiveMetadataReadable;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -4124,7 +4124,7 @@ export class DefaultApi {
      * @summary Get contents metadata for an expanded attachment
      * @param id The ID of the attachment.
      */
-    public comAtlassianJiraRestV2IssueAttachmentAttachmentResourceExpandAttachmentForMachinesGet (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: AttachmentArchiveMetadata;  }> {
+    public comAtlassianJiraRestV2IssueAttachmentAttachmentResourceExpandAttachmentForMachinesGet (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: AttachmentArchiveMetadata;  }> {
         const localVarPath = this.basePath + '/api/3/attachment/{id}/expand/raw'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -4160,7 +4160,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: AttachmentArchiveMetadata;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: AttachmentArchiveMetadata;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -4180,7 +4180,7 @@ export class DefaultApi {
      * @summary Get attachment metadata
      * @param id The ID of the attachment.
      */
-    public comAtlassianJiraRestV2IssueAttachmentAttachmentResourceGetAttachmentGet (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: AttachmentMetadata;  }> {
+    public comAtlassianJiraRestV2IssueAttachmentAttachmentResourceGetAttachmentGet (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: AttachmentMetadata;  }> {
         const localVarPath = this.basePath + '/api/3/attachment/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -4216,7 +4216,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: AttachmentMetadata;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: AttachmentMetadata;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -4235,7 +4235,7 @@ export class DefaultApi {
      * Returns the global attachment settings, that is, whether attachments are enabled and the maximum attachment size allowed.  Note that there are also [project permissions](https://confluence.atlassian.com/x/yodKLg) that restrict whether users can create and delete attachments or not.  **[Permissions](#permissions) required:** Permission to access Jira.
      * @summary Get global attachment settings
      */
-    public comAtlassianJiraRestV2IssueAttachmentAttachmentResourceGetAttachmentMetaGet (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: AttachmentSettings;  }> {
+    public comAtlassianJiraRestV2IssueAttachmentAttachmentResourceGetAttachmentMetaGet (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: AttachmentSettings;  }> {
         const localVarPath = this.basePath + '/api/3/attachment/meta';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -4265,7 +4265,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: AttachmentSettings;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: AttachmentSettings;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -4285,7 +4285,7 @@ export class DefaultApi {
      * @summary Delete attachment
      * @param id The ID of the attachment.
      */
-    public comAtlassianJiraRestV2IssueAttachmentAttachmentResourceRemoveAttachmentDelete (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
+    public comAtlassianJiraRestV2IssueAttachmentAttachmentResourceRemoveAttachmentDelete (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/attachment/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -4321,7 +4321,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body?: any;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -4340,7 +4340,7 @@ export class DefaultApi {
      * @summary Get system avatars by type
      * @param type The avatar type.
      */
-    public comAtlassianJiraRestV2IssueAvatarResourceGetAllSystemAvatarsGet (type: 'issuetype' | 'project' | 'user', options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: SystemAvatars;  }> {
+    public comAtlassianJiraRestV2IssueAvatarResourceGetAllSystemAvatarsGet (type: 'issuetype' | 'project' | 'user', options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: SystemAvatars;  }> {
         const localVarPath = this.basePath + '/api/3/avatar/{type}/system'
             .replace('{' + 'type' + '}', encodeURIComponent(String(type)));
         let localVarQueryParameters: any = {};
@@ -4374,7 +4374,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: SystemAvatars;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: SystemAvatars;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -4395,7 +4395,7 @@ export class DefaultApi {
      * @param commentId The ID of the comment.
      * @param propertyKey The key of the property.
      */
-    public comAtlassianJiraRestV2IssueCommentPropertyResourceDeleteCommentPropertyDelete (commentId: string, propertyKey: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
+    public comAtlassianJiraRestV2IssueCommentPropertyResourceDeleteCommentPropertyDelete (commentId: string, propertyKey: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/comment/{commentId}/properties/{propertyKey}'
             .replace('{' + 'commentId' + '}', encodeURIComponent(String(commentId)))
             .replace('{' + 'propertyKey' + '}', encodeURIComponent(String(propertyKey)));
@@ -4437,7 +4437,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body?: any;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -4457,7 +4457,7 @@ export class DefaultApi {
      * @param commentId The ID of the comment.
      * @param propertyKey The key of the property.
      */
-    public comAtlassianJiraRestV2IssueCommentPropertyResourceGetCommentPropertyGet (commentId: string, propertyKey: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: EntityProperty;  }> {
+    public comAtlassianJiraRestV2IssueCommentPropertyResourceGetCommentPropertyGet (commentId: string, propertyKey: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: EntityProperty;  }> {
         const localVarPath = this.basePath + '/api/3/comment/{commentId}/properties/{propertyKey}'
             .replace('{' + 'commentId' + '}', encodeURIComponent(String(commentId)))
             .replace('{' + 'propertyKey' + '}', encodeURIComponent(String(propertyKey)));
@@ -4499,7 +4499,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: EntityProperty;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: EntityProperty;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -4519,7 +4519,7 @@ export class DefaultApi {
      * @summary Get comment property keys
      * @param commentId The ID of the comment.
      */
-    public comAtlassianJiraRestV2IssueCommentPropertyResourceGetCommentPropertyKeysGet (commentId: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: PropertyKeys;  }> {
+    public comAtlassianJiraRestV2IssueCommentPropertyResourceGetCommentPropertyKeysGet (commentId: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: PropertyKeys;  }> {
         const localVarPath = this.basePath + '/api/3/comment/{commentId}/properties'
             .replace('{' + 'commentId' + '}', encodeURIComponent(String(commentId)));
         let localVarQueryParameters: any = {};
@@ -4555,7 +4555,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: PropertyKeys;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: PropertyKeys;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -4577,7 +4577,7 @@ export class DefaultApi {
      * @param propertyKey The key of the property. The maximum length is 255 characters.
      * @param body
      */
-    public comAtlassianJiraRestV2IssueCommentPropertyResourceSetCommentPropertyPut (commentId: string, propertyKey: string, body: any, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
+    public comAtlassianJiraRestV2IssueCommentPropertyResourceSetCommentPropertyPut (commentId: string, propertyKey: string, body: any, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/comment/{commentId}/properties/{propertyKey}'
             .replace('{' + 'commentId' + '}', encodeURIComponent(String(commentId)))
             .replace('{' + 'propertyKey' + '}', encodeURIComponent(String(propertyKey)));
@@ -4625,7 +4625,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body?: any;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -4644,7 +4644,7 @@ export class DefaultApi {
      * @summary Create component
      * @param component
      */
-    public comAtlassianJiraRestV2IssueComponentResourceCreateComponentPost (component: Component, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Component;  }> {
+    public comAtlassianJiraRestV2IssueComponentResourceCreateComponentPost (component: Component, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Component;  }> {
         const localVarPath = this.basePath + '/api/3/component';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -4680,7 +4680,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: Component;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: Component;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -4701,7 +4701,7 @@ export class DefaultApi {
      * @param id The ID of the component.
      * @param moveIssuesTo The ID of the component to replace the deleted component. If this value is null no replacement is made.
      */
-    public comAtlassianJiraRestV2IssueComponentResourceDeleteComponentDelete (id: string, moveIssuesTo?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
+    public comAtlassianJiraRestV2IssueComponentResourceDeleteComponentDelete (id: string, moveIssuesTo?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/component/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -4741,7 +4741,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body?: any;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -4760,7 +4760,7 @@ export class DefaultApi {
      * @summary Get component
      * @param id The ID of the component.
      */
-    public comAtlassianJiraRestV2IssueComponentResourceGetComponentGet (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Component;  }> {
+    public comAtlassianJiraRestV2IssueComponentResourceGetComponentGet (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Component;  }> {
         const localVarPath = this.basePath + '/api/3/component/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -4796,7 +4796,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: Component;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: Component;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -4816,7 +4816,7 @@ export class DefaultApi {
      * @summary Get component issues count
      * @param id The ID of the component.
      */
-    public comAtlassianJiraRestV2IssueComponentResourceGetComponentRelatedIssuesGet (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: ComponentIssuesCount;  }> {
+    public comAtlassianJiraRestV2IssueComponentResourceGetComponentRelatedIssuesGet (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: ComponentIssuesCount;  }> {
         const localVarPath = this.basePath + '/api/3/component/{id}/relatedIssueCounts'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -4852,7 +4852,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: ComponentIssuesCount;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: ComponentIssuesCount;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -4873,7 +4873,7 @@ export class DefaultApi {
      * @param id The ID of the component.
      * @param component
      */
-    public comAtlassianJiraRestV2IssueComponentResourceUpdateComponentPut (id: string, component: Component, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Component;  }> {
+    public comAtlassianJiraRestV2IssueComponentResourceUpdateComponentPut (id: string, component: Component, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Component;  }> {
         const localVarPath = this.basePath + '/api/3/component/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -4915,7 +4915,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: Component;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: Component;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -4935,7 +4935,7 @@ export class DefaultApi {
      * @summary Get current user
      * @param expand Use [expand](#expansion) to include additional information about user in the response. This parameter accepts multiple values separated by a comma:  *   &#x60;groups&#x60; Returns all groups, including nested groups, the user belongs to. *   &#x60;applicationRoles&#x60; Returns the application roles the user is assigned to.
      */
-    public comAtlassianJiraRestV2IssueCurrentUserResourceGetCurrentUserGet (expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: User;  }> {
+    public comAtlassianJiraRestV2IssueCurrentUserResourceGetCurrentUserGet (expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: User;  }> {
         const localVarPath = this.basePath + '/api/3/myself';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -4969,7 +4969,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: User;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: User;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -4989,7 +4989,7 @@ export class DefaultApi {
      * @summary Get custom field option
      * @param id The ID of the custom field option. To find this ID, [configure the custom field](https://confluence.atlassian.com/x/B4hKLg) and edit its options in Jira. Click the option and its ID will show in the URL as the &#x60;selectedParentOptionId&#x60; parameter.
      */
-    public comAtlassianJiraRestV2IssueCustomfieldCustomFieldOptionResourceGetCustomFieldOptionGet (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: CustomFieldOption;  }> {
+    public comAtlassianJiraRestV2IssueCustomfieldCustomFieldOptionResourceGetCustomFieldOptionGet (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: CustomFieldOption;  }> {
         const localVarPath = this.basePath + '/api/3/customFieldOption/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -5025,7 +5025,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: CustomFieldOption;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: CustomFieldOption;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -5046,7 +5046,7 @@ export class DefaultApi {
      * @param fieldKey The field key is specified in the following format: **$(app-key)__$(field-key)**. For example, _example-add-on__example-issue-field_.
      * @param issueFieldOptionCreateBean
      */
-    public comAtlassianJiraRestV2IssueFieldIssueFieldOptionResourceCreateIssueFieldOptionPost (fieldKey: string, issueFieldOptionCreateBean: IssueFieldOptionCreateBean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: IssueFieldOption;  }> {
+    public comAtlassianJiraRestV2IssueFieldIssueFieldOptionResourceCreateIssueFieldOptionPost (fieldKey: string, issueFieldOptionCreateBean: IssueFieldOptionCreateBean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: IssueFieldOption;  }> {
         const localVarPath = this.basePath + '/api/3/field/{fieldKey}/option'
             .replace('{' + 'fieldKey' + '}', encodeURIComponent(String(fieldKey)));
         let localVarQueryParameters: any = {};
@@ -5088,7 +5088,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: IssueFieldOption;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: IssueFieldOption;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -5109,7 +5109,7 @@ export class DefaultApi {
      * @param fieldKey The field key is specified in the following format: **$(app-key)__$(field-key)**. For example, _example-add-on__example-issue-field_.
      * @param optionId The ID of the option to be deleted.
      */
-    public comAtlassianJiraRestV2IssueFieldIssueFieldOptionResourceDeleteIssueFieldOptionDelete (fieldKey: string, optionId: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
+    public comAtlassianJiraRestV2IssueFieldIssueFieldOptionResourceDeleteIssueFieldOptionDelete (fieldKey: string, optionId: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/field/{fieldKey}/option/{optionId}'
             .replace('{' + 'fieldKey' + '}', encodeURIComponent(String(fieldKey)))
             .replace('{' + 'optionId' + '}', encodeURIComponent(String(optionId)));
@@ -5151,7 +5151,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body?: any;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -5172,7 +5172,7 @@ export class DefaultApi {
      * @param startAt The starting index of the returned objects.
      * @param maxResults The maximum number of items to return per page.
      */
-    public comAtlassianJiraRestV2IssueFieldIssueFieldOptionResourceGetAllIssueFieldOptionsGet (fieldKey: string, startAt?: number, maxResults?: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: PageOfIssueFieldOption;  }> {
+    public comAtlassianJiraRestV2IssueFieldIssueFieldOptionResourceGetAllIssueFieldOptionsGet (fieldKey: string, startAt?: number, maxResults?: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: PageOfIssueFieldOption;  }> {
         const localVarPath = this.basePath + '/api/3/field/{fieldKey}/option'
             .replace('{' + 'fieldKey' + '}', encodeURIComponent(String(fieldKey)));
         let localVarQueryParameters: any = {};
@@ -5216,7 +5216,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: PageOfIssueFieldOption;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: PageOfIssueFieldOption;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -5237,7 +5237,7 @@ export class DefaultApi {
      * @param fieldKey The field key is specified in the following format: **$(app-key)__$(field-key)**. For example, _example-add-on__example-issue-field_.
      * @param optionId The ID of the option to be returned.
      */
-    public comAtlassianJiraRestV2IssueFieldIssueFieldOptionResourceGetIssueFieldOptionGet (fieldKey: string, optionId: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: IssueFieldOption;  }> {
+    public comAtlassianJiraRestV2IssueFieldIssueFieldOptionResourceGetIssueFieldOptionGet (fieldKey: string, optionId: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: IssueFieldOption;  }> {
         const localVarPath = this.basePath + '/api/3/field/{fieldKey}/option/{optionId}'
             .replace('{' + 'fieldKey' + '}', encodeURIComponent(String(fieldKey)))
             .replace('{' + 'optionId' + '}', encodeURIComponent(String(optionId)));
@@ -5279,7 +5279,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: IssueFieldOption;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: IssueFieldOption;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -5302,7 +5302,7 @@ export class DefaultApi {
      * @param maxResults The maximum number of items to return per page.
      * @param projectId Filters the results to options that are only available in the specified project.
      */
-    public comAtlassianJiraRestV2IssueFieldIssueFieldOptionResourceGetSelectableIssueFieldOptionsGet (fieldKey: string, startAt?: number, maxResults?: number, projectId?: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: PageOfIssueFieldOption;  }> {
+    public comAtlassianJiraRestV2IssueFieldIssueFieldOptionResourceGetSelectableIssueFieldOptionsGet (fieldKey: string, startAt?: number, maxResults?: number, projectId?: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: PageOfIssueFieldOption;  }> {
         const localVarPath = this.basePath + '/api/3/field/{fieldKey}/option/suggestions/edit'
             .replace('{' + 'fieldKey' + '}', encodeURIComponent(String(fieldKey)));
         let localVarQueryParameters: any = {};
@@ -5350,7 +5350,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: PageOfIssueFieldOption;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: PageOfIssueFieldOption;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -5373,7 +5373,7 @@ export class DefaultApi {
      * @param maxResults The maximum number of items to return per page.
      * @param projectId Filters the results to options that are only available in the specified project.
      */
-    public comAtlassianJiraRestV2IssueFieldIssueFieldOptionResourceGetVisibleIssueFieldOptionsGet (fieldKey: string, startAt?: number, maxResults?: number, projectId?: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: PageOfIssueFieldOption;  }> {
+    public comAtlassianJiraRestV2IssueFieldIssueFieldOptionResourceGetVisibleIssueFieldOptionsGet (fieldKey: string, startAt?: number, maxResults?: number, projectId?: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: PageOfIssueFieldOption;  }> {
         const localVarPath = this.basePath + '/api/3/field/{fieldKey}/option/suggestions/search'
             .replace('{' + 'fieldKey' + '}', encodeURIComponent(String(fieldKey)));
         let localVarQueryParameters: any = {};
@@ -5421,7 +5421,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: PageOfIssueFieldOption;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: PageOfIssueFieldOption;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -5444,7 +5444,7 @@ export class DefaultApi {
      * @param replaceWith The ID of the option that will replace the currently selected option.
      * @param jql A JQL query that specifies the issues to be updated. For example, _project&#x3D;10000_.
      */
-    public comAtlassianJiraRestV2IssueFieldIssueFieldOptionResourceReplaceIssueFieldOptionDelete (fieldKey: string, optionId: number, replaceWith?: number, jql?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
+    public comAtlassianJiraRestV2IssueFieldIssueFieldOptionResourceReplaceIssueFieldOptionDelete (fieldKey: string, optionId: number, replaceWith?: number, jql?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/field/{fieldKey}/option/{optionId}/issue'
             .replace('{' + 'fieldKey' + '}', encodeURIComponent(String(fieldKey)))
             .replace('{' + 'optionId' + '}', encodeURIComponent(String(optionId)));
@@ -5494,7 +5494,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body?: any;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -5515,7 +5515,7 @@ export class DefaultApi {
      * @param optionId The ID of the option to be updated.
      * @param issueFieldOption
      */
-    public comAtlassianJiraRestV2IssueFieldIssueFieldOptionResourceUpdateIssueFieldOptionPut (fieldKey: string, optionId: number, issueFieldOption: IssueFieldOption, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: IssueFieldOption;  }> {
+    public comAtlassianJiraRestV2IssueFieldIssueFieldOptionResourceUpdateIssueFieldOptionPut (fieldKey: string, optionId: number, issueFieldOption: IssueFieldOption, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: IssueFieldOption;  }> {
         const localVarPath = this.basePath + '/api/3/field/{fieldKey}/option/{optionId}'
             .replace('{' + 'fieldKey' + '}', encodeURIComponent(String(fieldKey)))
             .replace('{' + 'optionId' + '}', encodeURIComponent(String(optionId)));
@@ -5563,7 +5563,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: IssueFieldOption;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: IssueFieldOption;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -5583,7 +5583,7 @@ export class DefaultApi {
      * @summary Create custom field
      * @param customFieldDefinitionJsonBean Definition of the custom field to be created
      */
-    public comAtlassianJiraRestV2IssueFieldResourceCreateCustomFieldPost (customFieldDefinitionJsonBean: CustomFieldDefinitionJsonBean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Field;  }> {
+    public comAtlassianJiraRestV2IssueFieldResourceCreateCustomFieldPost (customFieldDefinitionJsonBean: CustomFieldDefinitionJsonBean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Field;  }> {
         const localVarPath = this.basePath + '/api/3/field';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -5619,7 +5619,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: Field;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: Field;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -5638,7 +5638,7 @@ export class DefaultApi {
      * Returns all issue fields in Jira, both system and custom fields.  **[Permissions](#permissions) required:** Permission to access Jira, however the following rules apply:  *   Fields that cannot be added to the issue navigator are always returned. *   Fields that cannot be placed on an issue screen are always returned. *   Fields that depend on global Jira settings are only returned if the setting is enabled. That is, timetracking fields, subtasks, votes, and watches. *   For all other fields, this method only returns the fields that the current user has permission to see (that is, the field can be used in at least one project that the user can see).
      * @summary Get fields
      */
-    public comAtlassianJiraRestV2IssueFieldResourceGetFieldsGet (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Array<Field>;  }> {
+    public comAtlassianJiraRestV2IssueFieldResourceGetFieldsGet (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<Field>;  }> {
         const localVarPath = this.basePath + '/api/3/field';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -5668,7 +5668,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: Array<Field>;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: Array<Field>;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -5696,7 +5696,7 @@ export class DefaultApi {
      * @param caseInsensitive Indicates whether the search for groups should be case insensitive.
      * @param excludeConnectAddons Indicates whether Connect app users and groups should be excluded from the search results. If an invalid value is provided, the default value is used.
      */
-    public comAtlassianJiraRestV2IssueGroupAndUserPickerResourceFindUsersAndGroupsGet (query: string, maxResults?: number, showAvatar?: boolean, fieldId?: string, projectId?: Array<string>, issueTypeId?: Array<string>, avatarSize?: 'xsmall' | 'xsmall@2x' | 'xsmall@3x' | 'small' | 'small@2x' | 'small@3x' | 'medium' | 'medium@2x' | 'medium@3x' | 'large' | 'large@2x' | 'large@3x' | 'xlarge' | 'xlarge@2x' | 'xlarge@3x' | 'xxlarge' | 'xxlarge@2x' | 'xxlarge@3x' | 'xxxlarge' | 'xxxlarge@2x' | 'xxxlarge@3x', caseInsensitive?: boolean, excludeConnectAddons?: boolean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: FoundUsersAndGroups;  }> {
+    public comAtlassianJiraRestV2IssueGroupAndUserPickerResourceFindUsersAndGroupsGet (query: string, maxResults?: number, showAvatar?: boolean, fieldId?: string, projectId?: Array<string>, issueTypeId?: Array<string>, avatarSize?: 'xsmall' | 'xsmall@2x' | 'xsmall@3x' | 'small' | 'small@2x' | 'small@3x' | 'medium' | 'medium@2x' | 'medium@3x' | 'large' | 'large@2x' | 'large@3x' | 'xlarge' | 'xlarge@2x' | 'xlarge@3x' | 'xxlarge' | 'xxlarge@2x' | 'xxlarge@3x' | 'xxxlarge' | 'xxxlarge@2x' | 'xxxlarge@3x', caseInsensitive?: boolean, excludeConnectAddons?: boolean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: FoundUsersAndGroups;  }> {
         const localVarPath = this.basePath + '/api/3/groupuserpicker';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -5767,7 +5767,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: FoundUsersAndGroups;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: FoundUsersAndGroups;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -5789,7 +5789,7 @@ export class DefaultApi {
      * @param exclude A group to exclude from the result. To exclude multiple groups, provide multiple copies of this parameter. For example, &#x60;exclude&#x3D;group1&amp;exclude&#x3D;group2&#x60;.
      * @param maxResults The maximum number of groups to return. The maximum number of groups that can be returned is limited by the system property &#x60;jira.ajax.autocomplete.limit&#x60;.
      */
-    public comAtlassianJiraRestV2IssueGroupPickerResourceFindGroupsGet (query?: string, exclude?: Array<string>, maxResults?: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: FoundGroups;  }> {
+    public comAtlassianJiraRestV2IssueGroupPickerResourceFindGroupsGet (query?: string, exclude?: Array<string>, maxResults?: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: FoundGroups;  }> {
         const localVarPath = this.basePath + '/api/3/groups/picker';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -5829,7 +5829,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: FoundGroups;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: FoundGroups;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -5850,7 +5850,7 @@ export class DefaultApi {
      * @param groupname The name of the group (case sensitive).
      * @param updateUserToGroupBean The user to add to the group.
      */
-    public comAtlassianJiraRestV2IssueGroupResourceAddUserToGroupPost (groupname: string, updateUserToGroupBean: UpdateUserToGroupBean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Group;  }> {
+    public comAtlassianJiraRestV2IssueGroupResourceAddUserToGroupPost (groupname: string, updateUserToGroupBean: UpdateUserToGroupBean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Group;  }> {
         const localVarPath = this.basePath + '/api/3/group/user';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -5895,7 +5895,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: Group;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: Group;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -5915,7 +5915,7 @@ export class DefaultApi {
      * @summary Create group
      * @param addGroupBean The name of the group.
      */
-    public comAtlassianJiraRestV2IssueGroupResourceCreateGroupPost (addGroupBean: AddGroupBean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Group;  }> {
+    public comAtlassianJiraRestV2IssueGroupResourceCreateGroupPost (addGroupBean: AddGroupBean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Group;  }> {
         const localVarPath = this.basePath + '/api/3/group';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -5951,7 +5951,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: Group;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: Group;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -5972,7 +5972,7 @@ export class DefaultApi {
      * @param groupname The name of the group.
      * @param expand List of fields to expand.
      */
-    public comAtlassianJiraRestV2IssueGroupResourceGetGroupGet (groupname: string, expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Group;  }> {
+    public comAtlassianJiraRestV2IssueGroupResourceGetGroupGet (groupname: string, expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Group;  }> {
         const localVarPath = this.basePath + '/api/3/group';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -6015,7 +6015,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: Group;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: Group;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -6038,7 +6038,7 @@ export class DefaultApi {
      * @param startAt The index of the first item to return in a page of results (page offset).
      * @param maxResults The maximum number of items to return per page. The maximum is &#x60;50&#x60;.
      */
-    public comAtlassianJiraRestV2IssueGroupResourceGetUsersFromGroupGet (groupname: string, includeInactiveUsers?: boolean, startAt?: number, maxResults?: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: PageOfUserDetails;  }> {
+    public comAtlassianJiraRestV2IssueGroupResourceGetUsersFromGroupGet (groupname: string, includeInactiveUsers?: boolean, startAt?: number, maxResults?: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: PageOfUserDetails;  }> {
         const localVarPath = this.basePath + '/api/3/group/member';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -6089,7 +6089,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: PageOfUserDetails;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: PageOfUserDetails;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -6110,7 +6110,7 @@ export class DefaultApi {
      * @param groupname The name of the group.
      * @param swapGroup The group to transfer restrictions to. Only comments and worklogs are transferred. If restrictions are not transferred, comments and worklogs will be inaccessible after the deletion.
      */
-    public comAtlassianJiraRestV2IssueGroupResourceRemoveGroupDelete (groupname: string, swapGroup?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
+    public comAtlassianJiraRestV2IssueGroupResourceRemoveGroupDelete (groupname: string, swapGroup?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/group';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -6153,7 +6153,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body?: any;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -6174,7 +6174,7 @@ export class DefaultApi {
      * @param username This parameter has been deprecated due to privacy changes. Use &#x60;accountId&#x60; instead. See the [migration guide](https://developer.atlassian.com/cloud/jira/platform/deprecation-notice-user-privacy-api-migration-guide/) for details.  The username of the user. Required, unless &#x60;accountId&#x60; is specified.
      * @param accountId The accountId of the user, which uniquely identifies the user across all Atlassian products. For example, _384093:32b4d9w0-f6a5-3535-11a3-9c8c88d10192_. Required, unless &#x60;username&#x60; is specified.
      */
-    public comAtlassianJiraRestV2IssueGroupResourceRemoveUserFromGroupDelete (groupname: string, username?: string, accountId?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
+    public comAtlassianJiraRestV2IssueGroupResourceRemoveUserFromGroupDelete (groupname: string, username?: string, accountId?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/group/user';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -6221,7 +6221,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body?: any;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -6241,7 +6241,7 @@ export class DefaultApi {
      * @param issueIdOrKey The ID or key of the issue that attachments are added to.
      * @param file
      */
-    public comAtlassianJiraRestV2IssueIssueAttachmentsResourceAddAttachmentPost (issueIdOrKey: string, file: Buffer, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Array<Attachment>;  }> {
+    public comAtlassianJiraRestV2IssueIssueAttachmentsResourceAddAttachmentPost (issueIdOrKey: string, file: Buffer, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<Attachment>;  }> {
         const localVarPath = this.basePath + '/api/3/issue/{issueIdOrKey}/attachments'
             .replace('{' + 'issueIdOrKey' + '}', encodeURIComponent(String(issueIdOrKey)));
         let localVarQueryParameters: any = {};
@@ -6287,7 +6287,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: Array<Attachment>;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: Array<Attachment>;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -6309,7 +6309,7 @@ export class DefaultApi {
      * @param startAt The index of the first item to return in a page of results (page offset).
      * @param maxResults The maximum number of items to return per page. The maximum is &#x60;100&#x60;.
      */
-    public comAtlassianJiraRestV2IssueIssueChangelogResourceGetChangeLogsGet (issueIdOrKey: string, startAt?: number, maxResults?: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: PageOfChangelog;  }> {
+    public comAtlassianJiraRestV2IssueIssueChangelogResourceGetChangeLogsGet (issueIdOrKey: string, startAt?: number, maxResults?: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: PageOfChangelog;  }> {
         const localVarPath = this.basePath + '/api/3/issue/{issueIdOrKey}/changelog'
             .replace('{' + 'issueIdOrKey' + '}', encodeURIComponent(String(issueIdOrKey)));
         let localVarQueryParameters: any = {};
@@ -6353,7 +6353,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: PageOfChangelog;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: PageOfChangelog;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -6374,7 +6374,7 @@ export class DefaultApi {
      * @param issueCommentListRequestBean The list of comment IDs.
      * @param expand Use [expand](#expansion) to include additional information about comments in the response. This parameter accepts multiple values separated by a comma:  *   &#x60;renderedBody&#x60; Returns the comment body rendered in HTML. *   &#x60;properties&#x60; Returns the comment&#39;s properties.
      */
-    public comAtlassianJiraRestV2IssueIssueCommentListResourceGetCommentsByIdsPost (issueCommentListRequestBean: IssueCommentListRequestBean, expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: PageOfComment;  }> {
+    public comAtlassianJiraRestV2IssueIssueCommentListResourceGetCommentsByIdsPost (issueCommentListRequestBean: IssueCommentListRequestBean, expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: PageOfComment;  }> {
         const localVarPath = this.basePath + '/api/3/comment/list';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -6414,7 +6414,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: PageOfComment;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: PageOfComment;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -6436,7 +6436,7 @@ export class DefaultApi {
      * @param comment
      * @param expand Use [expand](#expansion) to include additional information about comments in the response. This parameter accepts &#x60;renderedBody&#x60;, which returns the comment body rendered in HTML.
      */
-    public comAtlassianJiraRestV2IssueIssueCommentResourceAddCommentPost (issueIdOrKey: string, comment: Comment, expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Comment;  }> {
+    public comAtlassianJiraRestV2IssueIssueCommentResourceAddCommentPost (issueIdOrKey: string, comment: Comment, expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Comment;  }> {
         const localVarPath = this.basePath + '/api/3/issue/{issueIdOrKey}/comment'
             .replace('{' + 'issueIdOrKey' + '}', encodeURIComponent(String(issueIdOrKey)));
         let localVarQueryParameters: any = {};
@@ -6482,7 +6482,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: Comment;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: Comment;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -6503,7 +6503,7 @@ export class DefaultApi {
      * @param issueIdOrKey The ID or key of the issue.
      * @param id The ID of the comment.
      */
-    public comAtlassianJiraRestV2IssueIssueCommentResourceDeleteCommentDelete (issueIdOrKey: string, id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
+    public comAtlassianJiraRestV2IssueIssueCommentResourceDeleteCommentDelete (issueIdOrKey: string, id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/issue/{issueIdOrKey}/comment/{id}'
             .replace('{' + 'issueIdOrKey' + '}', encodeURIComponent(String(issueIdOrKey)))
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
@@ -6545,7 +6545,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body?: any;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -6566,7 +6566,7 @@ export class DefaultApi {
      * @param id The ID of the comment.
      * @param expand Use [expand](#expansion) to include additional information about comments in the response. This parameter accepts &#x60;renderedBody&#x60;, which returns the comment body rendered in HTML.
      */
-    public comAtlassianJiraRestV2IssueIssueCommentResourceGetCommentGet (issueIdOrKey: string, id: string, expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Comment;  }> {
+    public comAtlassianJiraRestV2IssueIssueCommentResourceGetCommentGet (issueIdOrKey: string, id: string, expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Comment;  }> {
         const localVarPath = this.basePath + '/api/3/issue/{issueIdOrKey}/comment/{id}'
             .replace('{' + 'issueIdOrKey' + '}', encodeURIComponent(String(issueIdOrKey)))
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
@@ -6612,7 +6612,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: Comment;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: Comment;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -6636,7 +6636,7 @@ export class DefaultApi {
      * @param orderBy The field to order returned comments by. Only accepts the value _created_, which orders comments by their created date.
      * @param expand Use [expand](#expansion) to include additional information about comments in the response. This parameter accepts &#x60;renderedBody&#x60;, which returns the comment body rendered in HTML.
      */
-    public comAtlassianJiraRestV2IssueIssueCommentResourceGetCommentsGet (issueIdOrKey: string, startAt?: number, maxResults?: number, orderBy?: 'created' | '-created', expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: PageOfComments;  }> {
+    public comAtlassianJiraRestV2IssueIssueCommentResourceGetCommentsGet (issueIdOrKey: string, startAt?: number, maxResults?: number, orderBy?: 'created' | '-created', expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: PageOfComments;  }> {
         const localVarPath = this.basePath + '/api/3/issue/{issueIdOrKey}/comment'
             .replace('{' + 'issueIdOrKey' + '}', encodeURIComponent(String(issueIdOrKey)));
         let localVarQueryParameters: any = {};
@@ -6688,7 +6688,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: PageOfComments;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: PageOfComments;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -6711,7 +6711,7 @@ export class DefaultApi {
      * @param comment
      * @param expand Use [expand](#expansion) to include additional information about comments in the response. This parameter accepts &#x60;renderedBody&#x60;, which returns the comment body rendered in HTML.
      */
-    public comAtlassianJiraRestV2IssueIssueCommentResourceUpdateCommentPut (issueIdOrKey: string, id: string, comment: Comment, expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Comment;  }> {
+    public comAtlassianJiraRestV2IssueIssueCommentResourceUpdateCommentPut (issueIdOrKey: string, id: string, comment: Comment, expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Comment;  }> {
         const localVarPath = this.basePath + '/api/3/issue/{issueIdOrKey}/comment/{id}'
             .replace('{' + 'issueIdOrKey' + '}', encodeURIComponent(String(issueIdOrKey)))
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
@@ -6763,7 +6763,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: Comment;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: Comment;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -6783,7 +6783,7 @@ export class DefaultApi {
      * @summary Create issue link type
      * @param issueLinkType
      */
-    public comAtlassianJiraRestV2IssueIssueLinkTypeResourceCreateIssueLinkTypePost (issueLinkType: IssueLinkType, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: IssueLinkType;  }> {
+    public comAtlassianJiraRestV2IssueIssueLinkTypeResourceCreateIssueLinkTypePost (issueLinkType: IssueLinkType, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: IssueLinkType;  }> {
         const localVarPath = this.basePath + '/api/3/issueLinkType';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -6819,7 +6819,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: IssueLinkType;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: IssueLinkType;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -6839,7 +6839,7 @@ export class DefaultApi {
      * @summary Delete issue link type
      * @param issueLinkTypeId The ID of the issue link type.
      */
-    public comAtlassianJiraRestV2IssueIssueLinkTypeResourceDeleteIssueLinkTypeDelete (issueLinkTypeId: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
+    public comAtlassianJiraRestV2IssueIssueLinkTypeResourceDeleteIssueLinkTypeDelete (issueLinkTypeId: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/issueLinkType/{issueLinkTypeId}'
             .replace('{' + 'issueLinkTypeId' + '}', encodeURIComponent(String(issueLinkTypeId)));
         let localVarQueryParameters: any = {};
@@ -6875,7 +6875,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body?: any;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -6894,7 +6894,7 @@ export class DefaultApi {
      * @summary Get issue link type
      * @param issueLinkTypeId The ID of the issue link type.
      */
-    public comAtlassianJiraRestV2IssueIssueLinkTypeResourceGetIssueLinkTypeGet (issueLinkTypeId: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: IssueLinkType;  }> {
+    public comAtlassianJiraRestV2IssueIssueLinkTypeResourceGetIssueLinkTypeGet (issueLinkTypeId: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: IssueLinkType;  }> {
         const localVarPath = this.basePath + '/api/3/issueLinkType/{issueLinkTypeId}'
             .replace('{' + 'issueLinkTypeId' + '}', encodeURIComponent(String(issueLinkTypeId)));
         let localVarQueryParameters: any = {};
@@ -6930,7 +6930,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: IssueLinkType;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: IssueLinkType;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -6949,7 +6949,7 @@ export class DefaultApi {
      * Returns a list of all issue link types.  To use this operation, the site must have [issue linking](https://confluence.atlassian.com/x/yoXKM) enabled.  **[Permissions](#permissions) required:** _Browse projects_ [project permission](https://confluence.atlassian.com/x/yodKLg). Users with permission to access Jira can call this method, but an empty list is returned.
      * @summary Get issue link types
      */
-    public comAtlassianJiraRestV2IssueIssueLinkTypeResourceGetIssueLinkTypesGet (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: IssueLinkTypes;  }> {
+    public comAtlassianJiraRestV2IssueIssueLinkTypeResourceGetIssueLinkTypesGet (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: IssueLinkTypes;  }> {
         const localVarPath = this.basePath + '/api/3/issueLinkType';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -6979,7 +6979,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: IssueLinkTypes;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: IssueLinkTypes;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -7000,7 +7000,7 @@ export class DefaultApi {
      * @param issueLinkTypeId The ID of the issue link type.
      * @param issueLinkType
      */
-    public comAtlassianJiraRestV2IssueIssueLinkTypeResourceUpdateIssueLinkTypePut (issueLinkTypeId: string, issueLinkType: IssueLinkType, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: IssueLinkType;  }> {
+    public comAtlassianJiraRestV2IssueIssueLinkTypeResourceUpdateIssueLinkTypePut (issueLinkTypeId: string, issueLinkType: IssueLinkType, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: IssueLinkType;  }> {
         const localVarPath = this.basePath + '/api/3/issueLinkType/{issueLinkTypeId}'
             .replace('{' + 'issueLinkTypeId' + '}', encodeURIComponent(String(issueLinkTypeId)));
         let localVarQueryParameters: any = {};
@@ -7040,7 +7040,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: IssueLinkType;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: IssueLinkType;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -7061,7 +7061,7 @@ export class DefaultApi {
      * @param issueIdOrKey The key or ID of the issue.
      * @param propertyKey The key of the property.
      */
-    public comAtlassianJiraRestV2IssueIssuePropertyResourceDeleteIssuePropertyDelete (issueIdOrKey: string, propertyKey: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
+    public comAtlassianJiraRestV2IssueIssuePropertyResourceDeleteIssuePropertyDelete (issueIdOrKey: string, propertyKey: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/issue/{issueIdOrKey}/properties/{propertyKey}'
             .replace('{' + 'issueIdOrKey' + '}', encodeURIComponent(String(issueIdOrKey)))
             .replace('{' + 'propertyKey' + '}', encodeURIComponent(String(propertyKey)));
@@ -7103,7 +7103,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body?: any;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -7123,7 +7123,7 @@ export class DefaultApi {
      * @param issueIdOrKey The key or ID of the issue.
      * @param propertyKey The key of the property.
      */
-    public comAtlassianJiraRestV2IssueIssuePropertyResourceGetIssuePropertyGet (issueIdOrKey: string, propertyKey: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: EntityProperty;  }> {
+    public comAtlassianJiraRestV2IssueIssuePropertyResourceGetIssuePropertyGet (issueIdOrKey: string, propertyKey: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: EntityProperty;  }> {
         const localVarPath = this.basePath + '/api/3/issue/{issueIdOrKey}/properties/{propertyKey}'
             .replace('{' + 'issueIdOrKey' + '}', encodeURIComponent(String(issueIdOrKey)))
             .replace('{' + 'propertyKey' + '}', encodeURIComponent(String(propertyKey)));
@@ -7165,7 +7165,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: EntityProperty;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: EntityProperty;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -7185,7 +7185,7 @@ export class DefaultApi {
      * @summary Get issue property keys
      * @param issueIdOrKey The key or ID of the issue.
      */
-    public comAtlassianJiraRestV2IssueIssuePropertyResourceGetIssuePropertyKeysGet (issueIdOrKey: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: PropertyKeys;  }> {
+    public comAtlassianJiraRestV2IssueIssuePropertyResourceGetIssuePropertyKeysGet (issueIdOrKey: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: PropertyKeys;  }> {
         const localVarPath = this.basePath + '/api/3/issue/{issueIdOrKey}/properties'
             .replace('{' + 'issueIdOrKey' + '}', encodeURIComponent(String(issueIdOrKey)));
         let localVarQueryParameters: any = {};
@@ -7221,7 +7221,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: PropertyKeys;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: PropertyKeys;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -7243,7 +7243,7 @@ export class DefaultApi {
      * @param propertyKey The key of the issue property. The maximum length is 255 characters.
      * @param body
      */
-    public comAtlassianJiraRestV2IssueIssuePropertyResourceSetIssuePropertyPut (issueIdOrKey: string, propertyKey: string, body: any, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
+    public comAtlassianJiraRestV2IssueIssuePropertyResourceSetIssuePropertyPut (issueIdOrKey: string, propertyKey: string, body: any, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/issue/{issueIdOrKey}/properties/{propertyKey}'
             .replace('{' + 'issueIdOrKey' + '}', encodeURIComponent(String(issueIdOrKey)))
             .replace('{' + 'propertyKey' + '}', encodeURIComponent(String(propertyKey)));
@@ -7291,7 +7291,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body?: any;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -7310,7 +7310,7 @@ export class DefaultApi {
      * @summary Add vote
      * @param issueIdOrKey The ID or key of the issue.
      */
-    public comAtlassianJiraRestV2IssueIssueResourceAddVotePost (issueIdOrKey: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
+    public comAtlassianJiraRestV2IssueIssueResourceAddVotePost (issueIdOrKey: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/issue/{issueIdOrKey}/votes'
             .replace('{' + 'issueIdOrKey' + '}', encodeURIComponent(String(issueIdOrKey)));
         let localVarQueryParameters: any = {};
@@ -7346,7 +7346,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body?: any;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -7366,7 +7366,7 @@ export class DefaultApi {
      * @param issueIdOrKey The ID or key of the issue.
      * @param body The account ID or name of the user. The use of name is deprecated due to privacy changes. Use account ID instead. See the [migration guide](https://developer.atlassian.com/cloud/jira/platform/deprecation-notice-user-privacy-api-migration-guide/) for details.
      */
-    public comAtlassianJiraRestV2IssueIssueResourceAddWatcherPost (issueIdOrKey: string, body: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
+    public comAtlassianJiraRestV2IssueIssueResourceAddWatcherPost (issueIdOrKey: string, body: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/issue/{issueIdOrKey}/watchers'
             .replace('{' + 'issueIdOrKey' + '}', encodeURIComponent(String(issueIdOrKey)));
         let localVarQueryParameters: any = {};
@@ -7408,7 +7408,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body?: any;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -7428,7 +7428,7 @@ export class DefaultApi {
      * @param issueIdOrKey The ID or key of the issue to be assigned.
      * @param user The request object with the user that the issue will be assigned to.
      */
-    public comAtlassianJiraRestV2IssueIssueResourceAssignIssuePut (issueIdOrKey: string, user: User, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
+    public comAtlassianJiraRestV2IssueIssueResourceAssignIssuePut (issueIdOrKey: string, user: User, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/issue/{issueIdOrKey}/assignee'
             .replace('{' + 'issueIdOrKey' + '}', encodeURIComponent(String(issueIdOrKey)));
         let localVarQueryParameters: any = {};
@@ -7470,7 +7470,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body?: any;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -7490,7 +7490,7 @@ export class DefaultApi {
      * @param issueUpdateDetails
      * @param updateHistory Indicates whether the project in which the issue is created is added to the user&#39;s **Recently viewed** project list, as shown under **Projects** in Jira.
      */
-    public comAtlassianJiraRestV2IssueIssueResourceCreateIssuePost (issueUpdateDetails: IssueUpdateDetails, updateHistory?: boolean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: CreatedIssue;  }> {
+    public comAtlassianJiraRestV2IssueIssueResourceCreateIssuePost (issueUpdateDetails: IssueUpdateDetails, updateHistory?: boolean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: CreatedIssue;  }> {
         const localVarPath = this.basePath + '/api/3/issue';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -7530,7 +7530,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: CreatedIssue;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: CreatedIssue;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -7550,7 +7550,7 @@ export class DefaultApi {
      * @summary Bulk issue create
      * @param issuesUpdateBean
      */
-    public comAtlassianJiraRestV2IssueIssueResourceCreateIssuesPost (issuesUpdateBean: IssuesUpdateBean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: CreatedIssues;  }> {
+    public comAtlassianJiraRestV2IssueIssueResourceCreateIssuesPost (issuesUpdateBean: IssuesUpdateBean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: CreatedIssues;  }> {
         const localVarPath = this.basePath + '/api/3/issue/bulk';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -7586,7 +7586,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: CreatedIssues;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: CreatedIssues;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -7607,7 +7607,7 @@ export class DefaultApi {
      * @param issueIdOrKey The ID or key of the issue.
      * @param remoteIssueLinkRequest
      */
-    public comAtlassianJiraRestV2IssueIssueResourceCreateOrUpdateRemoteIssueLinkPost (issueIdOrKey: string, remoteIssueLinkRequest: RemoteIssueLinkRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: RemoteIssueLinkIdentifies;  }> {
+    public comAtlassianJiraRestV2IssueIssueResourceCreateOrUpdateRemoteIssueLinkPost (issueIdOrKey: string, remoteIssueLinkRequest: RemoteIssueLinkRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: RemoteIssueLinkIdentifies;  }> {
         const localVarPath = this.basePath + '/api/3/issue/{issueIdOrKey}/remotelink'
             .replace('{' + 'issueIdOrKey' + '}', encodeURIComponent(String(issueIdOrKey)));
         let localVarQueryParameters: any = {};
@@ -7649,7 +7649,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: RemoteIssueLinkIdentifies;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: RemoteIssueLinkIdentifies;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -7670,7 +7670,7 @@ export class DefaultApi {
      * @param issueIdOrKey The ID or key of the issue.
      * @param deleteSubtasks Indicates whether the issue&#39;s sub-tasks are deleted when the issue is deleted.
      */
-    public comAtlassianJiraRestV2IssueIssueResourceDeleteIssueDelete (issueIdOrKey: string, deleteSubtasks?: 'true' | 'false', options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
+    public comAtlassianJiraRestV2IssueIssueResourceDeleteIssueDelete (issueIdOrKey: string, deleteSubtasks?: 'true' | 'false', options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/issue/{issueIdOrKey}'
             .replace('{' + 'issueIdOrKey' + '}', encodeURIComponent(String(issueIdOrKey)));
         let localVarQueryParameters: any = {};
@@ -7710,7 +7710,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body?: any;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -7730,7 +7730,7 @@ export class DefaultApi {
      * @param issueIdOrKey The ID or key of the issue.
      * @param globalId The global ID of a remote issue link.
      */
-    public comAtlassianJiraRestV2IssueIssueResourceDeleteRemoteIssueLinkByGlobalIdDelete (issueIdOrKey: string, globalId: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
+    public comAtlassianJiraRestV2IssueIssueResourceDeleteRemoteIssueLinkByGlobalIdDelete (issueIdOrKey: string, globalId: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/issue/{issueIdOrKey}/remotelink'
             .replace('{' + 'issueIdOrKey' + '}', encodeURIComponent(String(issueIdOrKey)));
         let localVarQueryParameters: any = {};
@@ -7775,7 +7775,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body?: any;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -7795,7 +7795,7 @@ export class DefaultApi {
      * @param issueIdOrKey The ID or key of the issue.
      * @param linkId The ID of a remote issue link.
      */
-    public comAtlassianJiraRestV2IssueIssueResourceDeleteRemoteIssueLinkByIdDelete (issueIdOrKey: string, linkId: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
+    public comAtlassianJiraRestV2IssueIssueResourceDeleteRemoteIssueLinkByIdDelete (issueIdOrKey: string, linkId: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/issue/{issueIdOrKey}/remotelink/{linkId}'
             .replace('{' + 'issueIdOrKey' + '}', encodeURIComponent(String(issueIdOrKey)))
             .replace('{' + 'linkId' + '}', encodeURIComponent(String(linkId)));
@@ -7837,7 +7837,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body?: any;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -7857,7 +7857,7 @@ export class DefaultApi {
      * @param issueIdOrKey The ID or key of the issue.
      * @param issueUpdateDetails
      */
-    public comAtlassianJiraRestV2IssueIssueResourceDoTransitionPost (issueIdOrKey: string, issueUpdateDetails: IssueUpdateDetails, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
+    public comAtlassianJiraRestV2IssueIssueResourceDoTransitionPost (issueIdOrKey: string, issueUpdateDetails: IssueUpdateDetails, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/issue/{issueIdOrKey}/transitions'
             .replace('{' + 'issueIdOrKey' + '}', encodeURIComponent(String(issueIdOrKey)));
         let localVarQueryParameters: any = {};
@@ -7899,7 +7899,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body?: any;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -7922,7 +7922,7 @@ export class DefaultApi {
      * @param overrideScreenSecurity Indicates whether screen security should be overridden to enable hidden fields to be edited. Available to Connect app users with admin permissions.
      * @param overrideEditableFlag Indicates whether screen security should be overridden to enable uneditable fields to be edited. Available to Connect app users with admin permissions.
      */
-    public comAtlassianJiraRestV2IssueIssueResourceEditIssuePut (issueIdOrKey: string, issueUpdateDetails: IssueUpdateDetails, notifyUsers?: boolean, overrideScreenSecurity?: boolean, overrideEditableFlag?: boolean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
+    public comAtlassianJiraRestV2IssueIssueResourceEditIssuePut (issueIdOrKey: string, issueUpdateDetails: IssueUpdateDetails, notifyUsers?: boolean, overrideScreenSecurity?: boolean, overrideEditableFlag?: boolean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/issue/{issueIdOrKey}'
             .replace('{' + 'issueIdOrKey' + '}', encodeURIComponent(String(issueIdOrKey)));
         let localVarQueryParameters: any = {};
@@ -7976,7 +7976,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body?: any;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -7999,7 +7999,7 @@ export class DefaultApi {
      * @param issuetypeNames Comma-separated list of issue type names. This parameter may be specified multiple times. For example, &#x60;issuetypeNames&#x3D;name1,name2&amp;issuetypeNames&#x3D;name3&#x60;. This parameter may be provided with &#x60;issuetypeIds&#x60;.
      * @param expand Use [expand](#expansion) to include additional information about issue metadata in the response. This parameter accepts &#x60;projects.issuetypes.fields&#x60; which returns information about the fields in the issue creation screen for each issue type. Fields hidden from the screen are not returned. Use the information to populate the &#x60;fields&#x60; and &#x60;update&#x60; fields in [Create issue](#api-api-3-issue-post) and [Create issues](#api-api-3-issue-bulk-post).
      */
-    public comAtlassianJiraRestV2IssueIssueResourceGetCreateIssueMetaGet (projectIds?: Array<string>, projectKeys?: Array<string>, issuetypeIds?: Array<string>, issuetypeNames?: Array<string>, expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: IssueCreateMetadata;  }> {
+    public comAtlassianJiraRestV2IssueIssueResourceGetCreateIssueMetaGet (projectIds?: Array<string>, projectKeys?: Array<string>, issuetypeIds?: Array<string>, issuetypeNames?: Array<string>, expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: IssueCreateMetadata;  }> {
         const localVarPath = this.basePath + '/api/3/issue/createmeta';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -8049,7 +8049,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: IssueCreateMetadata;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: IssueCreateMetadata;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -8071,7 +8071,7 @@ export class DefaultApi {
      * @param overrideScreenSecurity Indicates whether hidden fields should be returned. Available to connect app users with admin permissions.
      * @param overrideEditableFlag Indicates whether non-editable fields should be returned. Available to connect app users with admin permissions.
      */
-    public comAtlassianJiraRestV2IssueIssueResourceGetEditIssueMetaGet (issueIdOrKey: string, overrideScreenSecurity?: boolean, overrideEditableFlag?: boolean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: IssueUpdateMetadata;  }> {
+    public comAtlassianJiraRestV2IssueIssueResourceGetEditIssueMetaGet (issueIdOrKey: string, overrideScreenSecurity?: boolean, overrideEditableFlag?: boolean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: IssueUpdateMetadata;  }> {
         const localVarPath = this.basePath + '/api/3/issue/{issueIdOrKey}/editmeta'
             .replace('{' + 'issueIdOrKey' + '}', encodeURIComponent(String(issueIdOrKey)));
         let localVarQueryParameters: any = {};
@@ -8115,7 +8115,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: IssueUpdateMetadata;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: IssueUpdateMetadata;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -8140,7 +8140,7 @@ export class DefaultApi {
      * @param properties A comma-separated list of issue properties to return for the issue. Allowed values:  *   &#x60;*all&#x60; Returns all issue properties. *   Any issue property key, prefixed with a minus to exclude.  Examples:  *   &#x60;*all&#x60; Returns all properties. *   &#x60;*all,-prop1&#x60; Returns all properties except &#x60;prop1&#x60;. *   &#x60;prop1,prop2&#x60; Returns &#x60;prop1&#x60; and &#x60;prop2&#x60; properties.  This parameter may be specified multiple times. For example, &#x60;properties&#x3D;prop1,prop2&amp; properties&#x3D;prop3&#x60;.
      * @param updateHistory Indicates whether the project in which the issue is created is added to the user&#39;s **Recently viewed** project list, as shown under **Projects** in Jira. This also populates the [JQL issues search](#api-api-3-search-get) &#x60;lastViewed&#x60; field.
      */
-    public comAtlassianJiraRestV2IssueIssueResourceGetIssueGet (issueIdOrKey: string, fields?: Array<string>, fieldsByKeys?: boolean, expand?: string, properties?: Array<string>, updateHistory?: boolean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Issue;  }> {
+    public comAtlassianJiraRestV2IssueIssueResourceGetIssueGet (issueIdOrKey: string, fields?: Array<string>, fieldsByKeys?: boolean, expand?: string, properties?: Array<string>, updateHistory?: boolean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Issue;  }> {
         const localVarPath = this.basePath + '/api/3/issue/{issueIdOrKey}'
             .replace('{' + 'issueIdOrKey' + '}', encodeURIComponent(String(issueIdOrKey)));
         let localVarQueryParameters: any = {};
@@ -8196,7 +8196,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: Issue;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: Issue;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -8221,7 +8221,7 @@ export class DefaultApi {
      * @param showSubTasks Indicate whether to include subtasks in the suggestions list.
      * @param showSubTaskParent When &#x60;currentIssueKey&#x60; is a sub-task, indicates whether to include the parent issue in the suggestions if it matches the query.
      */
-    public comAtlassianJiraRestV2IssueIssueResourceGetIssuePickerResourceGet (query?: string, currentJQL?: string, currentIssueKey?: string, currentProjectId?: string, showSubTasks?: boolean, showSubTaskParent?: boolean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: IssuePickerSuggestions;  }> {
+    public comAtlassianJiraRestV2IssueIssueResourceGetIssuePickerResourceGet (query?: string, currentJQL?: string, currentIssueKey?: string, currentProjectId?: string, showSubTasks?: boolean, showSubTaskParent?: boolean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: IssuePickerSuggestions;  }> {
         const localVarPath = this.basePath + '/api/3/issue/picker';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -8275,7 +8275,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: IssuePickerSuggestions;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: IssuePickerSuggestions;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -8295,7 +8295,7 @@ export class DefaultApi {
      * @summary Get issue watchers
      * @param issueIdOrKey The ID or key of the issue.
      */
-    public comAtlassianJiraRestV2IssueIssueResourceGetIssueWatchersGet (issueIdOrKey: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Watchers;  }> {
+    public comAtlassianJiraRestV2IssueIssueResourceGetIssueWatchersGet (issueIdOrKey: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Watchers;  }> {
         const localVarPath = this.basePath + '/api/3/issue/{issueIdOrKey}/watchers'
             .replace('{' + 'issueIdOrKey' + '}', encodeURIComponent(String(issueIdOrKey)));
         let localVarQueryParameters: any = {};
@@ -8331,7 +8331,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: Watchers;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: Watchers;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -8352,7 +8352,7 @@ export class DefaultApi {
      * @param issueIdOrKey The ID or key of the issue.
      * @param linkId The ID of the remote issue link.
      */
-    public comAtlassianJiraRestV2IssueIssueResourceGetRemoteIssueLinkByIdGet (issueIdOrKey: string, linkId: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: RemoteIssueLink;  }> {
+    public comAtlassianJiraRestV2IssueIssueResourceGetRemoteIssueLinkByIdGet (issueIdOrKey: string, linkId: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: RemoteIssueLink;  }> {
         const localVarPath = this.basePath + '/api/3/issue/{issueIdOrKey}/remotelink/{linkId}'
             .replace('{' + 'issueIdOrKey' + '}', encodeURIComponent(String(issueIdOrKey)))
             .replace('{' + 'linkId' + '}', encodeURIComponent(String(linkId)));
@@ -8394,7 +8394,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: RemoteIssueLink;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: RemoteIssueLink;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -8415,7 +8415,7 @@ export class DefaultApi {
      * @param issueIdOrKey The ID or key of the issue.
      * @param globalId The global ID of the remote issue link.
      */
-    public comAtlassianJiraRestV2IssueIssueResourceGetRemoteIssueLinksGet (issueIdOrKey: string, globalId?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: RemoteIssueLink;  }> {
+    public comAtlassianJiraRestV2IssueIssueResourceGetRemoteIssueLinksGet (issueIdOrKey: string, globalId?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: RemoteIssueLink;  }> {
         const localVarPath = this.basePath + '/api/3/issue/{issueIdOrKey}/remotelink'
             .replace('{' + 'issueIdOrKey' + '}', encodeURIComponent(String(issueIdOrKey)));
         let localVarQueryParameters: any = {};
@@ -8455,7 +8455,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: RemoteIssueLink;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: RemoteIssueLink;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -8478,7 +8478,7 @@ export class DefaultApi {
      * @param transitionId The ID of the transition.
      * @param skipRemoteOnlyCondition Indicates whether transitions with the condition _Hide From User Condition_ are included in the response.
      */
-    public comAtlassianJiraRestV2IssueIssueResourceGetTransitionsGet (issueIdOrKey: string, expand?: string, transitionId?: string, skipRemoteOnlyCondition?: boolean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Transitions;  }> {
+    public comAtlassianJiraRestV2IssueIssueResourceGetTransitionsGet (issueIdOrKey: string, expand?: string, transitionId?: string, skipRemoteOnlyCondition?: boolean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Transitions;  }> {
         const localVarPath = this.basePath + '/api/3/issue/{issueIdOrKey}/transitions'
             .replace('{' + 'issueIdOrKey' + '}', encodeURIComponent(String(issueIdOrKey)));
         let localVarQueryParameters: any = {};
@@ -8526,7 +8526,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: Transitions;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: Transitions;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -8546,7 +8546,7 @@ export class DefaultApi {
      * @summary Get votes
      * @param issueIdOrKey The ID or key of the issue.
      */
-    public comAtlassianJiraRestV2IssueIssueResourceGetVotesGet (issueIdOrKey: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Votes;  }> {
+    public comAtlassianJiraRestV2IssueIssueResourceGetVotesGet (issueIdOrKey: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Votes;  }> {
         const localVarPath = this.basePath + '/api/3/issue/{issueIdOrKey}/votes'
             .replace('{' + 'issueIdOrKey' + '}', encodeURIComponent(String(issueIdOrKey)));
         let localVarQueryParameters: any = {};
@@ -8582,7 +8582,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: Votes;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: Votes;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -8603,7 +8603,7 @@ export class DefaultApi {
      * @param issueIdOrKey ID or key of the issue that the notification is sent for.
      * @param notification The request object for the notification and recipients.
      */
-    public comAtlassianJiraRestV2IssueIssueResourceNotifyPost (issueIdOrKey: string, notification: Notification, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
+    public comAtlassianJiraRestV2IssueIssueResourceNotifyPost (issueIdOrKey: string, notification: Notification, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/issue/{issueIdOrKey}/notify'
             .replace('{' + 'issueIdOrKey' + '}', encodeURIComponent(String(issueIdOrKey)));
         let localVarQueryParameters: any = {};
@@ -8645,7 +8645,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body?: any;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -8664,7 +8664,7 @@ export class DefaultApi {
      * @summary Delete vote
      * @param issueIdOrKey The ID or key of the issue.
      */
-    public comAtlassianJiraRestV2IssueIssueResourceRemoveVoteDelete (issueIdOrKey: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
+    public comAtlassianJiraRestV2IssueIssueResourceRemoveVoteDelete (issueIdOrKey: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/issue/{issueIdOrKey}/votes'
             .replace('{' + 'issueIdOrKey' + '}', encodeURIComponent(String(issueIdOrKey)));
         let localVarQueryParameters: any = {};
@@ -8700,7 +8700,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body?: any;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -8721,7 +8721,7 @@ export class DefaultApi {
      * @param username This parameter has been deprecated due to privacy changes. Use &#x60;accountId&#x60; instead. See the [migration guide](https://developer.atlassian.com/cloud/jira/platform/deprecation-notice-user-privacy-api-migration-guide/) for details.  The username of the user. For example, _admin_. Required, unless &#x60;accountId&#x60; is specified.
      * @param accountId The accountId of the user, which uniquely identifies the user across all Atlassian products. For example, _384093:32b4d9w0-f6a5-3535-11a3-9c8c88d10192_. Required, unless &#x60;username&#x60; is specified.
      */
-    public comAtlassianJiraRestV2IssueIssueResourceRemoveWatcherDelete (issueIdOrKey: string, username?: string, accountId?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
+    public comAtlassianJiraRestV2IssueIssueResourceRemoveWatcherDelete (issueIdOrKey: string, username?: string, accountId?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/issue/{issueIdOrKey}/watchers'
             .replace('{' + 'issueIdOrKey' + '}', encodeURIComponent(String(issueIdOrKey)));
         let localVarQueryParameters: any = {};
@@ -8765,7 +8765,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body?: any;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -8786,7 +8786,7 @@ export class DefaultApi {
      * @param linkId The ID of the remote issue link.
      * @param remoteIssueLinkRequest
      */
-    public comAtlassianJiraRestV2IssueIssueResourceUpdateRemoteIssueLinkPut (issueIdOrKey: string, linkId: string, remoteIssueLinkRequest: RemoteIssueLinkRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
+    public comAtlassianJiraRestV2IssueIssueResourceUpdateRemoteIssueLinkPut (issueIdOrKey: string, linkId: string, remoteIssueLinkRequest: RemoteIssueLinkRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/issue/{issueIdOrKey}/remotelink/{linkId}'
             .replace('{' + 'issueIdOrKey' + '}', encodeURIComponent(String(issueIdOrKey)))
             .replace('{' + 'linkId' + '}', encodeURIComponent(String(linkId)));
@@ -8834,7 +8834,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body?: any;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -8853,7 +8853,7 @@ export class DefaultApi {
      * @summary Get issue security level
      * @param id The ID of the issue security level.
      */
-    public comAtlassianJiraRestV2IssueIssueSecurityLevelResourceGetIssueSecurityLevelGet (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: SecurityLevel;  }> {
+    public comAtlassianJiraRestV2IssueIssueSecurityLevelResourceGetIssueSecurityLevelGet (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: SecurityLevel;  }> {
         const localVarPath = this.basePath + '/api/3/securitylevel/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -8889,7 +8889,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: SecurityLevel;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: SecurityLevel;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -8909,7 +8909,7 @@ export class DefaultApi {
      * @summary Get issue security scheme
      * @param id The ID of the issue security scheme. Use the [Get issue security schemes](#api-api-3-issuesecurityschemes-get) operation to get a list of issue security scheme IDs.
      */
-    public comAtlassianJiraRestV2IssueIssueSecuritySchemeResourceGetIssueSecuritySchemeGet (id: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: SecurityScheme;  }> {
+    public comAtlassianJiraRestV2IssueIssueSecuritySchemeResourceGetIssueSecuritySchemeGet (id: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: SecurityScheme;  }> {
         const localVarPath = this.basePath + '/api/3/issuesecurityschemes/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -8945,7 +8945,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: SecurityScheme;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: SecurityScheme;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -8964,7 +8964,7 @@ export class DefaultApi {
      * Returns all [issue security schemes](https://confluence.atlassian.com/x/J4lKLg).  **[Permissions](#permissions) required:** _Administer Jira_ [global permission](https://confluence.atlassian.com/x/x4dKLg).
      * @summary Get issue security schemes
      */
-    public comAtlassianJiraRestV2IssueIssueSecuritySchemeResourceGetIssueSecuritySchemesGet (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: SecuritySchemes;  }> {
+    public comAtlassianJiraRestV2IssueIssueSecuritySchemeResourceGetIssueSecuritySchemesGet (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: SecuritySchemes;  }> {
         const localVarPath = this.basePath + '/api/3/issuesecurityschemes';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -8994,7 +8994,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: SecuritySchemes;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: SecuritySchemes;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -9015,7 +9015,7 @@ export class DefaultApi {
      * @param issueTypeId The ID of the issue type.
      * @param propertyKey The key of the property. Use [Get issue type property keys](#api-api-3-issuetype-issueTypeId-properties-get) to get a list of all issue type property keys.
      */
-    public comAtlassianJiraRestV2IssueIssueTypePropertyResourceDeleteIssueTypePropertyDelete (issueTypeId: string, propertyKey: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
+    public comAtlassianJiraRestV2IssueIssueTypePropertyResourceDeleteIssueTypePropertyDelete (issueTypeId: string, propertyKey: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/issuetype/{issueTypeId}/properties/{propertyKey}'
             .replace('{' + 'issueTypeId' + '}', encodeURIComponent(String(issueTypeId)))
             .replace('{' + 'propertyKey' + '}', encodeURIComponent(String(propertyKey)));
@@ -9057,7 +9057,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body?: any;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -9077,7 +9077,7 @@ export class DefaultApi {
      * @param issueTypeId The ID of the issue type.
      * @param propertyKey The key of the property. Use [Get issue type property keys](#api-api-3-issuetype-issueTypeId-properties-get) to get a list of all issue type property keys.
      */
-    public comAtlassianJiraRestV2IssueIssueTypePropertyResourceGetIssueTypePropertyGet (issueTypeId: string, propertyKey: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: EntityProperty;  }> {
+    public comAtlassianJiraRestV2IssueIssueTypePropertyResourceGetIssueTypePropertyGet (issueTypeId: string, propertyKey: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: EntityProperty;  }> {
         const localVarPath = this.basePath + '/api/3/issuetype/{issueTypeId}/properties/{propertyKey}'
             .replace('{' + 'issueTypeId' + '}', encodeURIComponent(String(issueTypeId)))
             .replace('{' + 'propertyKey' + '}', encodeURIComponent(String(propertyKey)));
@@ -9119,7 +9119,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: EntityProperty;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: EntityProperty;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -9139,7 +9139,7 @@ export class DefaultApi {
      * @summary Get issue type property keys
      * @param issueTypeId The ID of the issue type.
      */
-    public comAtlassianJiraRestV2IssueIssueTypePropertyResourceGetIssueTypePropertyKeysGet (issueTypeId: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: PropertyKeys;  }> {
+    public comAtlassianJiraRestV2IssueIssueTypePropertyResourceGetIssueTypePropertyKeysGet (issueTypeId: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: PropertyKeys;  }> {
         const localVarPath = this.basePath + '/api/3/issuetype/{issueTypeId}/properties'
             .replace('{' + 'issueTypeId' + '}', encodeURIComponent(String(issueTypeId)));
         let localVarQueryParameters: any = {};
@@ -9175,7 +9175,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: PropertyKeys;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: PropertyKeys;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -9197,7 +9197,7 @@ export class DefaultApi {
      * @param propertyKey The key of the issue type property. The maximum length is 255 characters.
      * @param body
      */
-    public comAtlassianJiraRestV2IssueIssueTypePropertyResourceSetIssueTypePropertyPut (issueTypeId: string, propertyKey: string, body: any, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
+    public comAtlassianJiraRestV2IssueIssueTypePropertyResourceSetIssueTypePropertyPut (issueTypeId: string, propertyKey: string, body: any, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/issuetype/{issueTypeId}/properties/{propertyKey}'
             .replace('{' + 'issueTypeId' + '}', encodeURIComponent(String(issueTypeId)))
             .replace('{' + 'propertyKey' + '}', encodeURIComponent(String(propertyKey)));
@@ -9245,7 +9245,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body?: any;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -9268,7 +9268,7 @@ export class DefaultApi {
      * @param x The X coordinate of the top-left corner of the crop region.
      * @param y The Y coordinate of the top-left corner of the crop region.
      */
-    public comAtlassianJiraRestV2IssueIssueTypeResourceCreateIssueTypeAvatarPost (id: string, size: number, body: any, x?: number, y?: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Avatar;  }> {
+    public comAtlassianJiraRestV2IssueIssueTypeResourceCreateIssueTypeAvatarPost (id: string, size: number, body: any, x?: number, y?: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Avatar;  }> {
         const localVarPath = this.basePath + '/api/3/issuetype/{id}/avatar2'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -9327,7 +9327,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: Avatar;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: Avatar;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -9347,7 +9347,7 @@ export class DefaultApi {
      * @summary Create issue type
      * @param issueTypeCreateBean
      */
-    public comAtlassianJiraRestV2IssueIssueTypeResourceCreateIssueTypePost (issueTypeCreateBean: IssueTypeCreateBean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: IssueType;  }> {
+    public comAtlassianJiraRestV2IssueIssueTypeResourceCreateIssueTypePost (issueTypeCreateBean: IssueTypeCreateBean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: IssueType;  }> {
         const localVarPath = this.basePath + '/api/3/issuetype';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -9383,7 +9383,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: IssueType;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: IssueType;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -9404,7 +9404,7 @@ export class DefaultApi {
      * @param id The ID of the issue type.
      * @param alternativeIssueTypeId The ID of the replacement issue type.
      */
-    public comAtlassianJiraRestV2IssueIssueTypeResourceDeleteIssueTypeDelete (id: string, alternativeIssueTypeId?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
+    public comAtlassianJiraRestV2IssueIssueTypeResourceDeleteIssueTypeDelete (id: string, alternativeIssueTypeId?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/issuetype/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -9444,7 +9444,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body?: any;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -9463,7 +9463,7 @@ export class DefaultApi {
      * @summary Get alternative issue types
      * @param id The ID of the issue type.
      */
-    public comAtlassianJiraRestV2IssueIssueTypeResourceGetAlternativeIssueTypesGet (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Array<IssueType>;  }> {
+    public comAtlassianJiraRestV2IssueIssueTypeResourceGetAlternativeIssueTypesGet (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<IssueType>;  }> {
         const localVarPath = this.basePath + '/api/3/issuetype/{id}/alternatives'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -9499,7 +9499,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: Array<IssueType>;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: Array<IssueType>;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -9518,7 +9518,7 @@ export class DefaultApi {
      * Returns all issue types.  **[Permissions](#permissions) required:** Permission to access Jira, however, issue types are only returned as follows:  *   if the user has the _Administer Jira_ [global permission](https://confluence.atlassian.com/x/x4dKLg), all issue types are returned. *   if the user has the _Browse projects_ [project permission](https://confluence.atlassian.com/x/yodKLg) for one or more projects, the issue types associated with the projects the user has permission to browse are returned.
      * @summary Get all issue types for user
      */
-    public comAtlassianJiraRestV2IssueIssueTypeResourceGetIssueAllTypesGet (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Array<IssueType>;  }> {
+    public comAtlassianJiraRestV2IssueIssueTypeResourceGetIssueAllTypesGet (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<IssueType>;  }> {
         const localVarPath = this.basePath + '/api/3/issuetype';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -9548,7 +9548,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: Array<IssueType>;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: Array<IssueType>;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -9568,7 +9568,7 @@ export class DefaultApi {
      * @summary Get issue type
      * @param id The ID of the issue type.
      */
-    public comAtlassianJiraRestV2IssueIssueTypeResourceGetIssueTypeGet (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: IssueType;  }> {
+    public comAtlassianJiraRestV2IssueIssueTypeResourceGetIssueTypeGet (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: IssueType;  }> {
         const localVarPath = this.basePath + '/api/3/issuetype/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -9604,7 +9604,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: IssueType;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: IssueType;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -9625,7 +9625,7 @@ export class DefaultApi {
      * @param id The ID of the issue type.
      * @param issueTypeUpdateBean
      */
-    public comAtlassianJiraRestV2IssueIssueTypeResourceUpdateIssueTypePut (id: string, issueTypeUpdateBean: IssueTypeUpdateBean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: IssueType;  }> {
+    public comAtlassianJiraRestV2IssueIssueTypeResourceUpdateIssueTypePut (id: string, issueTypeUpdateBean: IssueTypeUpdateBean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: IssueType;  }> {
         const localVarPath = this.basePath + '/api/3/issuetype/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -9667,7 +9667,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: IssueType;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: IssueType;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -9694,7 +9694,7 @@ export class DefaultApi {
      * @param expand Use [expand](#expansion) to include additional information about work logs in the response. This parameter accepts multiple values separated by a comma:  *   &#x60;properties&#x60; Returns worklog properties.
      * @param overrideEditableFlag Indicates whether the worklog entry should be added to the issue even if the issue is not editable, because jira.issue.editable set to false or missing. For example, the issue is closed. Only connect app users with admin scope permission can use this flag.
      */
-    public comAtlassianJiraRestV2IssueIssueWorklogsResourceAddWorklogPost (issueIdOrKey: string, worklog: Worklog, notifyUsers?: boolean, adjustEstimate?: 'new' | 'leave' | 'manual' | 'auto', newEstimate?: string, reduceBy?: string, expand?: string, overrideEditableFlag?: boolean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Worklog;  }> {
+    public comAtlassianJiraRestV2IssueIssueWorklogsResourceAddWorklogPost (issueIdOrKey: string, worklog: Worklog, notifyUsers?: boolean, adjustEstimate?: 'new' | 'leave' | 'manual' | 'auto', newEstimate?: string, reduceBy?: string, expand?: string, overrideEditableFlag?: boolean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Worklog;  }> {
         const localVarPath = this.basePath + '/api/3/issue/{issueIdOrKey}/worklog'
             .replace('{' + 'issueIdOrKey' + '}', encodeURIComponent(String(issueIdOrKey)));
         let localVarQueryParameters: any = {};
@@ -9760,7 +9760,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: Worklog;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: Worklog;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -9786,7 +9786,7 @@ export class DefaultApi {
      * @param increaseBy The amount to increase the issue&#39;s remaining estimate by, as days (#d), hours (#h), or minutes (#m or #). For example, _2d_. Required when &#x60;adjustEstimate&#x60; is &#x60;manual&#x60;.
      * @param overrideEditableFlag Indicates whether the work log entry should be added to the issue even if the issue is not editable, because jira.issue.editable set to false or missing. For example, the issue is closed. Only connect app users with admin permissions can use this flag.
      */
-    public comAtlassianJiraRestV2IssueIssueWorklogsResourceDeleteWorklogDelete (issueIdOrKey: string, id: string, notifyUsers?: boolean, adjustEstimate?: 'new' | 'leave' | 'manual' | 'auto', newEstimate?: string, increaseBy?: string, overrideEditableFlag?: boolean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
+    public comAtlassianJiraRestV2IssueIssueWorklogsResourceDeleteWorklogDelete (issueIdOrKey: string, id: string, notifyUsers?: boolean, adjustEstimate?: 'new' | 'leave' | 'manual' | 'auto', newEstimate?: string, increaseBy?: string, overrideEditableFlag?: boolean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/issue/{issueIdOrKey}/worklog/{id}'
             .replace('{' + 'issueIdOrKey' + '}', encodeURIComponent(String(issueIdOrKey)))
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
@@ -9848,7 +9848,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body?: any;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -9870,7 +9870,7 @@ export class DefaultApi {
      * @param maxResults The maximum number of items to return per page. The maximum is &#x60;1048576&#x60;.
      * @param expand Use [expand](#expansion) to include additional information about worklogs in the response. This parameter accepts multiple values separated by a comma:  *   &#x60;properties&#x60; Returns worklog properties.
      */
-    public comAtlassianJiraRestV2IssueIssueWorklogsResourceGetIssueWorklogGet (issueIdOrKey: string, startAt?: number, maxResults?: number, expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: PageOfWorklogs;  }> {
+    public comAtlassianJiraRestV2IssueIssueWorklogsResourceGetIssueWorklogGet (issueIdOrKey: string, startAt?: number, maxResults?: number, expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: PageOfWorklogs;  }> {
         const localVarPath = this.basePath + '/api/3/issue/{issueIdOrKey}/worklog'
             .replace('{' + 'issueIdOrKey' + '}', encodeURIComponent(String(issueIdOrKey)));
         let localVarQueryParameters: any = {};
@@ -9918,7 +9918,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: PageOfWorklogs;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: PageOfWorklogs;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -9940,7 +9940,7 @@ export class DefaultApi {
      * @param id The ID of the worklog.
      * @param expand Use [expand](#expansion) to include additional information about work logs in the response. This parameter accepts multiple values separated by a comma:  *   &#x60;properties&#x60; Returns worklog properties.
      */
-    public comAtlassianJiraRestV2IssueIssueWorklogsResourceGetWorklogGet (issueIdOrKey: string, id: string, expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Worklog;  }> {
+    public comAtlassianJiraRestV2IssueIssueWorklogsResourceGetWorklogGet (issueIdOrKey: string, id: string, expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Worklog;  }> {
         const localVarPath = this.basePath + '/api/3/issue/{issueIdOrKey}/worklog/{id}'
             .replace('{' + 'issueIdOrKey' + '}', encodeURIComponent(String(issueIdOrKey)))
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
@@ -9986,7 +9986,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: Worklog;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: Worklog;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -10013,7 +10013,7 @@ export class DefaultApi {
      * @param expand Use [expand](#expansion) to include additional information about worklogs in the response. This parameter accepts multiple values separated by a comma:  *   &#x60;properties&#x60; Returns worklog properties.
      * @param overrideEditableFlag Indicates whether the worklog should be added to the issue even if the issue is not editable. For example, because the issue is closed. Only connect app users with admin permissions can use this flag.
      */
-    public comAtlassianJiraRestV2IssueIssueWorklogsResourceUpdateWorklogPut (issueIdOrKey: string, id: string, worklog: Worklog, notifyUsers?: boolean, adjustEstimate?: 'new' | 'leave' | 'manual' | 'auto', newEstimate?: string, expand?: string, overrideEditableFlag?: boolean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Worklog;  }> {
+    public comAtlassianJiraRestV2IssueIssueWorklogsResourceUpdateWorklogPut (issueIdOrKey: string, id: string, worklog: Worklog, notifyUsers?: boolean, adjustEstimate?: 'new' | 'leave' | 'manual' | 'auto', newEstimate?: string, expand?: string, overrideEditableFlag?: boolean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Worklog;  }> {
         const localVarPath = this.basePath + '/api/3/issue/{issueIdOrKey}/worklog/{id}'
             .replace('{' + 'issueIdOrKey' + '}', encodeURIComponent(String(issueIdOrKey)))
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
@@ -10081,7 +10081,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: Worklog;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: Worklog;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -10101,7 +10101,7 @@ export class DefaultApi {
      * @summary Delete issue link
      * @param linkId The ID of the issue link.
      */
-    public comAtlassianJiraRestV2IssueLinkIssueResourceDeleteIssueLinkDelete (linkId: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
+    public comAtlassianJiraRestV2IssueLinkIssueResourceDeleteIssueLinkDelete (linkId: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/issueLink/{linkId}'
             .replace('{' + 'linkId' + '}', encodeURIComponent(String(linkId)));
         let localVarQueryParameters: any = {};
@@ -10137,7 +10137,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body?: any;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -10156,7 +10156,7 @@ export class DefaultApi {
      * @summary Get issue link
      * @param linkId The ID of the issue link.
      */
-    public comAtlassianJiraRestV2IssueLinkIssueResourceGetIssueLinkGet (linkId: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: IssueLink;  }> {
+    public comAtlassianJiraRestV2IssueLinkIssueResourceGetIssueLinkGet (linkId: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: IssueLink;  }> {
         const localVarPath = this.basePath + '/api/3/issueLink/{linkId}'
             .replace('{' + 'linkId' + '}', encodeURIComponent(String(linkId)));
         let localVarQueryParameters: any = {};
@@ -10192,7 +10192,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: IssueLink;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: IssueLink;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -10212,7 +10212,7 @@ export class DefaultApi {
      * @summary Create issue link
      * @param linkIssueRequestJsonBean The issue link request.
      */
-    public comAtlassianJiraRestV2IssueLinkIssueResourceLinkIssuesPost (linkIssueRequestJsonBean: LinkIssueRequestJsonBean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
+    public comAtlassianJiraRestV2IssueLinkIssueResourceLinkIssuesPost (linkIssueRequestJsonBean: LinkIssueRequestJsonBean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/issueLink';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -10248,7 +10248,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body?: any;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -10266,7 +10266,7 @@ export class DefaultApi {
      * Returns the list of all issue priorities.  **[Permissions](#permissions) required:** Permission to access Jira.
      * @summary Get priorities
      */
-    public comAtlassianJiraRestV2IssuePriorityResourceGetPrioritiesGet (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Array<Priority>;  }> {
+    public comAtlassianJiraRestV2IssuePriorityResourceGetPrioritiesGet (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<Priority>;  }> {
         const localVarPath = this.basePath + '/api/3/priority';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -10296,7 +10296,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: Array<Priority>;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: Array<Priority>;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -10316,7 +10316,7 @@ export class DefaultApi {
      * @summary Get priority
      * @param id The ID of the issue priority.
      */
-    public comAtlassianJiraRestV2IssuePriorityResourceGetPriorityGet (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Priority;  }> {
+    public comAtlassianJiraRestV2IssuePriorityResourceGetPriorityGet (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Priority;  }> {
         const localVarPath = this.basePath + '/api/3/priority/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -10352,7 +10352,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: Priority;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: Priority;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -10372,7 +10372,7 @@ export class DefaultApi {
      * @summary Create project category
      * @param projectCategory
      */
-    public comAtlassianJiraRestV2IssueProjectCategoryResourceCreateProjectCategoryPost (projectCategory: ProjectCategory, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: ProjectCategory;  }> {
+    public comAtlassianJiraRestV2IssueProjectCategoryResourceCreateProjectCategoryPost (projectCategory: ProjectCategory, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: ProjectCategory;  }> {
         const localVarPath = this.basePath + '/api/3/projectCategory';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -10408,7 +10408,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: ProjectCategory;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: ProjectCategory;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -10427,7 +10427,7 @@ export class DefaultApi {
      * Returns all project categories.  **[Permissions](#permissions) required:** Permission to access Jira.
      * @summary Get all project categories
      */
-    public comAtlassianJiraRestV2IssueProjectCategoryResourceGetAllProjectCategoriesGet (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Array<ProjectCategory>;  }> {
+    public comAtlassianJiraRestV2IssueProjectCategoryResourceGetAllProjectCategoriesGet (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<ProjectCategory>;  }> {
         const localVarPath = this.basePath + '/api/3/projectCategory';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -10457,7 +10457,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: Array<ProjectCategory>;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: Array<ProjectCategory>;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -10477,7 +10477,7 @@ export class DefaultApi {
      * @summary Get project category by id
      * @param id The ID of the project category.
      */
-    public comAtlassianJiraRestV2IssueProjectCategoryResourceGetProjectCategoryByIdGet (id: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: ProjectCategory;  }> {
+    public comAtlassianJiraRestV2IssueProjectCategoryResourceGetProjectCategoryByIdGet (id: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: ProjectCategory;  }> {
         const localVarPath = this.basePath + '/api/3/projectCategory/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -10513,7 +10513,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: ProjectCategory;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: ProjectCategory;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -10533,7 +10533,7 @@ export class DefaultApi {
      * @summary Delete project category
      * @param id ID of the project category to delete.
      */
-    public comAtlassianJiraRestV2IssueProjectCategoryResourceRemoveProjectCategoryDelete (id: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
+    public comAtlassianJiraRestV2IssueProjectCategoryResourceRemoveProjectCategoryDelete (id: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/projectCategory/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -10569,7 +10569,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body?: any;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -10589,7 +10589,7 @@ export class DefaultApi {
      * @param id
      * @param projectCategory
      */
-    public comAtlassianJiraRestV2IssueProjectCategoryResourceUpdateProjectCategoryPut (id: number, projectCategory: ProjectCategory, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: UpdatedProjectCategory;  }> {
+    public comAtlassianJiraRestV2IssueProjectCategoryResourceUpdateProjectCategoryPut (id: number, projectCategory: ProjectCategory, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: UpdatedProjectCategory;  }> {
         const localVarPath = this.basePath + '/api/3/projectCategory/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -10631,7 +10631,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: UpdatedProjectCategory;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: UpdatedProjectCategory;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -10651,7 +10651,7 @@ export class DefaultApi {
      * @summary Get project issue security scheme
      * @param projectKeyOrId The project ID or project key (case sensitive).
      */
-    public comAtlassianJiraRestV2IssueProjectIssueSecurityLevelSchemeResourceGetIssueSecuritySchemeGet (projectKeyOrId: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: SecurityScheme;  }> {
+    public comAtlassianJiraRestV2IssueProjectIssueSecurityLevelSchemeResourceGetIssueSecuritySchemeGet (projectKeyOrId: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: SecurityScheme;  }> {
         const localVarPath = this.basePath + '/api/3/project/{projectKeyOrId}/issuesecuritylevelscheme'
             .replace('{' + 'projectKeyOrId' + '}', encodeURIComponent(String(projectKeyOrId)));
         let localVarQueryParameters: any = {};
@@ -10687,7 +10687,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: SecurityScheme;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: SecurityScheme;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -10708,7 +10708,7 @@ export class DefaultApi {
      * @param projectIdOrKey The project ID or project key (case sensitive).
      * @param currentMember A boolean indicating if the roles should be filtered to only include those which the authenticated user is a member of.
      */
-    public comAtlassianJiraRestV2IssueProjectProjectRoleDetailsResourceGetProjectRoleDetailsGet (projectIdOrKey: string, currentMember?: boolean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Array<ProjectRole>;  }> {
+    public comAtlassianJiraRestV2IssueProjectProjectRoleDetailsResourceGetProjectRoleDetailsGet (projectIdOrKey: string, currentMember?: boolean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<ProjectRole>;  }> {
         const localVarPath = this.basePath + '/api/3/project/{projectIdOrKey}/roledetails'
             .replace('{' + 'projectIdOrKey' + '}', encodeURIComponent(String(projectIdOrKey)));
         let localVarQueryParameters: any = {};
@@ -10748,7 +10748,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: Array<ProjectRole>;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: Array<ProjectRole>;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -10770,7 +10770,7 @@ export class DefaultApi {
      * @param id The ID of the project role. Use [Get all project roles](#api-api-3-role-get) to get a list of project role IDs.
      * @param actorsMap The groups or users to associate with the project role for this project. Provide the user account ID or group name.
      */
-    public comAtlassianJiraRestV2IssueProjectProjectRoleResourceAddActorUsersPost (projectIdOrKey: string, id: number, actorsMap: ActorsMap, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: ProjectRole;  }> {
+    public comAtlassianJiraRestV2IssueProjectProjectRoleResourceAddActorUsersPost (projectIdOrKey: string, id: number, actorsMap: ActorsMap, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: ProjectRole;  }> {
         const localVarPath = this.basePath + '/api/3/project/{projectIdOrKey}/role/{id}'
             .replace('{' + 'projectIdOrKey' + '}', encodeURIComponent(String(projectIdOrKey)))
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
@@ -10818,7 +10818,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: ProjectRole;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: ProjectRole;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -10841,7 +10841,7 @@ export class DefaultApi {
      * @param user The user account ID of the user to remove from the project role.
      * @param group The name of the group to remove from the project role.
      */
-    public comAtlassianJiraRestV2IssueProjectProjectRoleResourceDeleteActorDelete (projectIdOrKey: string, id: number, user?: string, group?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
+    public comAtlassianJiraRestV2IssueProjectProjectRoleResourceDeleteActorDelete (projectIdOrKey: string, id: number, user?: string, group?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/project/{projectIdOrKey}/role/{id}'
             .replace('{' + 'projectIdOrKey' + '}', encodeURIComponent(String(projectIdOrKey)))
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
@@ -10891,7 +10891,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body?: any;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -10911,7 +10911,7 @@ export class DefaultApi {
      * @param projectIdOrKey The project ID or project key (case sensitive).
      * @param id The ID of the project role. Use [Get all project roles](#api-api-3-role-get) to get a list of project role IDs.
      */
-    public comAtlassianJiraRestV2IssueProjectProjectRoleResourceGetProjectRoleGet (projectIdOrKey: string, id: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: ProjectRole;  }> {
+    public comAtlassianJiraRestV2IssueProjectProjectRoleResourceGetProjectRoleGet (projectIdOrKey: string, id: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: ProjectRole;  }> {
         const localVarPath = this.basePath + '/api/3/project/{projectIdOrKey}/role/{id}'
             .replace('{' + 'projectIdOrKey' + '}', encodeURIComponent(String(projectIdOrKey)))
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
@@ -10953,7 +10953,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: ProjectRole;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: ProjectRole;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -10973,7 +10973,7 @@ export class DefaultApi {
      * @summary Get project roles for project
      * @param projectIdOrKey The project ID or project key (case sensitive).
      */
-    public comAtlassianJiraRestV2IssueProjectProjectRoleResourceGetProjectRolesGet (projectIdOrKey: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: { [key: string]: string; };  }> {
+    public comAtlassianJiraRestV2IssueProjectProjectRoleResourceGetProjectRolesGet (projectIdOrKey: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: { [key: string]: string; };  }> {
         const localVarPath = this.basePath + '/api/3/project/{projectIdOrKey}/role'
             .replace('{' + 'projectIdOrKey' + '}', encodeURIComponent(String(projectIdOrKey)));
         let localVarQueryParameters: any = {};
@@ -11009,7 +11009,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: { [key: string]: string; };  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: { [key: string]: string; };  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -11031,7 +11031,7 @@ export class DefaultApi {
      * @param id The ID of the project role. Use [Get all project roles](#api-api-3-role-get) to get a list of project role IDs.
      * @param projectRoleActorsUpdateBean The groups or users to associate with the project role for this project. Provide the user account ID or group name.
      */
-    public comAtlassianJiraRestV2IssueProjectProjectRoleResourceSetActorsPut (projectIdOrKey: string, id: number, projectRoleActorsUpdateBean: ProjectRoleActorsUpdateBean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: ProjectRole;  }> {
+    public comAtlassianJiraRestV2IssueProjectProjectRoleResourceSetActorsPut (projectIdOrKey: string, id: number, projectRoleActorsUpdateBean: ProjectRoleActorsUpdateBean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: ProjectRole;  }> {
         const localVarPath = this.basePath + '/api/3/project/{projectIdOrKey}/role/{id}'
             .replace('{' + 'projectIdOrKey' + '}', encodeURIComponent(String(projectIdOrKey)))
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
@@ -11079,7 +11079,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: ProjectRole;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: ProjectRole;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -11100,7 +11100,7 @@ export class DefaultApi {
      * @param projectIdOrKey The project ID or project key (case sensitive).
      * @param propertyKey The project property key. Use [Get project property keys](#api-api-3-project-projectIdOrKey-properties-get) to get a list of all project property keys.
      */
-    public comAtlassianJiraRestV2IssueProjectPropertyResourceDeleteProjectPropertyDelete (projectIdOrKey: string, propertyKey: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
+    public comAtlassianJiraRestV2IssueProjectPropertyResourceDeleteProjectPropertyDelete (projectIdOrKey: string, propertyKey: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/project/{projectIdOrKey}/properties/{propertyKey}'
             .replace('{' + 'projectIdOrKey' + '}', encodeURIComponent(String(projectIdOrKey)))
             .replace('{' + 'propertyKey' + '}', encodeURIComponent(String(propertyKey)));
@@ -11142,7 +11142,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body?: any;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -11162,7 +11162,7 @@ export class DefaultApi {
      * @param projectIdOrKey The project ID or project key (case sensitive).
      * @param propertyKey The project property key. Use [Get project property keys](#api-api-3-project-projectIdOrKey-properties-get) to get a list of all project property keys.
      */
-    public comAtlassianJiraRestV2IssueProjectPropertyResourceGetProjectPropertyGet (projectIdOrKey: string, propertyKey: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: EntityProperty;  }> {
+    public comAtlassianJiraRestV2IssueProjectPropertyResourceGetProjectPropertyGet (projectIdOrKey: string, propertyKey: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: EntityProperty;  }> {
         const localVarPath = this.basePath + '/api/3/project/{projectIdOrKey}/properties/{propertyKey}'
             .replace('{' + 'projectIdOrKey' + '}', encodeURIComponent(String(projectIdOrKey)))
             .replace('{' + 'propertyKey' + '}', encodeURIComponent(String(propertyKey)));
@@ -11204,7 +11204,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: EntityProperty;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: EntityProperty;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -11224,7 +11224,7 @@ export class DefaultApi {
      * @summary Get project property keys
      * @param projectIdOrKey The project ID or project key (case sensitive).
      */
-    public comAtlassianJiraRestV2IssueProjectPropertyResourceGetProjectPropertyKeysGet (projectIdOrKey: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: PropertyKeys;  }> {
+    public comAtlassianJiraRestV2IssueProjectPropertyResourceGetProjectPropertyKeysGet (projectIdOrKey: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: PropertyKeys;  }> {
         const localVarPath = this.basePath + '/api/3/project/{projectIdOrKey}/properties'
             .replace('{' + 'projectIdOrKey' + '}', encodeURIComponent(String(projectIdOrKey)));
         let localVarQueryParameters: any = {};
@@ -11260,7 +11260,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: PropertyKeys;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: PropertyKeys;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -11282,7 +11282,7 @@ export class DefaultApi {
      * @param propertyKey The key of the project property. The maximum length is 255 characters.
      * @param body
      */
-    public comAtlassianJiraRestV2IssueProjectPropertyResourceSetProjectPropertyPut (projectIdOrKey: string, propertyKey: string, body: any, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
+    public comAtlassianJiraRestV2IssueProjectPropertyResourceSetProjectPropertyPut (projectIdOrKey: string, propertyKey: string, body: any, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/project/{projectIdOrKey}/properties/{propertyKey}'
             .replace('{' + 'projectIdOrKey' + '}', encodeURIComponent(String(projectIdOrKey)))
             .replace('{' + 'propertyKey' + '}', encodeURIComponent(String(propertyKey)));
@@ -11330,7 +11330,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body?: any;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -11353,7 +11353,7 @@ export class DefaultApi {
      * @param y The Y coordinate of the top-left corner of the crop region.
      * @param size The length of each side of the crop region.
      */
-    public comAtlassianJiraRestV2IssueProjectResourceCreateProjectAvatarPost (projectIdOrKey: string, body: any, x?: number, y?: number, size?: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Avatar;  }> {
+    public comAtlassianJiraRestV2IssueProjectResourceCreateProjectAvatarPost (projectIdOrKey: string, body: any, x?: number, y?: number, size?: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Avatar;  }> {
         const localVarPath = this.basePath + '/api/3/project/{projectIdOrKey}/avatar2'
             .replace('{' + 'projectIdOrKey' + '}', encodeURIComponent(String(projectIdOrKey)));
         let localVarQueryParameters: any = {};
@@ -11407,7 +11407,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: Avatar;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: Avatar;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -11427,7 +11427,7 @@ export class DefaultApi {
      * @summary Create project
      * @param projectInputBean The JSON representation of the project being created.
      */
-    public comAtlassianJiraRestV2IssueProjectResourceCreateProjectPost (projectInputBean: ProjectInputBean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: ProjectIdentifiers;  }> {
+    public comAtlassianJiraRestV2IssueProjectResourceCreateProjectPost (projectInputBean: ProjectInputBean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: ProjectIdentifiers;  }> {
         const localVarPath = this.basePath + '/api/3/project';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -11463,7 +11463,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: ProjectIdentifiers;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: ProjectIdentifiers;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -11484,7 +11484,7 @@ export class DefaultApi {
      * @param projectIdOrKey The project ID or (case-sensitive) key.
      * @param id The ID of the avatar.
      */
-    public comAtlassianJiraRestV2IssueProjectResourceDeleteProjectAvatarDelete (projectIdOrKey: string, id: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
+    public comAtlassianJiraRestV2IssueProjectResourceDeleteProjectAvatarDelete (projectIdOrKey: string, id: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/project/{projectIdOrKey}/avatar/{id}'
             .replace('{' + 'projectIdOrKey' + '}', encodeURIComponent(String(projectIdOrKey)))
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
@@ -11526,7 +11526,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body?: any;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -11545,7 +11545,7 @@ export class DefaultApi {
      * @summary Delete project
      * @param projectIdOrKey The project ID or project key (case sensitive).
      */
-    public comAtlassianJiraRestV2IssueProjectResourceDeleteProjectDelete (projectIdOrKey: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
+    public comAtlassianJiraRestV2IssueProjectResourceDeleteProjectDelete (projectIdOrKey: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/project/{projectIdOrKey}'
             .replace('{' + 'projectIdOrKey' + '}', encodeURIComponent(String(projectIdOrKey)));
         let localVarQueryParameters: any = {};
@@ -11581,7 +11581,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body?: any;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -11600,7 +11600,7 @@ export class DefaultApi {
      * @summary Get all project avatars
      * @param projectIdOrKey The ID or (case-sensitive) key of the project.
      */
-    public comAtlassianJiraRestV2IssueProjectResourceGetAllProjectAvatarsGet (projectIdOrKey: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: ProjectAvatars;  }> {
+    public comAtlassianJiraRestV2IssueProjectResourceGetAllProjectAvatarsGet (projectIdOrKey: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: ProjectAvatars;  }> {
         const localVarPath = this.basePath + '/api/3/project/{projectIdOrKey}/avatars'
             .replace('{' + 'projectIdOrKey' + '}', encodeURIComponent(String(projectIdOrKey)));
         let localVarQueryParameters: any = {};
@@ -11636,7 +11636,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: ProjectAvatars;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: ProjectAvatars;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -11657,7 +11657,7 @@ export class DefaultApi {
      * @param expand Use [expand](#expansion) to include additional information in the response. This parameter accepts multiple values separated by a comma:  *   &#x60;description&#x60; Returns the project description. *   &#x60;issueTypes&#x60; Returns all issue types associated with the project. *   &#x60;lead&#x60; Returns information about the the project lead. *   &#x60;projectKeys&#x60; Returns all project keys associated with the project.
      * @param recent Returns the most recently accessed projects for the current user. You may specify the number of results to return up to a maximum of 20. If no user is logged in, then the recently accessed projects will be returned based on the current HTTP session.
      */
-    public comAtlassianJiraRestV2IssueProjectResourceGetAllProjectsGet (expand?: string, recent?: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Array<Project>;  }> {
+    public comAtlassianJiraRestV2IssueProjectResourceGetAllProjectsGet (expand?: string, recent?: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<Project>;  }> {
         const localVarPath = this.basePath + '/api/3/project';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -11695,7 +11695,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: Array<Project>;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: Array<Project>;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -11715,7 +11715,7 @@ export class DefaultApi {
      * @summary Get all statuses for project
      * @param projectIdOrKey The project ID or project key (case sensitive).
      */
-    public comAtlassianJiraRestV2IssueProjectResourceGetAllStatusesGet (projectIdOrKey: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Array<IssueTypeWithStatus>;  }> {
+    public comAtlassianJiraRestV2IssueProjectResourceGetAllStatusesGet (projectIdOrKey: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<IssueTypeWithStatus>;  }> {
         const localVarPath = this.basePath + '/api/3/project/{projectIdOrKey}/statuses'
             .replace('{' + 'projectIdOrKey' + '}', encodeURIComponent(String(projectIdOrKey)));
         let localVarQueryParameters: any = {};
@@ -11751,7 +11751,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: Array<IssueTypeWithStatus>;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: Array<IssueTypeWithStatus>;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -11771,7 +11771,7 @@ export class DefaultApi {
      * @summary Get project components
      * @param projectIdOrKey The project ID or project key (case sensitive).
      */
-    public comAtlassianJiraRestV2IssueProjectResourceGetProjectComponentsGet (projectIdOrKey: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Array<Component>;  }> {
+    public comAtlassianJiraRestV2IssueProjectResourceGetProjectComponentsGet (projectIdOrKey: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<Component>;  }> {
         const localVarPath = this.basePath + '/api/3/project/{projectIdOrKey}/components'
             .replace('{' + 'projectIdOrKey' + '}', encodeURIComponent(String(projectIdOrKey)));
         let localVarQueryParameters: any = {};
@@ -11807,7 +11807,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: Array<Component>;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: Array<Component>;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -11831,7 +11831,7 @@ export class DefaultApi {
      * @param orderBy [Order](#ordering) the results by a particular field:  *   &#x60;description&#x60; Sorts components in alphabetical order by description. *   &#x60;issueCount&#x60; Sorts components by the count of issues associated with the component in ascending order. *   &#x60;lead&#x60; Sorts by the project lead&#39;s user key in alphabetical order. *   &#x60;name&#x60; Sorts components in alphabetical order by component name.
      * @param query Filter the results using a literal string. Components with a matching &#x60;name&#x60; or &#x60;description&#x60; are returned (case insensitive).
      */
-    public comAtlassianJiraRestV2IssueProjectResourceGetProjectComponentsPaginatedGet (projectIdOrKey: string, startAt?: number, maxResults?: number, orderBy?: 'description' | '-description' | '+description' | 'issueCount' | '-issueCount' | '+issueCount' | 'lead' | '-lead' | '+lead' | 'name' | '-name' | '+name', query?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: PageOfComponentWithIssueCount;  }> {
+    public comAtlassianJiraRestV2IssueProjectResourceGetProjectComponentsPaginatedGet (projectIdOrKey: string, startAt?: number, maxResults?: number, orderBy?: 'description' | '-description' | '+description' | 'issueCount' | '-issueCount' | '+issueCount' | 'lead' | '-lead' | '+lead' | 'name' | '-name' | '+name', query?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: PageOfComponentWithIssueCount;  }> {
         const localVarPath = this.basePath + '/api/3/project/{projectIdOrKey}/component'
             .replace('{' + 'projectIdOrKey' + '}', encodeURIComponent(String(projectIdOrKey)));
         let localVarQueryParameters: any = {};
@@ -11883,7 +11883,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: PageOfComponentWithIssueCount;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: PageOfComponentWithIssueCount;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -11904,7 +11904,7 @@ export class DefaultApi {
      * @param projectIdOrKey The project ID or project key (case sensitive).
      * @param expand Use [expand](#expansion) to include additional information in the response. This parameter accepts multiple values separated by a comma. Note that the project description, issue types, and project lead are included in all responses by default:  *   &#x60;description&#x60; The project description. *   &#x60;issueTypes&#x60; The issue types associated with the project. *   &#x60;lead&#x60; The project lead. *   &#x60;projectKeys&#x60; All project keys associated with the project.
      */
-    public comAtlassianJiraRestV2IssueProjectResourceGetProjectGet (projectIdOrKey: string, expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Project;  }> {
+    public comAtlassianJiraRestV2IssueProjectResourceGetProjectGet (projectIdOrKey: string, expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Project;  }> {
         const localVarPath = this.basePath + '/api/3/project/{projectIdOrKey}'
             .replace('{' + 'projectIdOrKey' + '}', encodeURIComponent(String(projectIdOrKey)));
         let localVarQueryParameters: any = {};
@@ -11944,7 +11944,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: Project;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: Project;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -11965,7 +11965,7 @@ export class DefaultApi {
      * @param projectIdOrKey The project ID or project key (case sensitive).
      * @param expand Use [expand](#expansion) to include additional information in the response. This parameter accepts multiple values separated by a comma:  *   &#x60;operations&#x60; Returns actions that can be performed on the specified version.
      */
-    public comAtlassianJiraRestV2IssueProjectResourceGetProjectVersionsGet (projectIdOrKey: string, expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Array<Version>;  }> {
+    public comAtlassianJiraRestV2IssueProjectResourceGetProjectVersionsGet (projectIdOrKey: string, expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<Version>;  }> {
         const localVarPath = this.basePath + '/api/3/project/{projectIdOrKey}/versions'
             .replace('{' + 'projectIdOrKey' + '}', encodeURIComponent(String(projectIdOrKey)));
         let localVarQueryParameters: any = {};
@@ -12005,7 +12005,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: Array<Version>;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: Array<Version>;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -12031,7 +12031,7 @@ export class DefaultApi {
      * @param status A comma-separated list of status values used to filter the results by version status. The status values are &#x60;released&#x60;, &#x60;unreleased&#x60;, and &#x60;archived&#x60;.
      * @param expand Use [expand](#expansion) to include additional information in the response. This parameter accepts multiple values separated by a comma:  *   &#x60;issuesstatus&#x60; Returns the number of issues in each status category for each version. *   &#x60;operations&#x60; Returns actions that can be performed on the specified version. *   &#x60;remotelinks&#x60; Returns remote version links.
      */
-    public comAtlassianJiraRestV2IssueProjectResourceGetProjectVersionsPaginatedGet (projectIdOrKey: string, startAt?: number, maxResults?: number, orderBy?: 'description' | '-description' | '+description' | 'name' | '-name' | '+name' | 'releaseDate' | '-releaseDate' | '+releaseDate' | 'sequence' | '-sequence' | '+sequence' | 'startDate' | '-startDate' | '+startDate', query?: string, status?: string, expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: PageOfVersion;  }> {
+    public comAtlassianJiraRestV2IssueProjectResourceGetProjectVersionsPaginatedGet (projectIdOrKey: string, startAt?: number, maxResults?: number, orderBy?: 'description' | '-description' | '+description' | 'name' | '-name' | '+name' | 'releaseDate' | '-releaseDate' | '+releaseDate' | 'sequence' | '-sequence' | '+sequence' | 'startDate' | '-startDate' | '+startDate', query?: string, status?: string, expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: PageOfVersion;  }> {
         const localVarPath = this.basePath + '/api/3/project/{projectIdOrKey}/version'
             .replace('{' + 'projectIdOrKey' + '}', encodeURIComponent(String(projectIdOrKey)));
         let localVarQueryParameters: any = {};
@@ -12091,7 +12091,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: PageOfVersion;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: PageOfVersion;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -12118,7 +12118,7 @@ export class DefaultApi {
      * @param action Filter results by projects for which the calling user has permission to perform the given action. The &#x60;view&#x60; action corresponds with the _Browse projects_ project permission, and the &#x60;edit&#x60; action corresponds with _Administer project_ permissions.
      * @param expand Use [expand](#expansion) to include additional information in the response. This parameter accepts multiple values separated by a comma:  *   &#x60;description&#x60; Returns the project description. *   &#x60;projectKeys&#x60; Returns all project keys associated with a project. *   &#x60;lead&#x60; Returns information about the the project lead. *   &#x60;issueTypes&#x60; Returns all issue types associated with the project. *   &#x60;url&#x60; Returns the URL associated with the project.
      */
-    public comAtlassianJiraRestV2IssueProjectResourceSearchProjectsGet (startAt?: number, maxResults?: number, orderBy?: 'category' | '-category' | '+category' | 'key' | '-key' | '+key' | 'name' | '-name' | '+name' | 'owner' | '-owner' | '+owner', query?: string, typeKey?: string, categoryId?: number, action?: 'view' | 'edit', expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: PageOfProject;  }> {
+    public comAtlassianJiraRestV2IssueProjectResourceSearchProjectsGet (startAt?: number, maxResults?: number, orderBy?: 'category' | '-category' | '+category' | 'key' | '-key' | '+key' | 'name' | '-name' | '+name' | 'owner' | '-owner' | '+owner', query?: string, typeKey?: string, categoryId?: number, action?: 'view' | 'edit', expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: PageOfProject;  }> {
         const localVarPath = this.basePath + '/api/3/project/search';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -12180,7 +12180,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: PageOfProject;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: PageOfProject;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -12201,7 +12201,7 @@ export class DefaultApi {
      * @param projectIdOrKey The ID or (case-sensitive) key of the project.
      * @param avatar
      */
-    public comAtlassianJiraRestV2IssueProjectResourceUpdateProjectAvatarPut (projectIdOrKey: string, avatar: Avatar, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
+    public comAtlassianJiraRestV2IssueProjectResourceUpdateProjectAvatarPut (projectIdOrKey: string, avatar: Avatar, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/project/{projectIdOrKey}/avatar'
             .replace('{' + 'projectIdOrKey' + '}', encodeURIComponent(String(projectIdOrKey)));
         let localVarQueryParameters: any = {};
@@ -12243,7 +12243,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body?: any;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -12264,7 +12264,7 @@ export class DefaultApi {
      * @param projectInputBean The project details to be updated.
      * @param expand Use [expand](#expansion) to include additional information in the response. This parameter accepts multiple values separated by a comma. Note that the project description, issue types, and project lead are included in all responses by default:  *   &#x60;description&#x60; The project description. *   &#x60;issueTypes&#x60; The issue types associated with the project. *   &#x60;lead&#x60; The project lead. *   &#x60;projectKeys&#x60; All project keys associated with the project.
      */
-    public comAtlassianJiraRestV2IssueProjectResourceUpdateProjectPut (projectIdOrKey: string, projectInputBean: ProjectInputBean, expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Project;  }> {
+    public comAtlassianJiraRestV2IssueProjectResourceUpdateProjectPut (projectIdOrKey: string, projectInputBean: ProjectInputBean, expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Project;  }> {
         const localVarPath = this.basePath + '/api/3/project/{projectIdOrKey}'
             .replace('{' + 'projectIdOrKey' + '}', encodeURIComponent(String(projectIdOrKey)));
         let localVarQueryParameters: any = {};
@@ -12310,7 +12310,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: Project;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: Project;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -12331,7 +12331,7 @@ export class DefaultApi {
      * @param projectIdOrKey The project ID or project key (case sensitive).
      * @param newProjectTypeKey The key of the new project type.
      */
-    public comAtlassianJiraRestV2IssueProjectResourceUpdateProjectTypePut (projectIdOrKey: string, newProjectTypeKey: 'business' | 'ops' | 'service_desk' | 'software', options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Project;  }> {
+    public comAtlassianJiraRestV2IssueProjectResourceUpdateProjectTypePut (projectIdOrKey: string, newProjectTypeKey: 'business' | 'ops' | 'service_desk' | 'software', options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Project;  }> {
         const localVarPath = this.basePath + '/api/3/project/{projectIdOrKey}/type/{newProjectTypeKey}'
             .replace('{' + 'projectIdOrKey' + '}', encodeURIComponent(String(projectIdOrKey)))
             .replace('{' + 'newProjectTypeKey' + '}', encodeURIComponent(String(newProjectTypeKey)));
@@ -12373,7 +12373,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: Project;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: Project;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -12394,7 +12394,7 @@ export class DefaultApi {
      * @param id The ID of the project role. Use [Get all project roles](#api-api-3-role-get) to get a list of project role IDs.
      * @param actorInputBean
      */
-    public comAtlassianJiraRestV2IssueProjectRoleResourceAddProjectRoleActorsToRolePost (id: number, actorInputBean: ActorInputBean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: ProjectRole;  }> {
+    public comAtlassianJiraRestV2IssueProjectRoleResourceAddProjectRoleActorsToRolePost (id: number, actorInputBean: ActorInputBean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: ProjectRole;  }> {
         const localVarPath = this.basePath + '/api/3/role/{id}/actors'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -12434,7 +12434,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: ProjectRole;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: ProjectRole;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -12454,7 +12454,7 @@ export class DefaultApi {
      * @summary Create project role
      * @param createUpdateRoleRequestBean
      */
-    public comAtlassianJiraRestV2IssueProjectRoleResourceCreateProjectRolePost (createUpdateRoleRequestBean: CreateUpdateRoleRequestBean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: ProjectRole;  }> {
+    public comAtlassianJiraRestV2IssueProjectRoleResourceCreateProjectRolePost (createUpdateRoleRequestBean: CreateUpdateRoleRequestBean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: ProjectRole;  }> {
         const localVarPath = this.basePath + '/api/3/role';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -12488,7 +12488,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: ProjectRole;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: ProjectRole;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -12510,7 +12510,7 @@ export class DefaultApi {
      * @param user The user account ID of the user to remove as a default actor.
      * @param group The group name of the group to be removed as a default actor.
      */
-    public comAtlassianJiraRestV2IssueProjectRoleResourceDeleteProjectRoleActorsFromRoleDelete (id: number, user?: string, group?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: ProjectRole;  }> {
+    public comAtlassianJiraRestV2IssueProjectRoleResourceDeleteProjectRoleActorsFromRoleDelete (id: number, user?: string, group?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: ProjectRole;  }> {
         const localVarPath = this.basePath + '/api/3/role/{id}/actors'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -12552,7 +12552,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: ProjectRole;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: ProjectRole;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -12573,7 +12573,7 @@ export class DefaultApi {
      * @param id The ID of the project role to delete. Use [Get all project roles](#api-api-3-role-get) to get a list of project role IDs.
      * @param swap The ID of the project role that will replace the one being deleted.
      */
-    public comAtlassianJiraRestV2IssueProjectRoleResourceDeleteProjectRoleDelete (id: number, swap?: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
+    public comAtlassianJiraRestV2IssueProjectRoleResourceDeleteProjectRoleDelete (id: number, swap?: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/role/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -12611,7 +12611,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body?: any;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -12631,7 +12631,7 @@ export class DefaultApi {
      * @param id The ID of the project role. Use [Get all project roles](#api-api-3-role-get) to get a list of project role IDs.
      * @param createUpdateRoleRequestBean
      */
-    public comAtlassianJiraRestV2IssueProjectRoleResourceFullyUpdateProjectRolePut (id: number, createUpdateRoleRequestBean: CreateUpdateRoleRequestBean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: ProjectRole;  }> {
+    public comAtlassianJiraRestV2IssueProjectRoleResourceFullyUpdateProjectRolePut (id: number, createUpdateRoleRequestBean: CreateUpdateRoleRequestBean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: ProjectRole;  }> {
         const localVarPath = this.basePath + '/api/3/role/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -12671,7 +12671,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: ProjectRole;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: ProjectRole;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -12690,7 +12690,7 @@ export class DefaultApi {
      * Gets a list of all project roles, complete with project role details and default actors.  ### About project roles  [Project roles](https://confluence.atlassian.com/x/3odKLg) are a flexible way to to associate users and groups with projects. In Jira Cloud, the list of project roles is shared globally with all projects, but each project can have a different set of actors associated with it (unlike groups, which have the same membership throughout all Jira applications).  Project roles can be used in [permission schemes](#api-api-3-permissionscheme-get), [email notification schemes](#api-api-3-notificationscheme-get), [issue security levels](#api-api-3-issuesecurityschemes-get), [comment visibility](#api-api-3-comment-list-post), and workflow conditions.  #### Members and actors  In the Jira REST API, a member of a project role is called an _actor_. An _actor_ is a group or user associated with a project role.  Actors may be set as [default members](https://confluence.atlassian.com/x/3odKLg#Managingprojectroles-Specifying'defaultmembers'foraprojectrole) of the project role or set at the project level:  *   Default actors: Users and groups that are assigned to the project role for all newly created projects. The default actors can be removed at the project level later if desired. *   Actors: Users and groups that are associated with a project role for a particular project, which may differ from the default actors. This allows you to assign a particular user to different roles in different projects.  **[Permissions](#permissions) required:** _Administer Jira_ [global permission](https://confluence.atlassian.com/x/x4dKLg).
      * @summary Get all project roles
      */
-    public comAtlassianJiraRestV2IssueProjectRoleResourceGetAllProjectRolesGet (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Array<ProjectRole>;  }> {
+    public comAtlassianJiraRestV2IssueProjectRoleResourceGetAllProjectRolesGet (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<ProjectRole>;  }> {
         const localVarPath = this.basePath + '/api/3/role';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -12720,7 +12720,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: Array<ProjectRole>;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: Array<ProjectRole>;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -12740,7 +12740,7 @@ export class DefaultApi {
      * @summary Get default actors for project role
      * @param id The ID of the project role. Use [Get all project roles](#api-api-3-role-get) to get a list of project role IDs.
      */
-    public comAtlassianJiraRestV2IssueProjectRoleResourceGetProjectRoleActorsForRoleGet (id: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: ProjectRole;  }> {
+    public comAtlassianJiraRestV2IssueProjectRoleResourceGetProjectRoleActorsForRoleGet (id: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: ProjectRole;  }> {
         const localVarPath = this.basePath + '/api/3/role/{id}/actors'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -12776,7 +12776,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: ProjectRole;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: ProjectRole;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -12796,7 +12796,7 @@ export class DefaultApi {
      * @summary Get project role by ID
      * @param id The ID of the project role. Use [Get all project roles](#api-api-3-role-get) to get a list of project role IDs.
      */
-    public comAtlassianJiraRestV2IssueProjectRoleResourceGetProjectRoleByIdGet (id: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: ProjectRole;  }> {
+    public comAtlassianJiraRestV2IssueProjectRoleResourceGetProjectRoleByIdGet (id: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: ProjectRole;  }> {
         const localVarPath = this.basePath + '/api/3/role/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -12832,7 +12832,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: ProjectRole;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: ProjectRole;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -12853,7 +12853,7 @@ export class DefaultApi {
      * @param id The ID of the project role. Use [Get all project roles](#api-api-3-role-get) to get a list of project role IDs.
      * @param createUpdateRoleRequestBean
      */
-    public comAtlassianJiraRestV2IssueProjectRoleResourcePartialUpdateProjectRolePost (id: number, createUpdateRoleRequestBean: CreateUpdateRoleRequestBean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: ProjectRole;  }> {
+    public comAtlassianJiraRestV2IssueProjectRoleResourcePartialUpdateProjectRolePost (id: number, createUpdateRoleRequestBean: CreateUpdateRoleRequestBean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: ProjectRole;  }> {
         const localVarPath = this.basePath + '/api/3/role/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -12893,7 +12893,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: ProjectRole;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: ProjectRole;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -12913,7 +12913,7 @@ export class DefaultApi {
      * @summary Get valid project key
      * @param key The project key.
      */
-    public comAtlassianJiraRestV2IssueProjectValidateResourceGetValidProjectKeyGet (key?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: string;  }> {
+    public comAtlassianJiraRestV2IssueProjectValidateResourceGetValidProjectKeyGet (key?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: string;  }> {
         const localVarPath = this.basePath + '/api/3/projectvalidate/validProjectKey';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -12945,7 +12945,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: string;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: string;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -12965,7 +12965,7 @@ export class DefaultApi {
      * @summary Get valid project name
      * @param name The project name.
      */
-    public comAtlassianJiraRestV2IssueProjectValidateResourceGetValidProjectNameGet (name: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: string;  }> {
+    public comAtlassianJiraRestV2IssueProjectValidateResourceGetValidProjectNameGet (name: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: string;  }> {
         const localVarPath = this.basePath + '/api/3/projectvalidate/validProjectName';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -13002,7 +13002,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: string;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: string;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -13022,7 +13022,7 @@ export class DefaultApi {
      * @summary Validate project key
      * @param key The project key.
      */
-    public comAtlassianJiraRestV2IssueProjectValidateResourceValidateProjectKeyGet (key?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: ErrorCollection;  }> {
+    public comAtlassianJiraRestV2IssueProjectValidateResourceValidateProjectKeyGet (key?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: ErrorCollection;  }> {
         const localVarPath = this.basePath + '/api/3/projectvalidate/key';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -13054,7 +13054,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: ErrorCollection;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: ErrorCollection;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -13074,7 +13074,7 @@ export class DefaultApi {
      * @summary Get resolution
      * @param id The ID of the issue resolution value.
      */
-    public comAtlassianJiraRestV2IssueResolutionResourceGetResolutionGet (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Resolution;  }> {
+    public comAtlassianJiraRestV2IssueResolutionResourceGetResolutionGet (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Resolution;  }> {
         const localVarPath = this.basePath + '/api/3/resolution/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -13110,7 +13110,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: Resolution;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: Resolution;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -13129,7 +13129,7 @@ export class DefaultApi {
      * Returns a list of all issue resolution values.  **[Permissions](#permissions) required:** Permission to access Jira.
      * @summary Get resolutions
      */
-    public comAtlassianJiraRestV2IssueResolutionResourceGetResolutionsGet (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Array<Resolution>;  }> {
+    public comAtlassianJiraRestV2IssueResolutionResourceGetResolutionsGet (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<Resolution>;  }> {
         const localVarPath = this.basePath + '/api/3/resolution';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -13159,7 +13159,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: Array<Resolution>;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: Array<Resolution>;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -13179,7 +13179,7 @@ export class DefaultApi {
      * @summary Add field to default screen
      * @param fieldId The ID of the field.
      */
-    public comAtlassianJiraRestV2IssueScreensResourceAddFieldToDefaultScreenPost (fieldId: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
+    public comAtlassianJiraRestV2IssueScreensResourceAddFieldToDefaultScreenPost (fieldId: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/screens/addToDefault/{fieldId}'
             .replace('{' + 'fieldId' + '}', encodeURIComponent(String(fieldId)));
         let localVarQueryParameters: any = {};
@@ -13215,7 +13215,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body?: any;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -13236,7 +13236,7 @@ export class DefaultApi {
      * @param tabId The ID of the screen tab.
      * @param addFieldBean
      */
-    public comAtlassianJiraRestV2IssueScreensResourceAddScreenTabFieldPost (screenId: number, tabId: number, addFieldBean: AddFieldBean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: ScreenableField;  }> {
+    public comAtlassianJiraRestV2IssueScreensResourceAddScreenTabFieldPost (screenId: number, tabId: number, addFieldBean: AddFieldBean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: ScreenableField;  }> {
         const localVarPath = this.basePath + '/api/3/screens/{screenId}/tabs/{tabId}/fields'
             .replace('{' + 'screenId' + '}', encodeURIComponent(String(screenId)))
             .replace('{' + 'tabId' + '}', encodeURIComponent(String(tabId)));
@@ -13284,7 +13284,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: ScreenableField;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: ScreenableField;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -13305,7 +13305,7 @@ export class DefaultApi {
      * @param screenId The ID of the screen.
      * @param screenableTab
      */
-    public comAtlassianJiraRestV2IssueScreensResourceAddScreenTabPost (screenId: number, screenableTab: ScreenableTab, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: ScreenableTab;  }> {
+    public comAtlassianJiraRestV2IssueScreensResourceAddScreenTabPost (screenId: number, screenableTab: ScreenableTab, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: ScreenableTab;  }> {
         const localVarPath = this.basePath + '/api/3/screens/{screenId}/tabs'
             .replace('{' + 'screenId' + '}', encodeURIComponent(String(screenId)));
         let localVarQueryParameters: any = {};
@@ -13347,7 +13347,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: ScreenableTab;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: ScreenableTab;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -13368,7 +13368,7 @@ export class DefaultApi {
      * @param screenId The ID of the screen.
      * @param tabId The ID of the screen tab.
      */
-    public comAtlassianJiraRestV2IssueScreensResourceDeleteScreenTabDelete (screenId: number, tabId: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
+    public comAtlassianJiraRestV2IssueScreensResourceDeleteScreenTabDelete (screenId: number, tabId: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/screens/{screenId}/tabs/{tabId}'
             .replace('{' + 'screenId' + '}', encodeURIComponent(String(screenId)))
             .replace('{' + 'tabId' + '}', encodeURIComponent(String(tabId)));
@@ -13408,7 +13408,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body?: any;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -13429,7 +13429,7 @@ export class DefaultApi {
      * @param tabId The ID of the screen tab.
      * @param projectKey The key of the project.
      */
-    public comAtlassianJiraRestV2IssueScreensResourceGetAllScreenTabFieldsGet (screenId: number, tabId: number, projectKey?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Array<ScreenableField>;  }> {
+    public comAtlassianJiraRestV2IssueScreensResourceGetAllScreenTabFieldsGet (screenId: number, tabId: number, projectKey?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<ScreenableField>;  }> {
         const localVarPath = this.basePath + '/api/3/screens/{screenId}/tabs/{tabId}/fields'
             .replace('{' + 'screenId' + '}', encodeURIComponent(String(screenId)))
             .replace('{' + 'tabId' + '}', encodeURIComponent(String(tabId)));
@@ -13475,7 +13475,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: Array<ScreenableField>;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: Array<ScreenableField>;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -13496,7 +13496,7 @@ export class DefaultApi {
      * @param screenId The ID of the screen.
      * @param projectKey The key of the project.
      */
-    public comAtlassianJiraRestV2IssueScreensResourceGetAllScreenTabsGet (screenId: number, projectKey?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Array<ScreenableTab>;  }> {
+    public comAtlassianJiraRestV2IssueScreensResourceGetAllScreenTabsGet (screenId: number, projectKey?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<ScreenableTab>;  }> {
         const localVarPath = this.basePath + '/api/3/screens/{screenId}/tabs'
             .replace('{' + 'screenId' + '}', encodeURIComponent(String(screenId)));
         let localVarQueryParameters: any = {};
@@ -13536,7 +13536,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: Array<ScreenableTab>;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: Array<ScreenableTab>;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -13557,7 +13557,7 @@ export class DefaultApi {
      * @param startAt The index of the first item to return in a page of results (page offset).
      * @param maxResults The maximum number of items to return per page. The maximum is &#x60;100&#x60;.
      */
-    public comAtlassianJiraRestV2IssueScreensResourceGetAllScreensGet (startAt?: number, maxResults?: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: PageOfScreen;  }> {
+    public comAtlassianJiraRestV2IssueScreensResourceGetAllScreensGet (startAt?: number, maxResults?: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: PageOfScreen;  }> {
         const localVarPath = this.basePath + '/api/3/screens';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -13595,7 +13595,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: PageOfScreen;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: PageOfScreen;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -13615,7 +13615,7 @@ export class DefaultApi {
      * @summary Get available screen fields
      * @param screenId The ID of the screen.
      */
-    public comAtlassianJiraRestV2IssueScreensResourceGetAvailableScreenFieldsGet (screenId: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Array<ScreenableField>;  }> {
+    public comAtlassianJiraRestV2IssueScreensResourceGetAvailableScreenFieldsGet (screenId: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<ScreenableField>;  }> {
         const localVarPath = this.basePath + '/api/3/screens/{screenId}/availableFields'
             .replace('{' + 'screenId' + '}', encodeURIComponent(String(screenId)));
         let localVarQueryParameters: any = {};
@@ -13651,7 +13651,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: Array<ScreenableField>;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: Array<ScreenableField>;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -13674,7 +13674,7 @@ export class DefaultApi {
      * @param id The ID of the field.
      * @param moveFieldBean
      */
-    public comAtlassianJiraRestV2IssueScreensResourceMoveScreenTabFieldPost (screenId: number, tabId: number, id: string, moveFieldBean: MoveFieldBean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
+    public comAtlassianJiraRestV2IssueScreensResourceMoveScreenTabFieldPost (screenId: number, tabId: number, id: string, moveFieldBean: MoveFieldBean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/screens/{screenId}/tabs/{tabId}/fields/{id}/move'
             .replace('{' + 'screenId' + '}', encodeURIComponent(String(screenId)))
             .replace('{' + 'tabId' + '}', encodeURIComponent(String(tabId)))
@@ -13728,7 +13728,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body?: any;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -13749,7 +13749,7 @@ export class DefaultApi {
      * @param tabId The ID of the screen tab.
      * @param pos The position of tab. The base index is 0.
      */
-    public comAtlassianJiraRestV2IssueScreensResourceMoveScreenTabPost (screenId: number, tabId: number, pos: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
+    public comAtlassianJiraRestV2IssueScreensResourceMoveScreenTabPost (screenId: number, tabId: number, pos: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/screens/{screenId}/tabs/{tabId}/move/{pos}'
             .replace('{' + 'screenId' + '}', encodeURIComponent(String(screenId)))
             .replace('{' + 'tabId' + '}', encodeURIComponent(String(tabId)))
@@ -13797,7 +13797,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body?: any;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -13818,7 +13818,7 @@ export class DefaultApi {
      * @param tabId The ID of the screen tab.
      * @param id The ID of the field.
      */
-    public comAtlassianJiraRestV2IssueScreensResourceRemoveScreenTabFieldDelete (screenId: number, tabId: number, id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
+    public comAtlassianJiraRestV2IssueScreensResourceRemoveScreenTabFieldDelete (screenId: number, tabId: number, id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/screens/{screenId}/tabs/{tabId}/fields/{id}'
             .replace('{' + 'screenId' + '}', encodeURIComponent(String(screenId)))
             .replace('{' + 'tabId' + '}', encodeURIComponent(String(tabId)))
@@ -13864,7 +13864,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body?: any;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -13885,7 +13885,7 @@ export class DefaultApi {
      * @param tabId The ID of the screen tab.
      * @param screenableTab
      */
-    public comAtlassianJiraRestV2IssueScreensResourceRenameScreenTabPut (screenId: number, tabId: number, screenableTab: ScreenableTab, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: ScreenableTab;  }> {
+    public comAtlassianJiraRestV2IssueScreensResourceRenameScreenTabPut (screenId: number, tabId: number, screenableTab: ScreenableTab, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: ScreenableTab;  }> {
         const localVarPath = this.basePath + '/api/3/screens/{screenId}/tabs/{tabId}'
             .replace('{' + 'screenId' + '}', encodeURIComponent(String(screenId)))
             .replace('{' + 'tabId' + '}', encodeURIComponent(String(tabId)));
@@ -13931,7 +13931,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: ScreenableTab;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: ScreenableTab;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -13950,7 +13950,7 @@ export class DefaultApi {
      * Returns a list of all status categories.  **[Permissions](#permissions) required:** Permission to access Jira.
      * @summary Get all status categories
      */
-    public comAtlassianJiraRestV2IssueStatusCategoryResourceGetStatusCategoriesGet (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Array<StatusCategory>;  }> {
+    public comAtlassianJiraRestV2IssueStatusCategoryResourceGetStatusCategoriesGet (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<StatusCategory>;  }> {
         const localVarPath = this.basePath + '/api/3/statuscategory';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -13980,7 +13980,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: Array<StatusCategory>;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: Array<StatusCategory>;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -14000,7 +14000,7 @@ export class DefaultApi {
      * @summary Get status category
      * @param idOrKey The ID or key of the status category.
      */
-    public comAtlassianJiraRestV2IssueStatusCategoryResourceGetStatusCategoryGet (idOrKey: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: StatusCategory;  }> {
+    public comAtlassianJiraRestV2IssueStatusCategoryResourceGetStatusCategoryGet (idOrKey: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: StatusCategory;  }> {
         const localVarPath = this.basePath + '/api/3/statuscategory/{idOrKey}'
             .replace('{' + 'idOrKey' + '}', encodeURIComponent(String(idOrKey)));
         let localVarQueryParameters: any = {};
@@ -14036,7 +14036,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: StatusCategory;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: StatusCategory;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -14056,7 +14056,7 @@ export class DefaultApi {
      * @summary Get status
      * @param idOrName The ID or name of the status.
      */
-    public comAtlassianJiraRestV2IssueStatusResourceGetStatusGet (idOrName: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: StatusDetails;  }> {
+    public comAtlassianJiraRestV2IssueStatusResourceGetStatusGet (idOrName: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: StatusDetails;  }> {
         const localVarPath = this.basePath + '/api/3/status/{idOrName}'
             .replace('{' + 'idOrName' + '}', encodeURIComponent(String(idOrName)));
         let localVarQueryParameters: any = {};
@@ -14092,7 +14092,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: StatusDetails;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: StatusDetails;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -14111,7 +14111,7 @@ export class DefaultApi {
      * Returns a list of all statuses associated with workflows.  **[Permissions](#permissions) required:** _Browse projects_ [project permission](https://confluence.atlassian.com/x/yodKLg). Users with permission to access Jira can call this method, but an empty list is returned.
      * @summary Get all statuses
      */
-    public comAtlassianJiraRestV2IssueStatusResourceGetStatusesGet (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Array<StatusDetails>;  }> {
+    public comAtlassianJiraRestV2IssueStatusResourceGetStatusesGet (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<StatusDetails>;  }> {
         const localVarPath = this.basePath + '/api/3/status';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -14141,7 +14141,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: Array<StatusDetails>;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: Array<StatusDetails>;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -14163,7 +14163,7 @@ export class DefaultApi {
      * @param owningObjectId The ID of the entity item.
      * @param id The ID of the avatar.
      */
-    public comAtlassianJiraRestV2IssueUniversalAvatarResourceDeleteAvatarDelete (type: string, owningObjectId: string, id: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
+    public comAtlassianJiraRestV2IssueUniversalAvatarResourceDeleteAvatarDelete (type: string, owningObjectId: string, id: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/universal_avatar/type/{type}/owner/{owningObjectId}/avatar/{id}'
             .replace('{' + 'type' + '}', encodeURIComponent(String(type)))
             .replace('{' + 'owningObjectId' + '}', encodeURIComponent(String(owningObjectId)))
@@ -14209,7 +14209,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body?: any;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -14229,7 +14229,7 @@ export class DefaultApi {
      * @param type The type of the entity. Valid values are &#x60;project&#x60; and &#x60;issuetype&#x60;.
      * @param entityId The ID of the entity item.
      */
-    public comAtlassianJiraRestV2IssueUniversalAvatarResourceGetAvatarsGet (type: string, entityId: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Avatars;  }> {
+    public comAtlassianJiraRestV2IssueUniversalAvatarResourceGetAvatarsGet (type: string, entityId: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Avatars;  }> {
         const localVarPath = this.basePath + '/api/3/universal_avatar/type/{type}/owner/{entityId}'
             .replace('{' + 'type' + '}', encodeURIComponent(String(type)))
             .replace('{' + 'entityId' + '}', encodeURIComponent(String(entityId)));
@@ -14269,7 +14269,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: Avatars;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: Avatars;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -14294,7 +14294,7 @@ export class DefaultApi {
      * @param x The X coordinate of the top-left corner of the crop region.
      * @param y The Y coordinate of the top-left corner of the crop region.
      */
-    public comAtlassianJiraRestV2IssueUniversalAvatarResourceStoreAvatarPost (type: string, entityId: string, size: number, body: any, x?: number, y?: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Avatar;  }> {
+    public comAtlassianJiraRestV2IssueUniversalAvatarResourceStoreAvatarPost (type: string, entityId: string, size: number, body: any, x?: number, y?: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Avatar;  }> {
         const localVarPath = this.basePath + '/api/3/universal_avatar/type/{type}/owner/{entityId}'
             .replace('{' + 'type' + '}', encodeURIComponent(String(type)))
             .replace('{' + 'entityId' + '}', encodeURIComponent(String(entityId)));
@@ -14357,7 +14357,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: Avatar;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: Avatar;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -14377,7 +14377,7 @@ export class DefaultApi {
      * @summary Create user
      * @param userWriteBean
      */
-    public comAtlassianJiraRestV2IssueUserResourceCreateUserPost (userWriteBean: UserWriteBean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: User;  }> {
+    public comAtlassianJiraRestV2IssueUserResourceCreateUserPost (userWriteBean: UserWriteBean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: User;  }> {
         const localVarPath = this.basePath + '/api/3/user';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -14411,7 +14411,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: User;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: User;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -14437,7 +14437,7 @@ export class DefaultApi {
      * @param maxResults The maximum number of items to return per page. The maximum is &#x60;1000&#x60;.
      * @param actionDescriptorId The ID of the transition.
      */
-    public comAtlassianJiraRestV2IssueUserResourceFindAssignableUsersGet (query?: string, username?: string, project?: string, issueKey?: string, startAt?: number, maxResults?: number, actionDescriptorId?: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Array<User>;  }> {
+    public comAtlassianJiraRestV2IssueUserResourceFindAssignableUsersGet (query?: string, username?: string, project?: string, issueKey?: string, startAt?: number, maxResults?: number, actionDescriptorId?: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<User>;  }> {
         const localVarPath = this.basePath + '/api/3/user/assignable/search';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -14495,7 +14495,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: Array<User>;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: Array<User>;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -14519,7 +14519,7 @@ export class DefaultApi {
      * @param startAt The index of the first item to return in a page of results (page offset).
      * @param maxResults The maximum number of items to return per page. The maximum is &#x60;1000&#x60;.
      */
-    public comAtlassianJiraRestV2IssueUserResourceFindBulkAssignableUsersGet (projectKeys: string, query?: string, username?: string, startAt?: number, maxResults?: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Array<User>;  }> {
+    public comAtlassianJiraRestV2IssueUserResourceFindBulkAssignableUsersGet (projectKeys: string, query?: string, username?: string, startAt?: number, maxResults?: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<User>;  }> {
         const localVarPath = this.basePath + '/api/3/user/assignable/multiProjectSearch';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -14574,7 +14574,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: Array<User>;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: Array<User>;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -14598,7 +14598,7 @@ export class DefaultApi {
      * @param exclude This parameter has been deprecated due to privacy changes. Use &#x60;excludeAccountIds&#x60; instead. See the [migration guide](https://developer.atlassian.com/cloud/jira/platform/deprecation-notice-user-privacy-api-migration-guide/) for details. The username of a user to exclude from the search results. To exclude multiple users, specify this parameter multiple times. For example, &#x60;exclude&#x3D;mia&amp;exclude&#x3D;alana&#x60;. Cannot be provided with &#x60;excludeAccountIds&#x60;.
      * @param excludeAccountIds A comma-separated list of account IDs to exclude from the search results. This parameter may be specified multiple times. For example, &#x60;excludeAccountIds&#x3D;99:27935d01-92a7-4687-8272-a9b8d3b2ae2e,bd429c95-e27b-4423-a0bd-421cf3d69129&amp;excludeAccountIds&#x3D;384093:32b4d9w0-f6a5-3535-11a3-9c8c88d10192&#x60;. Cannot be provided with &#x60;exclude&#x60;.
      */
-    public comAtlassianJiraRestV2IssueUserResourceFindUsersForPickerGet (query: string, maxResults?: number, showAvatar?: boolean, exclude?: Array<string>, excludeAccountIds?: Array<string>, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: FoundUsers;  }> {
+    public comAtlassianJiraRestV2IssueUserResourceFindUsersForPickerGet (query: string, maxResults?: number, showAvatar?: boolean, exclude?: Array<string>, excludeAccountIds?: Array<string>, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: FoundUsers;  }> {
         const localVarPath = this.basePath + '/api/3/user/picker';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -14653,7 +14653,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: FoundUsers;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: FoundUsers;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -14679,7 +14679,7 @@ export class DefaultApi {
      * @param includeInactive Include inactive users in the results. This parameter is deprecated and will be removed soon. Searching for inactive users is no longer supported.
      * @param property A query string used to search properties. Property keys are specified by path, so property keys containing dot (.) or equals (&#x3D;) characters cannot be used. The query string cannot be specified using a JSON object. Example: To search for the value of &#x60;nested&#x60; from &#x60;{\&quot;something\&quot;:{\&quot;nested\&quot;:1,\&quot;other\&quot;:2}}&#x60; use &#x60;thepropertykey.something.nested&#x3D;1&#x60;.
      */
-    public comAtlassianJiraRestV2IssueUserResourceFindUsersGet (query?: string, username?: string, startAt?: number, maxResults?: number, includeActive?: boolean, includeInactive?: boolean, property?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Array<User>;  }> {
+    public comAtlassianJiraRestV2IssueUserResourceFindUsersGet (query?: string, username?: string, startAt?: number, maxResults?: number, includeActive?: boolean, includeInactive?: boolean, property?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<User>;  }> {
         const localVarPath = this.basePath + '/api/3/user/search';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -14737,7 +14737,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: Array<User>;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: Array<User>;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -14763,7 +14763,7 @@ export class DefaultApi {
      * @param startAt The index of the first item to return in a page of results (page offset).
      * @param maxResults The maximum number of items to return per page. The maximum is &#x60;1000&#x60;.
      */
-    public comAtlassianJiraRestV2IssueUserResourceFindUsersWithAllPermissionsGet (permissions: string, query?: string, username?: string, issueKey?: string, projectKey?: string, startAt?: number, maxResults?: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Array<User>;  }> {
+    public comAtlassianJiraRestV2IssueUserResourceFindUsersWithAllPermissionsGet (permissions: string, query?: string, username?: string, issueKey?: string, projectKey?: string, startAt?: number, maxResults?: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<User>;  }> {
         const localVarPath = this.basePath + '/api/3/user/permission/search';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -14826,7 +14826,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: Array<User>;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: Array<User>;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -14851,7 +14851,7 @@ export class DefaultApi {
      * @param startAt The index of the first item to return in a page of results (page offset).
      * @param maxResults The maximum number of items to return per page. The maximum is &#x60;1000&#x60;.
      */
-    public comAtlassianJiraRestV2IssueUserResourceFindUsersWithBrowsePermissionGet (query?: string, username?: string, issueKey?: string, projectKey?: string, startAt?: number, maxResults?: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Array<User>;  }> {
+    public comAtlassianJiraRestV2IssueUserResourceFindUsersWithBrowsePermissionGet (query?: string, username?: string, issueKey?: string, projectKey?: string, startAt?: number, maxResults?: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<User>;  }> {
         const localVarPath = this.basePath + '/api/3/user/viewissue/search';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -14905,7 +14905,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: Array<User>;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: Array<User>;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -14926,7 +14926,7 @@ export class DefaultApi {
      * @param accountId The accountId of the user, which uniquely identifies the user across all Atlassian products. For example, _384093:32b4d9w0-f6a5-3535-11a3-9c8c88d10192_. Cannot be provided with &#x60;username&#x60;.
      * @param username This parameter has been deprecated due to privacy changes. Use &#x60;accountId&#x60; instead. See the [migration guide](https://developer.atlassian.com/cloud/jira/platform/deprecation-notice-user-privacy-api-migration-guide/) for details.  The username of the user. Cannot be provided with &#x60;accountId&#x60;.
      */
-    public comAtlassianJiraRestV2IssueUserResourceGetUserDefaultColumnsGet (accountId?: string, username?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Array<ColumnItem>;  }> {
+    public comAtlassianJiraRestV2IssueUserResourceGetUserDefaultColumnsGet (accountId?: string, username?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<ColumnItem>;  }> {
         const localVarPath = this.basePath + '/api/3/user/columns';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -14964,7 +14964,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: Array<ColumnItem>;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: Array<ColumnItem>;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -14987,7 +14987,7 @@ export class DefaultApi {
      * @param key This parameter has been deprecated due to privacy changes. Use &#x60;accountId&#x60; instead. See the [migration guide](https://developer.atlassian.com/cloud/jira/platform/deprecation-notice-user-privacy-api-migration-guide/) for details.  The key of the user. Required, unless &#x60;accountId&#x60; or &#x60;username&#x60; is specified.
      * @param expand Use [expand](#expansion) to include additional information about users in the response. This parameter accepts multiple values separated by a comma:  *   &#x60;groups&#x60; includes all groups and nested groups to which the user belongs. *   &#x60;applicationRoles&#x60; includes details of all the applications to which the user has access.
      */
-    public comAtlassianJiraRestV2IssueUserResourceGetUserGet (accountId?: string, username?: string, key?: string, expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: User;  }> {
+    public comAtlassianJiraRestV2IssueUserResourceGetUserGet (accountId?: string, username?: string, key?: string, expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: User;  }> {
         const localVarPath = this.basePath + '/api/3/user';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -15033,7 +15033,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: User;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: User;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -15055,7 +15055,7 @@ export class DefaultApi {
      * @param username This parameter has been deprecated due to privacy changes. Use &#x60;accountId&#x60; instead. See the [migration guide](https://developer.atlassian.com/cloud/jira/platform/deprecation-notice-user-privacy-api-migration-guide/) for details.  The username of the user. Required, unless &#x60;accountId&#x60; or &#x60;key&#x60; is specified.
      * @param key This parameter has been deprecated due to privacy changes. Use &#x60;accountId&#x60; instead. See the [migration guide](https://developer.atlassian.com/cloud/jira/platform/deprecation-notice-user-privacy-api-migration-guide/) for details.  The key of the user. Required, unless &#x60;accountId&#x60; or &#x60;username&#x60; is specified.
      */
-    public comAtlassianJiraRestV2IssueUserResourceGetUserGroupsGet (accountId?: string, username?: string, key?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Array<GroupName>;  }> {
+    public comAtlassianJiraRestV2IssueUserResourceGetUserGroupsGet (accountId?: string, username?: string, key?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<GroupName>;  }> {
         const localVarPath = this.basePath + '/api/3/user/groups';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -15097,7 +15097,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: Array<GroupName>;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: Array<GroupName>;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -15119,7 +15119,7 @@ export class DefaultApi {
      * @param username This parameter has been deprecated due to privacy changes. Use &#x60;accountId&#x60; instead. See the [migration guide](https://developer.atlassian.com/cloud/jira/platform/deprecation-notice-user-privacy-api-migration-guide/) for details.  The username of the user. Required, unless &#x60;accountId&#x60; or &#x60;key&#x60; is specified.
      * @param key This parameter has been deprecated due to privacy changes. Use &#x60;accountId&#x60; instead. See the [migration guide](https://developer.atlassian.com/cloud/jira/platform/deprecation-notice-user-privacy-api-migration-guide/) for details.  The key of the user. Required, unless &#x60;accountId&#x60; or &#x60;username&#x60; is specified.
      */
-    public comAtlassianJiraRestV2IssueUserResourceRemoveUserDelete (accountId?: string, username?: string, key?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
+    public comAtlassianJiraRestV2IssueUserResourceRemoveUserDelete (accountId?: string, username?: string, key?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/user';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -15159,7 +15159,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body?: any;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -15179,7 +15179,7 @@ export class DefaultApi {
      * @param accountId The accountId of the user, which uniquely identifies the user across all Atlassian products. For example, _384093:32b4d9w0-f6a5-3535-11a3-9c8c88d10192_. Required, unless &#x60;username&#x60; is specified.
      * @param username This parameter has been deprecated due to privacy changes. Use &#x60;accountId&#x60; instead. See the [migration guide](https://developer.atlassian.com/cloud/jira/platform/deprecation-notice-user-privacy-api-migration-guide/) for details.  The username of the user. Required, unless &#x60;accountId&#x60; is specified.
      */
-    public comAtlassianJiraRestV2IssueUserResourceResetUserColumnsDelete (accountId?: string, username?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
+    public comAtlassianJiraRestV2IssueUserResourceResetUserColumnsDelete (accountId?: string, username?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/user/columns';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -15215,7 +15215,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body?: any;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -15236,7 +15236,7 @@ export class DefaultApi {
      * @param columns The ID of a column to set. To set multiple columns, send multiple &#x60;columns&#x60; parameters.
      * @param accountId The accountId of the user, which uniquely identifies the user across all Atlassian products. For example, _384093:32b4d9w0-f6a5-3535-11a3-9c8c88d10192_. Cannot be provided with the form parameter &#x60;username&#x60;.
      */
-    public comAtlassianJiraRestV2IssueUserResourceSetUserColumnsPut (username: string, columns: Array<string>, accountId?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
+    public comAtlassianJiraRestV2IssueUserResourceSetUserColumnsPut (username: string, columns: Array<string>, accountId?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/user/columns';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -15286,7 +15286,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body?: any;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -15305,7 +15305,7 @@ export class DefaultApi {
      * @summary Create version
      * @param version
      */
-    public comAtlassianJiraRestV2IssueVersionResourceCreateVersionPost (version: Version, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Version;  }> {
+    public comAtlassianJiraRestV2IssueVersionResourceCreateVersionPost (version: Version, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Version;  }> {
         const localVarPath = this.basePath + '/api/3/version';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -15341,7 +15341,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: Version;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: Version;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -15362,7 +15362,7 @@ export class DefaultApi {
      * @param id The ID of the version.
      * @param deleteAndReplaceVersionBean
      */
-    public comAtlassianJiraRestV2IssueVersionResourceDeleteAndReplaceVersionPost (id: string, deleteAndReplaceVersionBean: DeleteAndReplaceVersionBean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
+    public comAtlassianJiraRestV2IssueVersionResourceDeleteAndReplaceVersionPost (id: string, deleteAndReplaceVersionBean: DeleteAndReplaceVersionBean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/version/{id}/removeAndSwap'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -15404,7 +15404,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body?: any;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -15425,7 +15425,7 @@ export class DefaultApi {
      * @param moveFixIssuesTo The ID of the version to update &#x60;fixVersion&#x60; to when the field contains the deleted version. The replacement version must be in the same project as the version being deleted and cannot be the version being deleted.
      * @param moveAffectedIssuesTo The ID of the version to update &#x60;affectedVersion&#x60; to when the field contains the deleted version. The replacement version must be in the same project as the version being deleted and cannot be the version being deleted.
      */
-    public comAtlassianJiraRestV2IssueVersionResourceDeleteVersionDelete (id: string, moveFixIssuesTo?: string, moveAffectedIssuesTo?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
+    public comAtlassianJiraRestV2IssueVersionResourceDeleteVersionDelete (id: string, moveFixIssuesTo?: string, moveAffectedIssuesTo?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/version/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -15469,7 +15469,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body?: any;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -15489,7 +15489,7 @@ export class DefaultApi {
      * @param id The ID of the version.
      * @param expand Use [expand](#expansion) to include additional information about version in the response. This parameter accepts multiple values separated by a comma:  *   &#x60;operations&#x60; Returns the list of operations available for this version. *   &#x60;remotelinks&#x60; Returns the list of remote links stored against this version. *   &#x60;issuesstatus&#x60; Returns the count of issues in this version for each of the status categories _to do_, _in progress_, _done_, and _unmapped_. The _unmapped_ property represents the number of issues with a status other than _to do_, _in progress_, and _done_.
      */
-    public comAtlassianJiraRestV2IssueVersionResourceGetVersionGet (id: string, expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Version;  }> {
+    public comAtlassianJiraRestV2IssueVersionResourceGetVersionGet (id: string, expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Version;  }> {
         const localVarPath = this.basePath + '/api/3/version/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -15529,7 +15529,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: Version;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: Version;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -15549,7 +15549,7 @@ export class DefaultApi {
      * @summary Get version's related issues count
      * @param id The ID of the version.
      */
-    public comAtlassianJiraRestV2IssueVersionResourceGetVersionRelatedIssuesGet (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: VersionIssueCounts;  }> {
+    public comAtlassianJiraRestV2IssueVersionResourceGetVersionRelatedIssuesGet (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: VersionIssueCounts;  }> {
         const localVarPath = this.basePath + '/api/3/version/{id}/relatedIssueCounts'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -15585,7 +15585,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: VersionIssueCounts;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: VersionIssueCounts;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -15605,7 +15605,7 @@ export class DefaultApi {
      * @summary Get version's unresolved issues count
      * @param id The ID of the version.
      */
-    public comAtlassianJiraRestV2IssueVersionResourceGetVersionUnresolvedIssuesGet (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: VersionUnresolvedIssuesCount;  }> {
+    public comAtlassianJiraRestV2IssueVersionResourceGetVersionUnresolvedIssuesGet (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: VersionUnresolvedIssuesCount;  }> {
         const localVarPath = this.basePath + '/api/3/version/{id}/unresolvedIssueCount'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -15641,7 +15641,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: VersionUnresolvedIssuesCount;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: VersionUnresolvedIssuesCount;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -15662,7 +15662,7 @@ export class DefaultApi {
      * @param id The ID of the version to delete.
      * @param moveIssuesTo The ID of the version to merge into.
      */
-    public comAtlassianJiraRestV2IssueVersionResourceMergeVersionsPut (id: string, moveIssuesTo: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
+    public comAtlassianJiraRestV2IssueVersionResourceMergeVersionsPut (id: string, moveIssuesTo: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/version/{id}/mergeto/{moveIssuesTo}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)))
             .replace('{' + 'moveIssuesTo' + '}', encodeURIComponent(String(moveIssuesTo)));
@@ -15704,7 +15704,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body?: any;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -15724,7 +15724,7 @@ export class DefaultApi {
      * @param id The ID of the version to be moved.
      * @param versionMoveBean
      */
-    public comAtlassianJiraRestV2IssueVersionResourceMoveVersionPost (id: string, versionMoveBean: VersionMoveBean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Version;  }> {
+    public comAtlassianJiraRestV2IssueVersionResourceMoveVersionPost (id: string, versionMoveBean: VersionMoveBean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Version;  }> {
         const localVarPath = this.basePath + '/api/3/version/{id}/move'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -15766,7 +15766,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: Version;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: Version;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -15787,7 +15787,7 @@ export class DefaultApi {
      * @param id The ID of the version.
      * @param version
      */
-    public comAtlassianJiraRestV2IssueVersionResourceUpdateVersionPut (id: string, version: Version, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Version;  }> {
+    public comAtlassianJiraRestV2IssueVersionResourceUpdateVersionPut (id: string, version: Version, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Version;  }> {
         const localVarPath = this.basePath + '/api/3/version/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -15829,7 +15829,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: Version;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: Version;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -15851,7 +15851,7 @@ export class DefaultApi {
      * @param worklogId The ID of the worklog.
      * @param propertyKey The key of the property.
      */
-    public comAtlassianJiraRestV2IssueWorklogPropertyResourceDeleteWorklogPropertyDelete (issueIdOrKey: string, worklogId: string, propertyKey: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
+    public comAtlassianJiraRestV2IssueWorklogPropertyResourceDeleteWorklogPropertyDelete (issueIdOrKey: string, worklogId: string, propertyKey: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/issue/{issueIdOrKey}/worklog/{worklogId}/properties/{propertyKey}'
             .replace('{' + 'issueIdOrKey' + '}', encodeURIComponent(String(issueIdOrKey)))
             .replace('{' + 'worklogId' + '}', encodeURIComponent(String(worklogId)))
@@ -15899,7 +15899,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body?: any;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -15920,7 +15920,7 @@ export class DefaultApi {
      * @param worklogId The ID of the worklog.
      * @param propertyKey The key of the property.
      */
-    public comAtlassianJiraRestV2IssueWorklogPropertyResourceGetWorklogPropertyGet (issueIdOrKey: string, worklogId: string, propertyKey: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: EntityProperty;  }> {
+    public comAtlassianJiraRestV2IssueWorklogPropertyResourceGetWorklogPropertyGet (issueIdOrKey: string, worklogId: string, propertyKey: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: EntityProperty;  }> {
         const localVarPath = this.basePath + '/api/3/issue/{issueIdOrKey}/worklog/{worklogId}/properties/{propertyKey}'
             .replace('{' + 'issueIdOrKey' + '}', encodeURIComponent(String(issueIdOrKey)))
             .replace('{' + 'worklogId' + '}', encodeURIComponent(String(worklogId)))
@@ -15968,7 +15968,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: EntityProperty;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: EntityProperty;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -15989,7 +15989,7 @@ export class DefaultApi {
      * @param issueIdOrKey The ID or key of the issue.
      * @param worklogId The ID of the worklog.
      */
-    public comAtlassianJiraRestV2IssueWorklogPropertyResourceGetWorklogPropertyKeysGet (issueIdOrKey: string, worklogId: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: PropertyKeys;  }> {
+    public comAtlassianJiraRestV2IssueWorklogPropertyResourceGetWorklogPropertyKeysGet (issueIdOrKey: string, worklogId: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: PropertyKeys;  }> {
         const localVarPath = this.basePath + '/api/3/issue/{issueIdOrKey}/worklog/{worklogId}/properties'
             .replace('{' + 'issueIdOrKey' + '}', encodeURIComponent(String(issueIdOrKey)))
             .replace('{' + 'worklogId' + '}', encodeURIComponent(String(worklogId)));
@@ -16031,7 +16031,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: PropertyKeys;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: PropertyKeys;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -16054,7 +16054,7 @@ export class DefaultApi {
      * @param propertyKey The key of the issue property. The maximum length is 255 characters.
      * @param body
      */
-    public comAtlassianJiraRestV2IssueWorklogPropertyResourceSetWorklogPropertyPut (issueIdOrKey: string, worklogId: string, propertyKey: string, body: any, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
+    public comAtlassianJiraRestV2IssueWorklogPropertyResourceSetWorklogPropertyPut (issueIdOrKey: string, worklogId: string, propertyKey: string, body: any, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/issue/{issueIdOrKey}/worklog/{worklogId}/properties/{propertyKey}'
             .replace('{' + 'issueIdOrKey' + '}', encodeURIComponent(String(issueIdOrKey)))
             .replace('{' + 'worklogId' + '}', encodeURIComponent(String(worklogId)))
@@ -16108,7 +16108,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body?: any;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -16127,7 +16127,7 @@ export class DefaultApi {
      * @summary Get IDs of deleted worklogs
      * @param since The date and time, in UNIX timestamp format, after which deleted worklogs are returned.
      */
-    public comAtlassianJiraRestV2IssueWorklogWorklogResourceGetIdsOfWorklogsDeletedSinceGet (since?: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: ChangedWorklogs;  }> {
+    public comAtlassianJiraRestV2IssueWorklogWorklogResourceGetIdsOfWorklogsDeletedSinceGet (since?: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: ChangedWorklogs;  }> {
         const localVarPath = this.basePath + '/api/3/worklog/deleted';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -16161,7 +16161,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: ChangedWorklogs;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: ChangedWorklogs;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -16182,7 +16182,7 @@ export class DefaultApi {
      * @param since The date and time, in UNIX timestamp format, after which updated worklogs are returned.
      * @param expand Use [expand](#expansion) to include additional information about worklogs in the response. This parameter accepts &#x60;properties&#x60; that returns the properties of each worklog.
      */
-    public comAtlassianJiraRestV2IssueWorklogWorklogResourceGetIdsOfWorklogsModifiedSinceGet (since?: number, expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: ChangedWorklogs;  }> {
+    public comAtlassianJiraRestV2IssueWorklogWorklogResourceGetIdsOfWorklogsModifiedSinceGet (since?: number, expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: ChangedWorklogs;  }> {
         const localVarPath = this.basePath + '/api/3/worklog/updated';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -16220,7 +16220,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: ChangedWorklogs;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: ChangedWorklogs;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -16241,7 +16241,7 @@ export class DefaultApi {
      * @param worklogIdsRequestBean A JSON object containing a list of worklog IDs.
      * @param expand Use [expand](#expansion) to include additional information about worklogs in the response. This parameter accepts &#x60;properties&#x60; that returns the properties of each worklog.
      */
-    public comAtlassianJiraRestV2IssueWorklogWorklogResourceGetWorklogsForIdsPost (worklogIdsRequestBean: WorklogIdsRequestBean, expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Array<Worklog>;  }> {
+    public comAtlassianJiraRestV2IssueWorklogWorklogResourceGetWorklogsForIdsPost (worklogIdsRequestBean: WorklogIdsRequestBean, expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<Worklog>;  }> {
         const localVarPath = this.basePath + '/api/3/worklog/list';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -16281,7 +16281,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: Array<Worklog>;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: Array<Worklog>;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -16302,7 +16302,7 @@ export class DefaultApi {
      * @param id The ID of the notification scheme. Use [Get notification schemes paginated](#api-api-3-notificationscheme-get) to get a list of notification scheme IDs.
      * @param expand Use [expand](#expansion) to include additional information in the response. This parameter accepts multiple values separated by a comma:  *   &#x60;all&#x60; Returns all expandable information. *   &#x60;field&#x60; Returns information about any custom fields assigned to receive an event. *   &#x60;group&#x60; Returns information about any groups assigned to receive an event. *   &#x60;notificationSchemeEvents&#x60; Returns a list of event associations. This list is returned for all expandable information. *   &#x60;projectRole&#x60; Returns information about any project roles assigned to receive an event. *   &#x60;user&#x60; Returns information about any users assigned to receive an event.
      */
-    public comAtlassianJiraRestV2NotificationNotificationSchemeResourceGetNotificationSchemeGet (id: number, expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: NotificationScheme;  }> {
+    public comAtlassianJiraRestV2NotificationNotificationSchemeResourceGetNotificationSchemeGet (id: number, expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: NotificationScheme;  }> {
         const localVarPath = this.basePath + '/api/3/notificationscheme/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -16342,7 +16342,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: NotificationScheme;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: NotificationScheme;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -16364,7 +16364,7 @@ export class DefaultApi {
      * @param maxResults The maximum number of items to return per page. The maximum is &#x60;50&#x60;.
      * @param expand Use [expand](#expansion) to include additional information in the response. This parameter accepts multiple values separated by a comma:  *   &#x60;all&#x60; Returns all expandable information. *   &#x60;field&#x60; Returns information about any custom fields assigned to receive an event. *   &#x60;group&#x60; Returns information about any groups assigned to receive an event. *   &#x60;notificationSchemeEvents&#x60; Returns a list of event associations. This list is returned for all expandable information. *   &#x60;projectRole&#x60; Returns information about any project roles assigned to receive an event. *   &#x60;user&#x60; Returns information about any users assigned to receive an event.
      */
-    public comAtlassianJiraRestV2NotificationNotificationSchemeResourceGetNotificationSchemesGet (startAt?: number, maxResults?: number, expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: PageOfNotificationScheme;  }> {
+    public comAtlassianJiraRestV2NotificationNotificationSchemeResourceGetNotificationSchemesGet (startAt?: number, maxResults?: number, expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: PageOfNotificationScheme;  }> {
         const localVarPath = this.basePath + '/api/3/notificationscheme';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -16406,7 +16406,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: PageOfNotificationScheme;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: PageOfNotificationScheme;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -16427,7 +16427,7 @@ export class DefaultApi {
      * @param projectKeyOrId The project ID or project key (case sensitive).
      * @param expand Use [expand](#expansion) to include additional information in the response. This parameter accepts multiple values separated by a comma:  *   &#x60;all&#x60; Returns all expandable information. *   &#x60;field&#x60; Returns information about any custom fields assigned to receive an event. *   &#x60;group&#x60; Returns information about any groups assigned to receive an event. *   &#x60;notificationSchemeEvents&#x60; Returns a list of event associations. This list is returned for all expandable information. *   &#x60;projectRole&#x60; Returns information about any project roles assigned to receive an event. *   &#x60;user&#x60; Returns information about any users assigned to receive an event.
      */
-    public comAtlassianJiraRestV2NotificationProjectNotificationSchemeResourceGetNotificationSchemeGet (projectKeyOrId: string, expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: NotificationScheme;  }> {
+    public comAtlassianJiraRestV2NotificationProjectNotificationSchemeResourceGetNotificationSchemeGet (projectKeyOrId: string, expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: NotificationScheme;  }> {
         const localVarPath = this.basePath + '/api/3/project/{projectKeyOrId}/notificationscheme'
             .replace('{' + 'projectKeyOrId' + '}', encodeURIComponent(String(projectKeyOrId)));
         let localVarQueryParameters: any = {};
@@ -16467,7 +16467,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: NotificationScheme;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: NotificationScheme;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -16486,7 +16486,7 @@ export class DefaultApi {
      * Returns all permissions, including:  *   global permissions. *   project permissions. *   global permissions added by plugins.  **[Permissions](#permissions) required:** _Administer Jira_ [global permission](https://confluence.atlassian.com/x/x4dKLg).
      * @summary Get all permissions
      */
-    public comAtlassianJiraRestV2PermissionPermissionsResourceGetAllPermissionsGet (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Permissions;  }> {
+    public comAtlassianJiraRestV2PermissionPermissionsResourceGetAllPermissionsGet (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Permissions;  }> {
         const localVarPath = this.basePath + '/api/3/permissions';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -16514,7 +16514,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: Permissions;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: Permissions;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -16534,7 +16534,7 @@ export class DefaultApi {
      * @summary Get bulk permissions
      * @param bulkPermissionsRequestBean Details of the permissions to check.
      */
-    public comAtlassianJiraRestV2PermissionPermissionsResourceGetBulkPermissionsPost (bulkPermissionsRequestBean: BulkPermissionsRequestBean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: BulkPermissionGrants;  }> {
+    public comAtlassianJiraRestV2PermissionPermissionsResourceGetBulkPermissionsPost (bulkPermissionsRequestBean: BulkPermissionsRequestBean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: BulkPermissionGrants;  }> {
         const localVarPath = this.basePath + '/api/3/permissions/check';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -16570,7 +16570,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: BulkPermissionGrants;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: BulkPermissionGrants;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -16594,7 +16594,7 @@ export class DefaultApi {
      * @param issueId The ID of the issue.
      * @param permissions A comma-separated list of permission keys. [Omitting this parameter is **deprecated**.](https://developer.atlassian.com/cloud/jira/platform/change-notice-get-my-permissions-requires-permissions-query-parameter/) To get the list of available permissions, use [Get all permissions](#api-api-3-permissions-get). Note that deprecated keys cannot be used. Deprecated keys are not returned by [Get all permissions](#api-api-3-permissions-get) but are returned by this operation if &#x60;permissions&#x60; is omitted.
      */
-    public comAtlassianJiraRestV2PermissionPermissionsResourceGetMyPermissionsGet (projectKey?: string, projectId?: string, issueKey?: string, issueId?: string, permissions?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Permissions;  }> {
+    public comAtlassianJiraRestV2PermissionPermissionsResourceGetMyPermissionsGet (projectKey?: string, projectId?: string, issueKey?: string, issueId?: string, permissions?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Permissions;  }> {
         const localVarPath = this.basePath + '/api/3/mypermissions';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -16644,7 +16644,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: Permissions;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: Permissions;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -16664,7 +16664,7 @@ export class DefaultApi {
      * @summary Get permitted projects
      * @param permissionsKeysBean
      */
-    public comAtlassianJiraRestV2PermissionPermissionsResourceGetPermittedProjectsPost (permissionsKeysBean: PermissionsKeysBean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: PermittedProjects;  }> {
+    public comAtlassianJiraRestV2PermissionPermissionsResourceGetPermittedProjectsPost (permissionsKeysBean: PermissionsKeysBean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: PermittedProjects;  }> {
         const localVarPath = this.basePath + '/api/3/permissions/project';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -16700,7 +16700,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: PermittedProjects;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: PermittedProjects;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -16722,7 +16722,7 @@ export class DefaultApi {
      * @param idBean
      * @param expand Use [expand](#expansion) to include additional information in the response. This parameter accepts multiple values separated by a comma. Note that permissions are included when you specify any value:  *   &#x60;all&#x60; Returns all expandable information. *   &#x60;field&#x60; Returns information about the custom field granted the permission. *   &#x60;group&#x60; Returns information about the group that is granted the permission. *   &#x60;permissions&#x60; Returns all permission grants for each permission scheme. *   &#x60;projectRole&#x60; Returns information about the project role granted the permission. *   &#x60;user&#x60; Returns information about the user who is granted the permission.
      */
-    public comAtlassianJiraRestV2PermissionProjectPermissionSchemeResourceAssignPermissionSchemePut (projectKeyOrId: string, idBean: IdBean, expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: PermissionScheme;  }> {
+    public comAtlassianJiraRestV2PermissionProjectPermissionSchemeResourceAssignPermissionSchemePut (projectKeyOrId: string, idBean: IdBean, expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: PermissionScheme;  }> {
         const localVarPath = this.basePath + '/api/3/project/{projectKeyOrId}/permissionscheme'
             .replace('{' + 'projectKeyOrId' + '}', encodeURIComponent(String(projectKeyOrId)));
         let localVarQueryParameters: any = {};
@@ -16768,7 +16768,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: PermissionScheme;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: PermissionScheme;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -16789,7 +16789,7 @@ export class DefaultApi {
      * @param projectKeyOrId The project ID or project key (case sensitive).
      * @param expand Use [expand](#expansion) to include additional information in the response. This parameter accepts multiple values separated by a comma. Note that permissions are included when you specify any value:  *   &#x60;all&#x60; Returns all expandable information. *   &#x60;field&#x60; Returns information about the custom field granted the permission. *   &#x60;group&#x60; Returns information about the group that is granted the permission. *   &#x60;permissions&#x60; Returns all permission grants for each permission scheme. *   &#x60;projectRole&#x60; Returns information about the project role granted the permission. *   &#x60;user&#x60; Returns information about the user who is granted the permission.
      */
-    public comAtlassianJiraRestV2PermissionProjectPermissionSchemeResourceGetAssignedPermissionSchemeGet (projectKeyOrId: string, expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: PermissionScheme;  }> {
+    public comAtlassianJiraRestV2PermissionProjectPermissionSchemeResourceGetAssignedPermissionSchemeGet (projectKeyOrId: string, expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: PermissionScheme;  }> {
         const localVarPath = this.basePath + '/api/3/project/{projectKeyOrId}/permissionscheme'
             .replace('{' + 'projectKeyOrId' + '}', encodeURIComponent(String(projectKeyOrId)));
         let localVarQueryParameters: any = {};
@@ -16829,7 +16829,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: PermissionScheme;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: PermissionScheme;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -16848,7 +16848,7 @@ export class DefaultApi {
      * Deletes the locale of the current user, which restores the default setting.  **[Permissions](#permissions) required:** Permission to access Jira.
      * @summary Delete locale
      */
-    public comAtlassianJiraRestV2PreferenceCurrentUserPreferencesResourceDeleteLocaleDelete (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
+    public comAtlassianJiraRestV2PreferenceCurrentUserPreferencesResourceDeleteLocaleDelete (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/mypreferences/locale';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -16876,7 +16876,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body?: any;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -16894,7 +16894,7 @@ export class DefaultApi {
      * Returns the locale for the current user.  If the user has no language preference set (which is the default setting) or this resource is accessed anonymous, the browser locale detected by Jira is returned. Jira detects the browser locale using the _Accept-Language_ header in the request. However, if this doesn't match a locale available Jira, the site default locale is returned.  **[Permissions](#permissions) required:** Permission to access Jira.
      * @summary Get locale
      */
-    public comAtlassianJiraRestV2PreferenceCurrentUserPreferencesResourceGetLocaleGet (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Locale;  }> {
+    public comAtlassianJiraRestV2PreferenceCurrentUserPreferencesResourceGetLocaleGet (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Locale;  }> {
         const localVarPath = this.basePath + '/api/3/mypreferences/locale';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -16922,7 +16922,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: Locale;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: Locale;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -16942,7 +16942,7 @@ export class DefaultApi {
      * @summary Get preference
      * @param key The key of the preference.
      */
-    public comAtlassianJiraRestV2PreferenceCurrentUserPreferencesResourceGetPreferenceGet (key: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: string;  }> {
+    public comAtlassianJiraRestV2PreferenceCurrentUserPreferencesResourceGetPreferenceGet (key: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: string;  }> {
         const localVarPath = this.basePath + '/api/3/mypreferences';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -16979,7 +16979,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: string;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: string;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -16999,7 +16999,7 @@ export class DefaultApi {
      * @summary Delete preference
      * @param key The key of the preference.
      */
-    public comAtlassianJiraRestV2PreferenceCurrentUserPreferencesResourceRemovePreferenceDelete (key: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
+    public comAtlassianJiraRestV2PreferenceCurrentUserPreferencesResourceRemovePreferenceDelete (key: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/mypreferences';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -17036,7 +17036,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body?: any;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -17055,7 +17055,7 @@ export class DefaultApi {
      * @summary Set locale
      * @param locale The locale defined in a LocaleBean.
      */
-    public comAtlassianJiraRestV2PreferenceCurrentUserPreferencesResourceSetLocalePut (locale: Locale, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
+    public comAtlassianJiraRestV2PreferenceCurrentUserPreferencesResourceSetLocalePut (locale: Locale, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/mypreferences/locale';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -17089,7 +17089,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body?: any;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -17109,7 +17109,7 @@ export class DefaultApi {
      * @param key The key of the preference. The maximum length is 255 characters.
      * @param body The value of the preference as a plain text string. The maximum length is 255 characters.
      */
-    public comAtlassianJiraRestV2PreferenceCurrentUserPreferencesResourceSetPreferencePut (key: string, body: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
+    public comAtlassianJiraRestV2PreferenceCurrentUserPreferencesResourceSetPreferencePut (key: string, body: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/mypreferences';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -17152,7 +17152,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body?: any;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -17171,7 +17171,7 @@ export class DefaultApi {
      * @summary Get accessible project type by key
      * @param projectTypeKey The key of the project type.
      */
-    public comAtlassianJiraRestV2ProjectTypeProjectTypeResourceGetAccessibleProjectTypeByKeyGet (projectTypeKey: 'business' | 'ops' | 'service_desk' | 'software', options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: ProjectType;  }> {
+    public comAtlassianJiraRestV2ProjectTypeProjectTypeResourceGetAccessibleProjectTypeByKeyGet (projectTypeKey: 'business' | 'ops' | 'service_desk' | 'software', options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: ProjectType;  }> {
         const localVarPath = this.basePath + '/api/3/project/type/{projectTypeKey}/accessible'
             .replace('{' + 'projectTypeKey' + '}', encodeURIComponent(String(projectTypeKey)));
         let localVarQueryParameters: any = {};
@@ -17207,7 +17207,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: ProjectType;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: ProjectType;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -17226,7 +17226,7 @@ export class DefaultApi {
      * Returns all [project types](https://confluence.atlassian.com/x/Var1Nw), whether or not the instance has a valid license for each type.  **[Permissions](#permissions) required:** Permission to access Jira.
      * @summary Get all project types
      */
-    public comAtlassianJiraRestV2ProjectTypeProjectTypeResourceGetAllProjectTypesGet (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Array<ProjectType>;  }> {
+    public comAtlassianJiraRestV2ProjectTypeProjectTypeResourceGetAllProjectTypesGet (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<ProjectType>;  }> {
         const localVarPath = this.basePath + '/api/3/project/type';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -17256,7 +17256,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: Array<ProjectType>;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: Array<ProjectType>;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -17276,7 +17276,7 @@ export class DefaultApi {
      * @summary Get project type by key
      * @param projectTypeKey The key of the project type.
      */
-    public comAtlassianJiraRestV2ProjectTypeProjectTypeResourceGetProjectTypeByKeyGet (projectTypeKey: 'business' | 'ops' | 'service_desk' | 'software', options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: ProjectType;  }> {
+    public comAtlassianJiraRestV2ProjectTypeProjectTypeResourceGetProjectTypeByKeyGet (projectTypeKey: 'business' | 'ops' | 'service_desk' | 'software', options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: ProjectType;  }> {
         const localVarPath = this.basePath + '/api/3/project/type/{projectTypeKey}'
             .replace('{' + 'projectTypeKey' + '}', encodeURIComponent(String(projectTypeKey)));
         let localVarQueryParameters: any = {};
@@ -17312,7 +17312,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: ProjectType;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: ProjectType;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -17333,7 +17333,7 @@ export class DefaultApi {
      * @param propertyKey The key of the property.
      * @param issueFilterForBulkPropertyDelete
      */
-    public comAtlassianJiraRestV2PropertyIssuePropertyBulkUpdateResourceBulkDeleteIssuePropertyDelete (propertyKey: string, issueFilterForBulkPropertyDelete: IssueFilterForBulkPropertyDelete, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
+    public comAtlassianJiraRestV2PropertyIssuePropertyBulkUpdateResourceBulkDeleteIssuePropertyDelete (propertyKey: string, issueFilterForBulkPropertyDelete: IssueFilterForBulkPropertyDelete, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/issue/properties/{propertyKey}'
             .replace('{' + 'propertyKey' + '}', encodeURIComponent(String(propertyKey)));
         let localVarQueryParameters: any = {};
@@ -17375,7 +17375,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body?: any;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -17395,7 +17395,7 @@ export class DefaultApi {
      * @param propertyKey The key of the property. The maximum length is 255 characters.
      * @param bulkIssuePropertyUpdateRequest
      */
-    public comAtlassianJiraRestV2PropertyIssuePropertyBulkUpdateResourceBulkSetIssuePropertyPut (propertyKey: string, bulkIssuePropertyUpdateRequest: BulkIssuePropertyUpdateRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
+    public comAtlassianJiraRestV2PropertyIssuePropertyBulkUpdateResourceBulkSetIssuePropertyPut (propertyKey: string, bulkIssuePropertyUpdateRequest: BulkIssuePropertyUpdateRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/issue/properties/{propertyKey}'
             .replace('{' + 'propertyKey' + '}', encodeURIComponent(String(propertyKey)));
         let localVarQueryParameters: any = {};
@@ -17437,7 +17437,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body?: any;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -17457,7 +17457,7 @@ export class DefaultApi {
      * @param id The ID of the filter.
      * @param sharePermissionInputBean
      */
-    public comAtlassianJiraRestV2SearchFilterResourceAddSharePermissionPost (id: number, sharePermissionInputBean: SharePermissionInputBean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Array<SharePermission>;  }> {
+    public comAtlassianJiraRestV2SearchFilterResourceAddSharePermissionPost (id: number, sharePermissionInputBean: SharePermissionInputBean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<SharePermission>;  }> {
         const localVarPath = this.basePath + '/api/3/filter/{id}/permission'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -17499,7 +17499,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: Array<SharePermission>;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: Array<SharePermission>;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -17520,7 +17520,7 @@ export class DefaultApi {
      * @param filter The filter to create.
      * @param expand Use [expand](#expansion) to include additional information about filter in the response. This parameter accepts multiple values separated by a comma:  *   &#x60;sharedUsers&#x60; Returns the users that the filter is shared with. This includes users that can browse projects that the filter is shared with. If you don&#39;t specify &#x60;sharedUsers&#x60;, then the &#x60;sharedUsers&#x60; object is returned but it doesn&#39;t list any users. The list of users returned is limited to 1000, to access additional users append &#x60;[start-index:end-index]&#x60; to the expand request. For example, to access the next 1000 users, use &#x60;?expand&#x3D;sharedUsers[1001:2000]&#x60;. *   &#x60;subscriptions&#x60; Returns the users that are subscribed to the filter. If you don&#39;t specify &#x60;subscriptions&#x60;, the &#x60;subscriptions&#x60; object is returned but it doesn&#39;t list any subscriptions. The list of subscriptions returned is limited to 1000, to access additional subscriptions append &#x60;[start-index:end-index]&#x60; to the expand request. For example, to access the next 1000 subscriptions, use &#x60;?expand&#x3D;subscriptions[1001:2000]&#x60;.
      */
-    public comAtlassianJiraRestV2SearchFilterResourceCreateFilterPost (filter: Filter, expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Filter;  }> {
+    public comAtlassianJiraRestV2SearchFilterResourceCreateFilterPost (filter: Filter, expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Filter;  }> {
         const localVarPath = this.basePath + '/api/3/filter';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -17560,7 +17560,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: Filter;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: Filter;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -17581,7 +17581,7 @@ export class DefaultApi {
      * @param id The ID of the filter.
      * @param expand Use [expand](#expansion) to include additional information about filter in the response. This parameter accepts multiple values separated by a comma:  *   &#x60;sharedUsers&#x60; Returns the users that the filter is shared with. This includes users that can browse projects that the filter is shared with. If you don&#39;t specify &#x60;sharedUsers&#x60;, then the &#x60;sharedUsers&#x60; object is returned but it doesn&#39;t list any users. The list of users returned is limited to 1000, to access additional users append &#x60;[start-index:end-index]&#x60; to the expand request. For example, to access the next 1000 users, use &#x60;?expand&#x3D;sharedUsers[1001:2000]&#x60;. *   &#x60;subscriptions&#x60; Returns the users that are subscribed to the filter. If you don&#39;t specify &#x60;subscriptions&#x60;, the &#x60;subscriptions&#x60; object is returned but it doesn&#39;t list any subscriptions. The list of subscriptions returned is limited to 1000, to access additional subscriptions append &#x60;[start-index:end-index]&#x60; to the expand request. For example, to access the next 1000 subscriptions, use &#x60;?expand&#x3D;subscriptions[1001:2000]&#x60;.
      */
-    public comAtlassianJiraRestV2SearchFilterResourceDeleteFavouriteForFilterDelete (id: number, expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Filter;  }> {
+    public comAtlassianJiraRestV2SearchFilterResourceDeleteFavouriteForFilterDelete (id: number, expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Filter;  }> {
         const localVarPath = this.basePath + '/api/3/filter/{id}/favourite'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -17621,7 +17621,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: Filter;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: Filter;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -17641,7 +17641,7 @@ export class DefaultApi {
      * @summary Delete filter
      * @param id The ID of the filter to delete.
      */
-    public comAtlassianJiraRestV2SearchFilterResourceDeleteFilterDelete (id: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
+    public comAtlassianJiraRestV2SearchFilterResourceDeleteFilterDelete (id: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/filter/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -17677,7 +17677,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body?: any;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -17697,7 +17697,7 @@ export class DefaultApi {
      * @param id The ID of the filter.
      * @param permissionId The ID of the share permission.
      */
-    public comAtlassianJiraRestV2SearchFilterResourceDeleteSharePermissionDelete (id: number, permissionId: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
+    public comAtlassianJiraRestV2SearchFilterResourceDeleteSharePermissionDelete (id: number, permissionId: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/filter/{id}/permission/{permissionId}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)))
             .replace('{' + 'permissionId' + '}', encodeURIComponent(String(permissionId)));
@@ -17739,7 +17739,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body?: any;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -17758,7 +17758,7 @@ export class DefaultApi {
      * @summary Get columns
      * @param id The ID of the filter.
      */
-    public comAtlassianJiraRestV2SearchFilterResourceGetColumnsGet (id: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Array<ColumnItem>;  }> {
+    public comAtlassianJiraRestV2SearchFilterResourceGetColumnsGet (id: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<ColumnItem>;  }> {
         const localVarPath = this.basePath + '/api/3/filter/{id}/columns'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -17794,7 +17794,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: Array<ColumnItem>;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: Array<ColumnItem>;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -17813,7 +17813,7 @@ export class DefaultApi {
      * Returns the default sharing settings for new filters and dashboards for a user.  **[Permissions](#permissions) required:** Permission to access Jira.
      * @summary Get default share scope
      */
-    public comAtlassianJiraRestV2SearchFilterResourceGetDefaultShareScopeGet (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: DefaultShareScope;  }> {
+    public comAtlassianJiraRestV2SearchFilterResourceGetDefaultShareScopeGet (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: DefaultShareScope;  }> {
         const localVarPath = this.basePath + '/api/3/filter/defaultShareScope';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -17843,7 +17843,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: DefaultShareScope;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: DefaultShareScope;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -17863,7 +17863,7 @@ export class DefaultApi {
      * @summary Get favorite filters
      * @param expand Use [expand](#expansion) to include additional information about filter in the response. This parameter accepts multiple values separated by a comma:  *   &#x60;sharedUsers&#x60; Returns the users that the filter is shared with. This includes users that can browse projects that the filter is shared with. If you don&#39;t specify &#x60;sharedUsers&#x60;, then the &#x60;sharedUsers&#x60; object is returned but it doesn&#39;t list any users. The list of users returned is limited to 1000, to access additional users append &#x60;[start-index:end-index]&#x60; to the expand request. For example, to access the next 1000 users, use &#x60;?expand&#x3D;sharedUsers[1001:2000]&#x60;. *   &#x60;subscriptions&#x60; Returns the users that are subscribed to the filter. If you don&#39;t specify &#x60;subscriptions&#x60;, the &#x60;subscriptions&#x60; object is returned but it doesn&#39;t list any subscriptions. The list of subscriptions returned is limited to 1000, to access additional subscriptions append &#x60;[start-index:end-index]&#x60; to the expand request. For example, to access the next 1000 subscriptions, use &#x60;?expand&#x3D;subscriptions[1001:2000]&#x60;.
      */
-    public comAtlassianJiraRestV2SearchFilterResourceGetFavouriteFiltersGet (expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Array<Filter>;  }> {
+    public comAtlassianJiraRestV2SearchFilterResourceGetFavouriteFiltersGet (expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<Filter>;  }> {
         const localVarPath = this.basePath + '/api/3/filter/favourite';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -17897,7 +17897,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: Array<Filter>;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: Array<Filter>;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -17918,7 +17918,7 @@ export class DefaultApi {
      * @param id The ID of the filter to return.
      * @param expand Use [expand](#expansion) to include additional information about filter in the response. This parameter accepts multiple values separated by a comma:  *   &#x60;sharedUsers&#x60; Returns the users that the filter is shared with. This includes users that can browse projects that the filter is shared with. If you don&#39;t specify &#x60;sharedUsers&#x60;, then the &#x60;sharedUsers&#x60; object is returned but it doesn&#39;t list any users. The list of users returned is limited to 1000, to access additional users append &#x60;[start-index:end-index]&#x60; to the expand request. For example, to access the next 1000 users, use &#x60;?expand&#x3D;sharedUsers[1001:2000]&#x60;. *   &#x60;subscriptions&#x60; Returns the users that are subscribed to the filter. If you don&#39;t specify &#x60;subscriptions&#x60;, the &#x60;subscriptions&#x60; object is returned but it doesn&#39;t list any subscriptions. The list of subscriptions returned is limited to 1000, to access additional subscriptions append &#x60;[start-index:end-index]&#x60; to the expand request. For example, to access the next 1000 subscriptions, use &#x60;?expand&#x3D;subscriptions[1001:2000]&#x60;.
      */
-    public comAtlassianJiraRestV2SearchFilterResourceGetFilterGet (id: number, expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Filter;  }> {
+    public comAtlassianJiraRestV2SearchFilterResourceGetFilterGet (id: number, expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Filter;  }> {
         const localVarPath = this.basePath + '/api/3/filter/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -17958,7 +17958,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: Filter;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: Filter;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -17978,7 +17978,7 @@ export class DefaultApi {
      * @summary Get filters
      * @param expand Use [expand](#expansion) to include additional information about filter in the response. This parameter accepts multiple values separated by a comma:  *   &#x60;sharedUsers&#x60; Returns the users that the filter is shared with. This includes users that can browse projects that the filter is shared with. If you don&#39;t specify &#x60;sharedUsers&#x60;, then the &#x60;sharedUsers&#x60; object is returned but it doesn&#39;t list any users. The list of users returned is limited to 1000, to access additional users append &#x60;[start-index:end-index]&#x60; to the expand request. For example, to access the next 1000 users, use &#x60;?expand&#x3D;sharedUsers[1001:2000]&#x60;. *   &#x60;subscriptions&#x60; Returns the users that are subscribed to the filter. If you don&#39;t specify &#x60;subscriptions&#x60;, the &#x60;subscriptions&#x60; object is returned but it doesn&#39;t list any subscriptions. The list of subscriptions returned is limited to 1000, to access additional subscriptions append &#x60;[start-index:end-index]&#x60; to the expand request. For example, to access the next 1000 subscriptions, use &#x60;?expand&#x3D;subscriptions[1001:2000]&#x60;.
      */
-    public comAtlassianJiraRestV2SearchFilterResourceGetFiltersGet (expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Array<Filter>;  }> {
+    public comAtlassianJiraRestV2SearchFilterResourceGetFiltersGet (expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<Filter>;  }> {
         const localVarPath = this.basePath + '/api/3/filter';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -18012,7 +18012,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: Array<Filter>;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: Array<Filter>;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -18040,7 +18040,7 @@ export class DefaultApi {
      * @param maxResults The maximum number of items to return per page. The maximum is &#x60;100&#x60;.
      * @param expand Use [expand](#expansion) to include additional information about filter in the response. This parameter accepts multiple values separated by a comma:  *   &#x60;description&#x60; Returns the description of the filter. *   &#x60;favourite&#x60; Returns an indicator of whether the user has set the filter as a favorite. *   &#x60;favouritedCount&#x60; Returns a count of how many users have set this filter as a favorite. *   &#x60;jql&#x60; Returns the JQL query that the filter uses. *   &#x60;owner&#x60; Returns the owner of the filter. *   &#x60;searchUrl&#x60; Returns a URL to perform the filter&#39;s JQL query. *   &#x60;sharePermissions&#x60; Returns the share permissions defined for the filter. *   &#x60;subscriptions&#x60; Returns the users that are subscribed to the filter. *   &#x60;viewUrl&#x60; Returns a URL to view the filter.
      */
-    public comAtlassianJiraRestV2SearchFilterResourceGetFiltersPaginatedGet (filterName?: string, accountId?: string, owner?: string, groupname?: string, projectId?: number, orderBy?: 'id' | 'name' | 'description' | 'owner' | 'favorite_count' | 'is_favorite' | '-id' | '-name' | '-description' | '-owner' | '-favorite_count' | '-is_favorite', startAt?: number, maxResults?: number, expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: PageOfFoundFilter;  }> {
+    public comAtlassianJiraRestV2SearchFilterResourceGetFiltersPaginatedGet (filterName?: string, accountId?: string, owner?: string, groupname?: string, projectId?: number, orderBy?: 'id' | 'name' | 'description' | 'owner' | 'favorite_count' | 'is_favorite' | '-id' | '-name' | '-description' | '-owner' | '-favorite_count' | '-is_favorite', startAt?: number, maxResults?: number, expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: PageOfFoundFilter;  }> {
         const localVarPath = this.basePath + '/api/3/filter/search';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -18106,7 +18106,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: PageOfFoundFilter;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: PageOfFoundFilter;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -18127,7 +18127,7 @@ export class DefaultApi {
      * @param expand Use [expand](#expansion) to include additional information about filter in the response. This parameter accepts multiple values separated by a comma:  *   &#x60;sharedUsers&#x60; Returns the users that the filter is shared with. This includes users that can browse projects that the filter is shared with. If you don&#39;t specify &#x60;sharedUsers&#x60;, then the &#x60;sharedUsers&#x60; object is returned but it doesn&#39;t list any users. The list of users returned is limited to 1000, to access additional users append &#x60;[start-index:end-index]&#x60; to the expand request. For example, to access the next 1000 users, use &#x60;?expand&#x3D;sharedUsers[1001:2000]&#x60;. *   &#x60;subscriptions&#x60; Returns the users that are subscribed to the filter. If you don&#39;t specify &#x60;subscriptions&#x60;, the &#x60;subscriptions&#x60; object is returned but it doesn&#39;t list any subscriptions. The list of subscriptions returned is limited to 1000, to access additional subscriptions append &#x60;[start-index:end-index]&#x60; to the expand request. For example, to access the next 1000 subscriptions, use &#x60;?expand&#x3D;subscriptions[1001:2000]&#x60;.
      * @param includeFavourites Include the user&#39;s favorite filters in the response.
      */
-    public comAtlassianJiraRestV2SearchFilterResourceGetMyFiltersGet (expand?: string, includeFavourites?: boolean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Array<Filter>;  }> {
+    public comAtlassianJiraRestV2SearchFilterResourceGetMyFiltersGet (expand?: string, includeFavourites?: boolean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<Filter>;  }> {
         const localVarPath = this.basePath + '/api/3/filter/my';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -18165,7 +18165,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: Array<Filter>;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: Array<Filter>;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -18186,7 +18186,7 @@ export class DefaultApi {
      * @param id The ID of the filter.
      * @param permissionId The ID of the share permission.
      */
-    public comAtlassianJiraRestV2SearchFilterResourceGetSharePermissionGet (id: number, permissionId: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: SharePermission;  }> {
+    public comAtlassianJiraRestV2SearchFilterResourceGetSharePermissionGet (id: number, permissionId: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: SharePermission;  }> {
         const localVarPath = this.basePath + '/api/3/filter/{id}/permission/{permissionId}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)))
             .replace('{' + 'permissionId' + '}', encodeURIComponent(String(permissionId)));
@@ -18228,7 +18228,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: SharePermission;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: SharePermission;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -18248,7 +18248,7 @@ export class DefaultApi {
      * @summary Get share permissions
      * @param id The ID of the filter.
      */
-    public comAtlassianJiraRestV2SearchFilterResourceGetSharePermissionsGet (id: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Array<SharePermission>;  }> {
+    public comAtlassianJiraRestV2SearchFilterResourceGetSharePermissionsGet (id: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<SharePermission>;  }> {
         const localVarPath = this.basePath + '/api/3/filter/{id}/permission'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -18284,7 +18284,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: Array<SharePermission>;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: Array<SharePermission>;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -18304,7 +18304,7 @@ export class DefaultApi {
      * @summary Reset columns
      * @param id The ID of the filter.
      */
-    public comAtlassianJiraRestV2SearchFilterResourceResetColumnsDelete (id: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
+    public comAtlassianJiraRestV2SearchFilterResourceResetColumnsDelete (id: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/filter/{id}/columns'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -18340,7 +18340,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body?: any;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -18360,7 +18360,7 @@ export class DefaultApi {
      * @param id The ID of the filter.
      * @param columns The IDs of the fields to set as columns. In the form data, specify each field as &#x60;columns&#x3D;id&#x60;, where &#x60;id&#x60; is the _id_ of a field (as seen in the response for [Get fields](#api-api-3-field-get)). For example, &#x60;columns&#x3D;summary&#x60;.
      */
-    public comAtlassianJiraRestV2SearchFilterResourceSetColumnsPut (id: number, columns: Array<string>, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
+    public comAtlassianJiraRestV2SearchFilterResourceSetColumnsPut (id: number, columns: Array<string>, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/filter/{id}/columns'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -18405,7 +18405,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body?: any;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -18424,7 +18424,7 @@ export class DefaultApi {
      * @summary Set default share scope
      * @param defaultShareScope
      */
-    public comAtlassianJiraRestV2SearchFilterResourceSetDefaultShareScopePut (defaultShareScope: DefaultShareScope, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: DefaultShareScope;  }> {
+    public comAtlassianJiraRestV2SearchFilterResourceSetDefaultShareScopePut (defaultShareScope: DefaultShareScope, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: DefaultShareScope;  }> {
         const localVarPath = this.basePath + '/api/3/filter/defaultShareScope';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -18460,7 +18460,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: DefaultShareScope;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: DefaultShareScope;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -18481,7 +18481,7 @@ export class DefaultApi {
      * @param id The ID of the filter.
      * @param expand Use [expand](#expansion) to include additional information about filter in the response. This parameter accepts multiple values separated by a comma:  *   &#x60;sharedUsers&#x60; Returns the users that the filter is shared with. This includes users that can browse projects that the filter is shared with. If you don&#39;t specify &#x60;sharedUsers&#x60;, then the &#x60;sharedUsers&#x60; object is returned but it doesn&#39;t list any users. The list of users returned is limited to 1000, to access additional users append &#x60;[start-index:end-index]&#x60; to the expand request. For example, to access the next 1000 users, use &#x60;?expand&#x3D;sharedUsers[1001:2000]&#x60;. *   &#x60;subscriptions&#x60; Returns the users that are subscribed to the filter. If you don&#39;t specify &#x60;subscriptions&#x60;, the &#x60;subscriptions&#x60; object is returned but it doesn&#39;t list any subscriptions. The list of subscriptions returned is limited to 1000, to access additional subscriptions append &#x60;[start-index:end-index]&#x60; to the expand request. For example, to access the next 1000 subscriptions, use &#x60;?expand&#x3D;subscriptions[1001:2000]&#x60;.
      */
-    public comAtlassianJiraRestV2SearchFilterResourceSetFavouriteForFilterPut (id: number, expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Filter;  }> {
+    public comAtlassianJiraRestV2SearchFilterResourceSetFavouriteForFilterPut (id: number, expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Filter;  }> {
         const localVarPath = this.basePath + '/api/3/filter/{id}/favourite'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -18521,7 +18521,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: Filter;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: Filter;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -18543,7 +18543,7 @@ export class DefaultApi {
      * @param filter The filter to update.
      * @param expand Use [expand](#expansion) to include additional information about filter in the response. This parameter accepts multiple values separated by a comma:  *   &#x60;sharedUsers&#x60; Returns the users that the filter is shared with. This includes users that can browse projects that the filter is shared with. If you don&#39;t specify &#x60;sharedUsers&#x60;, then the &#x60;sharedUsers&#x60; object is returned but it doesn&#39;t list any users. The list of users returned is limited to 1000, to access additional users append &#x60;[start-index:end-index]&#x60; to the expand request. For example, to access the next 1000 users, use &#x60;?expand&#x3D;sharedUsers[1001:2000]&#x60;. *   &#x60;subscriptions&#x60; Returns the users that are subscribed to the filter. If you don&#39;t specify &#x60;subscriptions&#x60;, the &#x60;subscriptions&#x60; object is returned but it doesn&#39;t list any subscriptions. The list of subscriptions returned is limited to 1000, to access additional subscriptions append &#x60;[start-index:end-index]&#x60; to the expand request. For example, to access the next 1000 subscriptions, use &#x60;?expand&#x3D;subscriptions[1001:2000]&#x60;.
      */
-    public comAtlassianJiraRestV2SearchFilterResourceUpdateFilterPut (id: number, filter: Filter, expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Filter;  }> {
+    public comAtlassianJiraRestV2SearchFilterResourceUpdateFilterPut (id: number, filter: Filter, expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Filter;  }> {
         const localVarPath = this.basePath + '/api/3/filter/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -18589,7 +18589,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: Filter;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: Filter;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -18609,7 +18609,7 @@ export class DefaultApi {
      * @summary Convert user identifiers to account IDs in JQL queries
      * @param jQLPersonalDataMigrationRequest
      */
-    public comAtlassianJiraRestV2SearchJQLPersonalDataMigrationResourceMigrateQueriesPost (jQLPersonalDataMigrationRequest: JQLPersonalDataMigrationRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: ConvertedJQLQueries;  }> {
+    public comAtlassianJiraRestV2SearchJQLPersonalDataMigrationResourceMigrateQueriesPost (jQLPersonalDataMigrationRequest: JQLPersonalDataMigrationRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: ConvertedJQLQueries;  }> {
         const localVarPath = this.basePath + '/api/3/jql/pdcleaner';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -18645,7 +18645,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: ConvertedJQLQueries;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: ConvertedJQLQueries;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -18664,7 +18664,7 @@ export class DefaultApi {
      * Returns reference data for JQL searches. This is a downloadable version of the documentation provided in [Advanced searching - fields reference](https://confluence.atlassian.com/x/gwORLQ) and [Advanced searching - functions reference](https://confluence.atlassian.com/x/hgORLQ), along with a list of JQL-reserved words. Use this information to assist with the programmatic creation of JQL queries or the validation of queries built in a custom query builder.  **[Permissions](#permissions) required:** Permission to access Jira.
      * @summary Get field reference data
      */
-    public comAtlassianJiraRestV2SearchSearchAutoCompleteResourceGetAutoCompleteGet (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: JQLReferenceData;  }> {
+    public comAtlassianJiraRestV2SearchSearchAutoCompleteResourceGetAutoCompleteGet (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: JQLReferenceData;  }> {
         const localVarPath = this.basePath + '/api/3/jql/autocompletedata';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -18694,7 +18694,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: JQLReferenceData;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: JQLReferenceData;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -18717,7 +18717,7 @@ export class DefaultApi {
      * @param predicateName The name of the [CHANGED operator predicate](https://confluence.atlassian.com/x/hQORLQ#Advancedsearching-operatorsreference-CHANGEDCHANGED) for which the suggestions are generated. The valid predicate operators are _by_, _from_, and _to_.
      * @param predicateValue The partial predicate item name entered by the user.
      */
-    public comAtlassianJiraRestV2SearchSearchAutoCompleteResourceGetFieldAutoCompleteForQueryStringGet (fieldName?: string, fieldValue?: string, predicateName?: string, predicateValue?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: AutoCompleteSuggestions;  }> {
+    public comAtlassianJiraRestV2SearchSearchAutoCompleteResourceGetFieldAutoCompleteForQueryStringGet (fieldName?: string, fieldValue?: string, predicateName?: string, predicateValue?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: AutoCompleteSuggestions;  }> {
         const localVarPath = this.basePath + '/api/3/jql/autocompletedata/suggestions';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -18763,7 +18763,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: AutoCompleteSuggestions;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: AutoCompleteSuggestions;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -18790,7 +18790,7 @@ export class DefaultApi {
      * @param properties A comma-separated list of issue property keys for issue properties to include in the results. This parameter may be specified multiple times. For example, &#x60;properties&#x3D;prop1,prop2&amp;properties&#x3D;prop3&#x60;. A maximum of 5 issue property keys can be specified.
      * @param fieldsByKeys Reference fields by their key (rather than ID).
      */
-    public comAtlassianJiraRestV2SearchSearchResourceSearchForIssuesUsingJqlGet (jql?: string, startAt?: number, maxResults?: number, validateQuery?: 'strict' | 'warn' | 'none' | 'true' | 'false', fields?: Array<string>, expand?: string, properties?: Array<string>, fieldsByKeys?: boolean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: SearchResults;  }> {
+    public comAtlassianJiraRestV2SearchSearchResourceSearchForIssuesUsingJqlGet (jql?: string, startAt?: number, maxResults?: number, validateQuery?: 'strict' | 'warn' | 'none' | 'true' | 'false', fields?: Array<string>, expand?: string, properties?: Array<string>, fieldsByKeys?: boolean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: SearchResults;  }> {
         const localVarPath = this.basePath + '/api/3/search';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -18852,7 +18852,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: SearchResults;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: SearchResults;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -18872,7 +18872,7 @@ export class DefaultApi {
      * @summary Search for issues using JQL (POST)
      * @param searchRequestBean A JSON object containing the search request.
      */
-    public comAtlassianJiraRestV2SearchSearchResourceSearchForIssuesUsingJqlPost (searchRequestBean: SearchRequestBean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: SearchResults;  }> {
+    public comAtlassianJiraRestV2SearchSearchResourceSearchForIssuesUsingJqlPost (searchRequestBean: SearchRequestBean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: SearchResults;  }> {
         const localVarPath = this.basePath + '/api/3/search';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -18908,7 +18908,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: SearchResults;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: SearchResults;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -18931,7 +18931,7 @@ export class DefaultApi {
      * @param maxResults The maximum number of items to return per page. The maximum is &#x60;1000&#x60;.
      * @param includeInactive Include inactive users in the results. This parameter is deprecated and will be removed soon. Searching for inactive users is no longer supported.
      */
-    public comAtlassianJiraRestV2SearchUserSearchResourceFindUserKeysByQueryGet (query: string, startAt?: number, maxResults?: number, includeInactive?: boolean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: PageOfUserKey;  }> {
+    public comAtlassianJiraRestV2SearchUserSearchResourceFindUserKeysByQueryGet (query: string, startAt?: number, maxResults?: number, includeInactive?: boolean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: PageOfUserKey;  }> {
         const localVarPath = this.basePath + '/api/3/user/search/query/key';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -18982,7 +18982,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: PageOfUserKey;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: PageOfUserKey;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -19005,7 +19005,7 @@ export class DefaultApi {
      * @param maxResults The maximum number of items to return per page. The maximum is &#x60;1000&#x60;.
      * @param includeInactive Include inactive users in the results. This parameter is deprecated and will be removed soon. Searching for inactive users is no longer supported.
      */
-    public comAtlassianJiraRestV2SearchUserSearchResourceFindUsersByQueryGet (query: string, startAt?: number, maxResults?: number, includeInactive?: boolean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: PageOfUser;  }> {
+    public comAtlassianJiraRestV2SearchUserSearchResourceFindUsersByQueryGet (query: string, startAt?: number, maxResults?: number, includeInactive?: boolean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: PageOfUser;  }> {
         const localVarPath = this.basePath + '/api/3/user/search/query';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -19056,7 +19056,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: PageOfUser;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: PageOfUser;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -19076,7 +19076,7 @@ export class DefaultApi {
      * @summary Get project issue security levels
      * @param projectKeyOrId The project ID or project key (case sensitive).
      */
-    public comAtlassianJiraRestV2SecuritylevelProjectSecurityLevelResourceGetSecurityLevelsForProjectGet (projectKeyOrId: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: ProjectIssueSecurityLevels;  }> {
+    public comAtlassianJiraRestV2SecuritylevelProjectSecurityLevelResourceGetSecurityLevelsForProjectGet (projectKeyOrId: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: ProjectIssueSecurityLevels;  }> {
         const localVarPath = this.basePath + '/api/3/project/{projectKeyOrId}/securitylevel'
             .replace('{' + 'projectKeyOrId' + '}', encodeURIComponent(String(projectKeyOrId)));
         let localVarQueryParameters: any = {};
@@ -19112,7 +19112,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: ProjectIssueSecurityLevels;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: ProjectIssueSecurityLevels;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -19131,7 +19131,7 @@ export class DefaultApi {
      * Returns information about the Jira instance.  **[Permissions](#permissions) required:** Permission to access Jira.
      * @summary Get Jira instance info
      */
-    public comAtlassianJiraRestV2ServerInfoResourceGetServerInfoGet (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: ServerInformation;  }> {
+    public comAtlassianJiraRestV2ServerInfoResourceGetServerInfoGet (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: ServerInformation;  }> {
         const localVarPath = this.basePath + '/api/3/serverInfo';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -19161,7 +19161,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: ServerInformation;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: ServerInformation;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -19181,7 +19181,7 @@ export class DefaultApi {
      * @summary Cancel task
      * @param taskId The ID of the task.
      */
-    public comAtlassianJiraRestV2TaskTaskResourceCancelTaskPost (taskId: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
+    public comAtlassianJiraRestV2TaskTaskResourceCancelTaskPost (taskId: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/task/{taskId}/cancel'
             .replace('{' + 'taskId' + '}', encodeURIComponent(String(taskId)));
         let localVarQueryParameters: any = {};
@@ -19217,7 +19217,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body?: any;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -19236,7 +19236,7 @@ export class DefaultApi {
      * @summary Get task
      * @param taskId The ID of the task.
      */
-    public comAtlassianJiraRestV2TaskTaskResourceGetTaskGet (taskId: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: TaskProgressObject;  }> {
+    public comAtlassianJiraRestV2TaskTaskResourceGetTaskGet (taskId: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: TaskProgressObject;  }> {
         const localVarPath = this.basePath + '/api/3/task/{taskId}'
             .replace('{' + 'taskId' + '}', encodeURIComponent(String(taskId)));
         let localVarQueryParameters: any = {};
@@ -19272,7 +19272,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: TaskProgressObject;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: TaskProgressObject;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -19296,7 +19296,7 @@ export class DefaultApi {
      * @param key This parameter has been deprecated due to privacy changes. Use &#x60;accountIDs&#x60; instead. See the [migration guide](https://developer.atlassian.com/cloud/jira/platform/deprecation-notice-user-privacy-api-migration-guide/) for details. Key of a user. To specify multiple users, pass multiple &#x60;key&#x60; parameters. For example, &#x60;key&#x3D;fred&amp;key&#x3D;barney&#x60; Required if &#x60;username&#x60; or &#x60;accountID&#x60; isn&#39;t provided. Cannot be provided if &#x60;username&#x60; or &#x60;accountID&#x60; is present.
      * @param accountId Account ID of a user. To specify multiple users, pass multiple &#x60;accountId&#x60; parameters. For example, &#x60;accountId&#x3D;99:27935d01-92a7-4687-8272-a9b8d3b2ae2e&amp;accountId&#x3D;26912:8347-325f-ef346-bd0342234324&#x60; Required if &#x60;key&#x60; or &#x60;username&#x60; isn&#39;t provided. Cannot be provided if &#x60;key&#x60; or &#x60;username&#x60; is present.
      */
-    public comAtlassianJiraRestV2UserUserBulkResourceBulkGetUsersGet (startAt?: number, maxResults?: number, username?: Array<string>, key?: Array<string>, accountId?: Array<string>, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: PageOfUser;  }> {
+    public comAtlassianJiraRestV2UserUserBulkResourceBulkGetUsersGet (startAt?: number, maxResults?: number, username?: Array<string>, key?: Array<string>, accountId?: Array<string>, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: PageOfUser;  }> {
         const localVarPath = this.basePath + '/api/3/user/bulk';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -19346,7 +19346,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: PageOfUser;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: PageOfUser;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -19369,7 +19369,7 @@ export class DefaultApi {
      * @param username Username of a user. To specify multiple users, pass multiple &#x60;username&#x60; parameters. For example, &#x60;username&#x3D;fred&amp;username&#x3D;barney&#x60;. Required if &#x60;key&#x60; isn&#39;t provided. Cannot be provided if &#x60;key&#x60; is present.
      * @param key Key of a user. To specify multiple users, pass multiple &#x60;key&#x60; parameters. For example, &#x60;key&#x3D;fred&amp;key&#x3D;barney&#x60;. Required if &#x60;username&#x60; isn&#39;t provided. Cannot be provided if &#x60;username&#x60; is present.
      */
-    public comAtlassianJiraRestV2UserUserBulkResourceBulkGetUsersMigrationGet (startAt?: number, maxResults?: number, username?: Array<string>, key?: Array<string>, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Array<UserMigrationBean>;  }> {
+    public comAtlassianJiraRestV2UserUserBulkResourceBulkGetUsersMigrationGet (startAt?: number, maxResults?: number, username?: Array<string>, key?: Array<string>, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UserMigrationBean>;  }> {
         const localVarPath = this.basePath + '/api/3/user/bulk/migration';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -19415,7 +19415,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: Array<UserMigrationBean>;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: Array<UserMigrationBean>;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -19438,7 +19438,7 @@ export class DefaultApi {
      * @param userKey This parameter has been deprecated due to privacy changes. Use &#x60;accountId&#x60; instead. See the [migration guide](https://developer.atlassian.com/cloud/jira/platform/deprecation-notice-user-privacy-api-migration-guide/) for details.  The key of the user. Required, unless &#x60;accountId&#x60; or &#x60;username&#x60; is specified.
      * @param username This parameter has been deprecated due to privacy changes. Use &#x60;accountId&#x60; instead. See the [migration guide](https://developer.atlassian.com/cloud/jira/platform/deprecation-notice-user-privacy-api-migration-guide/) for details.  The username of the user. Required, unless &#x60;accountId&#x60; or &#x60;userkey&#x60; is specified.
      */
-    public comAtlassianJiraRestV2UserpropertyUserPropertyResourceDeleteUserPropertyDelete (propertyKey: string, accountId?: string, userKey?: string, username?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
+    public comAtlassianJiraRestV2UserpropertyUserPropertyResourceDeleteUserPropertyDelete (propertyKey: string, accountId?: string, userKey?: string, username?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/user/properties/{propertyKey}'
             .replace('{' + 'propertyKey' + '}', encodeURIComponent(String(propertyKey)));
         let localVarQueryParameters: any = {};
@@ -19486,7 +19486,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body?: any;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -19508,7 +19508,7 @@ export class DefaultApi {
      * @param userKey This parameter has been deprecated due to privacy changes. Use &#x60;accountId&#x60; instead. See the [migration guide](https://developer.atlassian.com/cloud/jira/platform/deprecation-notice-user-privacy-api-migration-guide/) for details.  The key of the user. Required, unless &#x60;accountId&#x60; or &#x60;username&#x60; is specified.
      * @param username This parameter has been deprecated due to privacy changes. Use &#x60;accountId&#x60; instead. See the [migration guide](https://developer.atlassian.com/cloud/jira/platform/deprecation-notice-user-privacy-api-migration-guide/) for details.  The username of the user. Required, unless &#x60;accountId&#x60; or &#x60;userKey&#x60; is specified.
      */
-    public comAtlassianJiraRestV2UserpropertyUserPropertyResourceGetUserPropertyGet (propertyKey: string, accountId?: string, userKey?: string, username?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: EntityProperty;  }> {
+    public comAtlassianJiraRestV2UserpropertyUserPropertyResourceGetUserPropertyGet (propertyKey: string, accountId?: string, userKey?: string, username?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: EntityProperty;  }> {
         const localVarPath = this.basePath + '/api/3/user/properties/{propertyKey}'
             .replace('{' + 'propertyKey' + '}', encodeURIComponent(String(propertyKey)));
         let localVarQueryParameters: any = {};
@@ -19556,7 +19556,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: EntityProperty;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: EntityProperty;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -19578,7 +19578,7 @@ export class DefaultApi {
      * @param userKey This parameter has been deprecated due to privacy changes. Use &#x60;accountId&#x60; instead. See the [migration guide](https://developer.atlassian.com/cloud/jira/platform/deprecation-notice-user-privacy-api-migration-guide/) for details.  The key of the user. Required, unless &#x60;accountId&#x60; or &#x60;username&#x60; is specified.
      * @param username This parameter has been deprecated due to privacy changes. Use &#x60;accountId&#x60; instead. See the [migration guide](https://developer.atlassian.com/cloud/jira/platform/deprecation-notice-user-privacy-api-migration-guide/) for details.  The username of the user. Required, unless &#x60;accountId&#x60; or &#x60;userKey&#x60; is specified.
      */
-    public comAtlassianJiraRestV2UserpropertyUserPropertyResourceGetUserPropertyKeysGet (accountId?: string, userKey?: string, username?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: PropertyKeys;  }> {
+    public comAtlassianJiraRestV2UserpropertyUserPropertyResourceGetUserPropertyKeysGet (accountId?: string, userKey?: string, username?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: PropertyKeys;  }> {
         const localVarPath = this.basePath + '/api/3/user/properties';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
@@ -19620,7 +19620,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body: PropertyKeys;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body: PropertyKeys;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
@@ -19644,7 +19644,7 @@ export class DefaultApi {
      * @param userKey This parameter has been deprecated due to privacy changes. Use &#x60;accountId&#x60; instead. See the [migration guide](https://developer.atlassian.com/cloud/jira/platform/deprecation-notice-user-privacy-api-migration-guide/) for details.  The key of the user. Required, unless &#x60;accountId&#x60; or &#x60;username&#x60; is specified.
      * @param username This parameter has been deprecated due to privacy changes. Use &#x60;accountId&#x60; instead. See the [migration guide](https://developer.atlassian.com/cloud/jira/platform/deprecation-notice-user-privacy-api-migration-guide/) for details.  The username of the user. Required, unless &#x60;accountId&#x60; or &#x60;userKey&#x60; is specified.
      */
-    public comAtlassianJiraRestV2UserpropertyUserPropertyResourceSetUserPropertyPut (propertyKey: string, body: any, accountId?: string, userKey?: string, username?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
+    public comAtlassianJiraRestV2UserpropertyUserPropertyResourceSetUserPropertyPut (propertyKey: string, body: any, accountId?: string, userKey?: string, username?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/user/properties/{propertyKey}'
             .replace('{' + 'propertyKey' + '}', encodeURIComponent(String(propertyKey)));
         let localVarQueryParameters: any = {};
@@ -19698,7 +19698,7 @@ export class DefaultApi {
                 localVarRequestOptions.form = localVarFormParams;
             }
         }
-        return new Promise<{ response: http.ClientResponse; body?: any;  }>((resolve, reject) => {
+        return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
             localVarRequest(localVarRequestOptions, (error, response, body) => {
                 if (error) {
                     reject(error);
