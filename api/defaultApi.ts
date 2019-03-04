@@ -12,7 +12,7 @@
 
 import localVarRequest = require('request');
 import http = require('http');
-import Promise = require('bluebird');
+// import Promise = require('bluebird');
 
 /* tslint:disable:no-unused-locals */
 import { ActorInputBean } from '../model/actorInputBean';
@@ -332,7 +332,7 @@ export class DefaultApi {
      * Changes the value of an application property. For example, you can change the value of the `jira.clone.prefix` from its default value of _CLONE -_ to _Clone -_ if you prefer sentence case capitalization. Editable properties are described below along with their default values.  #### Advanced settings  The advanced settings below are also accessible in [Jira](https://confluence.atlassian.com/x/vYXKM).  | Key | Description | Default value | | --- | --- | --- | | `jira.clone.prefix` | A string of text that automatically precedes the title of a cloned issue. | `CLONE -` | | `jira.date.picker.java.format` | The date format for the Java (server-side) generated dates. This must be the same as the `jira.date.picker.javascript.format` format setting. | `d/MMM/yy` | | `jira.date.picker.javascript.format` | This date format is for the JavaScript (client-side) generated dates. This must be the same as the `jira.date.picker.java.format` format setting. | `%e/%b/%y` | | `jira.date.time.picker.java.format` | The date format for the Java (server-side) generated date times. This must be the same as the `jira.date.time.picker.javascript.format` format setting. | `dd/MMM/yy h:mm a` | | `jira.date.time.picker.javascript.format` | This date format is for the JavaScript (client-side) generated date times. This must be the same as the `jira.date.time.picker.java.format` format setting. | `%e/%b/%y %I:%M %p` | | `jira.issue.actions.order` | The default order of actions (such as _Comments_ or _Change history_) displayed on the issue view. | `asc` | | `jira.table.cols.subtasks` | The columns to show while viewing sub-task issues in a table. For example, a list of sub-tasks on a particular issue. | `issuetype, status, assignee, progress` | | `jira.view.issue.links.sort.order` | The sort order of the list of issue links on the issue view. | `type, status, priority` | | `jira.comment.collapsing.minimum.hidden` | The minimum number of comments required for comment collapsing to occur. A value of `0` disables comment collapsing. | `4` | | `jira.newsletter.tip.delay.days` | The number of days before a prompt to sign up to the Jira Insiders newsletter is shown. A value of `-1` disables this functionality. | `7` |  #### Look and feel  The settings listed below adjust the [look and feel](https://confluence.atlassian.com/x/VwCLLg).  | Key | Description | Default value | | --- | --- | --- | | `jira.lf.date.time` | Look and feel of the [time format](https://docs.oracle.com/javase/6/docs/api/index.html?java/text/SimpleDateFormat.html). | `h:mm a` | | `jira.lf.date.day` | Look and feel of the [day format](https://docs.oracle.com/javase/6/docs/api/index.html?java/text/SimpleDateFormat.html). | `EEEE h:mm a` | | `jira.lf.date.complete` | Look and feel of the [date and time format](https://docs.oracle.com/javase/6/docs/api/index.html?java/text/SimpleDateFormat.html). | `dd/MMM/yy h:mm a` | | `jira.lf.date.dmy` | Look and feel of the [date format](https://docs.oracle.com/javase/6/docs/api/index.html?java/text/SimpleDateFormat.html). | `dd/MMM/yy` | | `jira.date.time.picker.use.iso8061` | When enabled, sets Monday as the first day of the week in the date picker, as specified by the ISO8601 standard. | `false` | | `jira.lf.logo.url` | The URL of the logo image file. | `/images/icon-jira-logo.png` | | `jira.lf.logo.show.application.title` | Controls the visibility of the application title on the sidebar. | `false` | | `jira.lf.favicon.url` | The URL of the favicon. | `/favicon.ico` | | `jira.lf.favicon.hires.url` | The URL of the high resolution favicon. | `/images/64jira.png` | | `jira.lf.top.adg3.bgcolour` | The background color of the sidebar. | `#0747A6` | | `jira.lf.top.adg3.textcolour` | The color of the text and logo of the sidebar. | `#DEEBFF` | | `jira.lf.hero.button.base.bg.colour` |  | `#3b7fc4` | | `jira.title` | The text for the application title. The application title can also be set in _General settings_. | `Jira` | | `jira.option.globalsharing` | boolean | `true` | | `xflow.product.suggestions.enabled` | Indicate whether or not to expose product suggestions for other Atlassian products within Jira. | `true` |  #### Other settings  | Key | Description | Default value | | --- | --- | --- | | `jira.issuenav.criteria.autoupdate` | Supports instant updates to search criteria. | `true` |  _Note: Be careful when changing [application properties and advanced settings](https://confluence.atlassian.com/x/vYXKM)._  **[Permissions](#permissions) required:** _Administer Jira_ [global permission](https://confluence.atlassian.com/x/x4dKLg).
      * @summary Set application property
      * @param id The key of the application property to update.
-     * @param simpleApplicationPropertyBean 
+     * @param simpleApplicationPropertyBean
      */
     public comAtlassianJiraRestV2AdminApplicationPropertiesResourceSetApplicationPropertyPut (id: string, simpleApplicationPropertyBean: SimpleApplicationPropertyBean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: ApplicationProperty;  }> {
         const localVarPath = this.basePath + '/api/3/application-properties/{id}'
@@ -1087,7 +1087,7 @@ export class DefaultApi {
      * Updates a permission scheme. Below are some important things to note when using this resource:  *   If a permissions list is present in the request, then it will be set in the permission scheme, overwriting _all existing_ grants. *   If you want to update only the name and description, then do not send a permissions list in the request. *   Sending an empty list will remove all permission grants from the permission scheme.  If you want to add or delete a single permission grant instead of updating the whole list, see [Create permission grant](#api-api-3-permissionscheme-schemeId-permission-post) or [Delete permission scheme entity](#api-api-3-permissionscheme-schemeId-permission-permissionId-delete).  See [About permission schemes and grants](#about-permission-schemes) for more details.  **[Permissions](#permissions) required:** _Administer Jira_ [global permission](https://confluence.atlassian.com/x/x4dKLg).
      * @summary Update permission scheme
      * @param schemeId The ID of the permission scheme to update.
-     * @param permissionScheme 
+     * @param permissionScheme
      * @param expand Use expand to include additional information in the response. This parameter accepts multiple values separated by a comma. Note that permissions are always included when you specify any value:  *   &#x60;all&#x60; Returns all expandable information. *   &#x60;field&#x60; Returns information about the custom field granted the permission. *   &#x60;group&#x60; Returns information about the group that is granted the permission. *   &#x60;permissions&#x60; Returns all permission grants for each permission scheme. *   &#x60;projectRole&#x60; Returns information about the project role granted the permission. *   &#x60;user&#x60; Returns information about the user who is granted the permission.
      */
     public comAtlassianJiraRestV2AdminPermissionschemePermissionSchemeResourceUpdatePermissionSchemePut (schemeId: number, permissionScheme: PermissionScheme, expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: PermissionScheme;  }> {
@@ -1442,7 +1442,7 @@ export class DefaultApi {
     /**
      * Selects a time tracking provider.  **[Permissions](#permissions) required:** _Administer Jira_ [global permission](https://confluence.atlassian.com/x/x4dKLg).
      * @summary Select time tracking provider
-     * @param timeTrackingProvider 
+     * @param timeTrackingProvider
      */
     public comAtlassianJiraRestV2AdminTimetrackingTimeTrackingResourceSelectTimeTrackingImplementationPut (timeTrackingProvider: TimeTrackingProvider, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/configuration/timetracking';
@@ -1495,7 +1495,7 @@ export class DefaultApi {
     /**
      * Sets the time tracking settings.  **[Permissions](#permissions) required:** _Administer Jira_ [global permission](https://confluence.atlassian.com/x/x4dKLg).
      * @summary Set time tracking settings
-     * @param timeTrackingConfiguration 
+     * @param timeTrackingConfiguration
      */
     public comAtlassianJiraRestV2AdminTimetrackingTimeTrackingResourceSetSharedTimeTrackingConfigurationPut (timeTrackingConfiguration: TimeTrackingConfiguration, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: TimeTrackingConfiguration;  }> {
         const localVarPath = this.basePath + '/api/3/configuration/timetracking/options';
@@ -1552,7 +1552,7 @@ export class DefaultApi {
      * @param transitionId The ID of the transition. To get the ID, view the workflow in text mode in the Jira admin settings. The ID is shown next to the transition.
      * @param key The key of the property being added, also known as the name of the property. Set this to the same value as the &#x60;key&#x60; defined in the request body.
      * @param workflowName The name of the workflow that the transition belongs to.
-     * @param workflowTransitionProperty 
+     * @param workflowTransitionProperty
      * @param workflowMode The workflow status. Set to _live_ for inactive workflows or _draft_ for draft workflows. Active workflows cannot be edited.
      */
     public comAtlassianJiraRestV2AdminWorkflowTransitionResourceCreateWorkflowTransitionPropertyPost (transitionId: number, key: string, workflowName: string, workflowTransitionProperty: WorkflowTransitionProperty, workflowMode?: 'live' | 'draft', options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: WorkflowTransitionProperty;  }> {
@@ -1797,7 +1797,7 @@ export class DefaultApi {
      * @param transitionId The ID of the transition. To get the ID, view the workflow in text mode in the Jira admin settings. The ID is shown next to the transition.
      * @param key The key of the property being updated, also known as the name of the property. Set this to the same value as the &#x60;key&#x60; defined in the request body.
      * @param workflowName The name of the workflow that the transition belongs to.
-     * @param workflowTransitionProperty 
+     * @param workflowTransitionProperty
      * @param workflowMode The workflow status. Set to &#x60;live&#x60; for inactive workflows or &#x60;draft&#x60; for draft workflows. Active workflows cannot be edited.
      */
     public comAtlassianJiraRestV2AdminWorkflowTransitionResourceUpdateWorkflowTransitionPropertyPut (transitionId: number, key: string, workflowName: string, workflowTransitionProperty: WorkflowTransitionProperty, workflowMode?: 'live' | 'draft', options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: WorkflowTransitionProperty;  }> {
@@ -1988,7 +1988,7 @@ export class DefaultApi {
     /**
      * Creates a workflow scheme.  **[Permissions](#permissions) required:** _Administer Jira_ [global permission](https://confluence.atlassian.com/x/x4dKLg).
      * @summary Create workflow scheme
-     * @param workflowScheme 
+     * @param workflowScheme
      */
     public comAtlassianJiraRestV2AdminWorkflowschemeWorkflowSchemeResourceCreateWorkflowSchemePost (workflowScheme: WorkflowScheme, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: WorkflowScheme;  }> {
         const localVarPath = this.basePath + '/api/3/workflowscheme';
@@ -3255,7 +3255,7 @@ export class DefaultApi {
      * @summary Set issue types for workflow in workflow scheme
      * @param id The ID of the workflow scheme that the draft belongs to.
      * @param workflowName The name of the workflow.
-     * @param issueTypesWorkflowMapping 
+     * @param issueTypesWorkflowMapping
      */
     public comAtlassianJiraRestV2AdminWorkflowschemeWorkflowSchemeResourceUpdateDraftWorkflowMappingPut (id: number, workflowName: string, issueTypesWorkflowMapping: IssueTypesWorkflowMapping, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: WorkflowScheme;  }> {
         const localVarPath = this.basePath + '/api/3/workflowscheme/{id}/draft/workflow'
@@ -3326,7 +3326,7 @@ export class DefaultApi {
      * @summary Set issue types for workflow in workflow scheme
      * @param id The ID of the workflow scheme.
      * @param workflowName The name of the workflow.
-     * @param issueTypesWorkflowMapping 
+     * @param issueTypesWorkflowMapping
      */
     public comAtlassianJiraRestV2AdminWorkflowschemeWorkflowSchemeResourceUpdateWorkflowMappingPut (id: number, workflowName: string, issueTypesWorkflowMapping: IssueTypesWorkflowMapping, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: WorkflowScheme;  }> {
         const localVarPath = this.basePath + '/api/3/workflowscheme/{id}/workflow'
@@ -3396,7 +3396,7 @@ export class DefaultApi {
      * Updates a draft workflow scheme. If a draft workflow scheme does not exist for the active workflow scheme, then a draft is created. Note that an active workflow scheme can only have one draft workflow scheme at any given time.  **[Permissions](#permissions) required:** _Administer Jira_ [global permission](https://confluence.atlassian.com/x/x4dKLg).
      * @summary Update draft workflow scheme
      * @param id The ID of the active workflow scheme that the draft was originally created from.
-     * @param workflowScheme 
+     * @param workflowScheme
      */
     public comAtlassianJiraRestV2AdminWorkflowschemeWorkflowSchemeResourceUpdateWorkflowSchemeDraftPut (id: number, workflowScheme: WorkflowScheme, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: WorkflowScheme;  }> {
         const localVarPath = this.basePath + '/api/3/workflowscheme/{id}/draft'
@@ -3457,7 +3457,7 @@ export class DefaultApi {
      * Updates a workflow scheme, including the name, default workflow, issue type to project mappings, and more. If the workflow scheme is active (that is, being used by at least one project), then a draft workflow scheme is created or updated instead, provided that `updateDraftIfNeeded` is set to `true`.  **[Permissions](#permissions) required:** _Administer Jira_ [global permission](https://confluence.atlassian.com/x/x4dKLg).
      * @summary Update workflow scheme
      * @param id The ID of the workflow scheme. Find this ID by editing the desired workflow scheme in Jira. The ID will be shown in the URL as &#x60;schemeId&#x60;. For example, _schemeId&#x3D;10301_.
-     * @param workflowScheme 
+     * @param workflowScheme
      */
     public comAtlassianJiraRestV2AdminWorkflowschemeWorkflowSchemeResourceUpdateWorkflowSchemePut (id: number, workflowScheme: WorkflowScheme, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: WorkflowScheme;  }> {
         const localVarPath = this.basePath + '/api/3/workflowscheme/{id}'
@@ -3722,7 +3722,7 @@ export class DefaultApi {
      * @param dashboardId The ID of the dashboard.
      * @param itemId The ID of the dashboard item.
      * @param propertyKey The key of the dashboard item property. The maximum length is 255 characters.
-     * @param body 
+     * @param body
      */
     public comAtlassianJiraRestV2DashboardDashboardItemPropertyResourceSetDashboardItemPropertyPut (dashboardId: string, itemId: string, propertyKey: string, body: any, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/dashboard/{dashboardId}/items/{itemId}/properties/{propertyKey}'
@@ -4575,7 +4575,7 @@ export class DefaultApi {
      * @summary Set comment property
      * @param commentId The ID of the comment.
      * @param propertyKey The key of the property. The maximum length is 255 characters.
-     * @param body 
+     * @param body
      */
     public comAtlassianJiraRestV2IssueCommentPropertyResourceSetCommentPropertyPut (commentId: string, propertyKey: string, body: any, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/comment/{commentId}/properties/{propertyKey}'
@@ -4642,7 +4642,7 @@ export class DefaultApi {
     /**
      * Creates a component. Use components to provide containers for issues within a project.  **[Permissions](#permissions) required:** Any of the following:  *   _Administer Jira_ [global permission](https://confluence.atlassian.com/x/x4dKLg). *   _Administer projects_ [project permission](https://confluence.atlassian.com/x/yodKLg).
      * @summary Create component
-     * @param component 
+     * @param component
      */
     public comAtlassianJiraRestV2IssueComponentResourceCreateComponentPost (component: Component, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Component;  }> {
         const localVarPath = this.basePath + '/api/3/component';
@@ -4871,7 +4871,7 @@ export class DefaultApi {
      * Updates a component. Any fields included in the request are overwritten. If `leadUserName` is an empty string (\"\") the component lead is removed.  **[Permissions](#permissions) required:** Any of the following:  *   _Administer Jira_ [global permission](https://confluence.atlassian.com/x/x4dKLg). *   _Administer projects_ [project permission](https://confluence.atlassian.com/x/yodKLg).
      * @summary Update component
      * @param id The ID of the component.
-     * @param component 
+     * @param component
      */
     public comAtlassianJiraRestV2IssueComponentResourceUpdateComponentPut (id: string, component: Component, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Component;  }> {
         const localVarPath = this.basePath + '/api/3/component/{id}'
@@ -5044,7 +5044,7 @@ export class DefaultApi {
      * Creates an option for a select list issue field.  Note that this operation **cannot be used with the built-in custom fields**. It only works with issue fields added by Connect apps, as described above.  **[Permissions](#permissions) required:** _Administer Jira_ [global permission](https://confluence.atlassian.com/x/x4dKLg). Jira permissions are not required for the app providing the field.
      * @summary Create issue field option
      * @param fieldKey The field key is specified in the following format: **$(app-key)__$(field-key)**. For example, _example-add-on__example-issue-field_.
-     * @param issueFieldOptionCreateBean 
+     * @param issueFieldOptionCreateBean
      */
     public comAtlassianJiraRestV2IssueFieldIssueFieldOptionResourceCreateIssueFieldOptionPost (fieldKey: string, issueFieldOptionCreateBean: IssueFieldOptionCreateBean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: IssueFieldOption;  }> {
         const localVarPath = this.basePath + '/api/3/field/{fieldKey}/option'
@@ -5513,7 +5513,7 @@ export class DefaultApi {
      * @summary Update issue field option
      * @param fieldKey The field key is specified in the following format: **$(app-key)__$(field-key)**. For example, _example-add-on__example-issue-field_.
      * @param optionId The ID of the option to be updated.
-     * @param issueFieldOption 
+     * @param issueFieldOption
      */
     public comAtlassianJiraRestV2IssueFieldIssueFieldOptionResourceUpdateIssueFieldOptionPut (fieldKey: string, optionId: number, issueFieldOption: IssueFieldOption, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: IssueFieldOption;  }> {
         const localVarPath = this.basePath + '/api/3/field/{fieldKey}/option/{optionId}'
@@ -6239,7 +6239,7 @@ export class DefaultApi {
      * Adds one or more attachments to an issue. Attachments are posted as multipart/form-data ([RFC 1867](https://www.ietf.org/rfc/rfc1867.txt)).  Note that:  *   The request must have a `X-Atlassian-Token: no-check` header, otherwise it will be blocked. See [Special headers](#special-request-headers) for more information. *   The name of the multipart/form-data parameter that contains the attachments must be `file`.  The following example uploads a file called _myfile.txt_ to the issue _TEST-123_:  `curl -D- -u admin:admin -X POST -H \"X-Atlassian-Token: no-check\" -F \"file=@myfile.txt\" https://your-domain.atlassian.net/rest/api/3/issue/TEST-123/attachments`  Tip: Use a client library. Many client libraries have classes for handling multipart POST operations. For example, in Java, the Apache HTTP Components library provides a [MultiPartEntity](http://hc.apache.org/httpcomponents-client-ga/httpmime/apidocs/org/apache/http/entity/mime/MultipartEntity.html) class for multipart POST operations.  **[Permissions](#permissions) required:**  *   _Browse Projects_ and _Create attachments_ [project permission](https://confluence.atlassian.com/x/yodKLg) for the project that the issue is in. *   If configured, permission to view the issue granted by [issue-level security](https://confluence.atlassian.com/x/J4lKLg).
      * @summary Add attachment
      * @param issueIdOrKey The ID or key of the issue that attachments are added to.
-     * @param file 
+     * @param file
      */
     public comAtlassianJiraRestV2IssueIssueAttachmentsResourceAddAttachmentPost (issueIdOrKey: string, file: Buffer, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Array<Attachment>;  }> {
         const localVarPath = this.basePath + '/api/3/issue/{issueIdOrKey}/attachments'
@@ -6433,7 +6433,7 @@ export class DefaultApi {
      * Adds a comment to an issue.  **[Permissions](#permissions) required:**  *   _Browse projects_ and _Add comments_ [project permission](https://confluence.atlassian.com/x/yodKLg) for the project that the issue containing the comment is in. *   If configured, permission to see the issue granted by [issue-level security](https://confluence.atlassian.com/x/J4lKLg).
      * @summary Add comment
      * @param issueIdOrKey The ID or key of the issue.
-     * @param comment 
+     * @param comment
      * @param expand Use [expand](#expansion) to include additional information about comments in the response. This parameter accepts &#x60;renderedBody&#x60;, which returns the comment body rendered in HTML.
      */
     public comAtlassianJiraRestV2IssueIssueCommentResourceAddCommentPost (issueIdOrKey: string, comment: Comment, expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Comment;  }> {
@@ -6708,7 +6708,7 @@ export class DefaultApi {
      * @summary Update comment
      * @param issueIdOrKey The ID or key of the issue.
      * @param id The ID of the comment.
-     * @param comment 
+     * @param comment
      * @param expand Use [expand](#expansion) to include additional information about comments in the response. This parameter accepts &#x60;renderedBody&#x60;, which returns the comment body rendered in HTML.
      */
     public comAtlassianJiraRestV2IssueIssueCommentResourceUpdateCommentPut (issueIdOrKey: string, id: string, comment: Comment, expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Comment;  }> {
@@ -6781,7 +6781,7 @@ export class DefaultApi {
     /**
      * Creates an issue link type. Use this operation to create descriptions of the reasons why issues are linked. The issue link type consists of a name and descriptions for a link's inward and outward relationships.  To use this operation, the site must have [issue linking](https://confluence.atlassian.com/x/yoXKM) enabled.  **[Permissions](#permissions) required:** _Administer Jira_ [global permission](https://confluence.atlassian.com/x/x4dKLg).
      * @summary Create issue link type
-     * @param issueLinkType 
+     * @param issueLinkType
      */
     public comAtlassianJiraRestV2IssueIssueLinkTypeResourceCreateIssueLinkTypePost (issueLinkType: IssueLinkType, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: IssueLinkType;  }> {
         const localVarPath = this.basePath + '/api/3/issueLinkType';
@@ -6998,7 +6998,7 @@ export class DefaultApi {
      * Updates an issue link type.  To use this operation, the site must have [issue linking](https://confluence.atlassian.com/x/yoXKM) enabled.  **[Permissions](#permissions) required:** _Administer Jira_ [global permission](https://confluence.atlassian.com/x/x4dKLg).
      * @summary Update issue link type
      * @param issueLinkTypeId The ID of the issue link type.
-     * @param issueLinkType 
+     * @param issueLinkType
      */
     public comAtlassianJiraRestV2IssueIssueLinkTypeResourceUpdateIssueLinkTypePut (issueLinkTypeId: string, issueLinkType: IssueLinkType, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: IssueLinkType;  }> {
         const localVarPath = this.basePath + '/api/3/issueLinkType/{issueLinkTypeId}'
@@ -7241,7 +7241,7 @@ export class DefaultApi {
      * @summary Set issue property
      * @param issueIdOrKey The ID or key of the issue.
      * @param propertyKey The key of the issue property. The maximum length is 255 characters.
-     * @param body 
+     * @param body
      */
     public comAtlassianJiraRestV2IssueIssuePropertyResourceSetIssuePropertyPut (issueIdOrKey: string, propertyKey: string, body: any, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/issue/{issueIdOrKey}/properties/{propertyKey}'
@@ -7487,7 +7487,7 @@ export class DefaultApi {
     /**
      * Creates an issue or, where the option to create sub-tasks is enabled in Jira, a sub-task. A transition may be applied, to move the issue or sub-task to a workflow step other than the default start step, and issue properties set.  The content of the issue or sub-task is defined using `update` and `fields`. The fields that can be set in the issue or sub-task are determined using the [Get create issue metadata](#api-api-3-issue-createmeta-get). These are the same fields that appear on the issue's create screen.  Creating a sub-task differs from creating an issue as follows:  *   `issueType` must be set to a sub-task issue type (use [Get create issue metadata](#api-api-3-issue-createmeta-get) to find sub-task issue types). *   `parent` the must contain the ID or key of the parent issue.  **[Permissions](#permissions) required:** _Browse projects_ and _Create issues_ [project permissions](https://confluence.atlassian.com/x/yodKLg) for the project in which the issue or sub-task is created.
      * @summary Create issue
-     * @param issueUpdateDetails 
+     * @param issueUpdateDetails
      * @param updateHistory Indicates whether the project in which the issue is created is added to the user&#39;s **Recently viewed** project list, as shown under **Projects** in Jira.
      */
     public comAtlassianJiraRestV2IssueIssueResourceCreateIssuePost (issueUpdateDetails: IssueUpdateDetails, updateHistory?: boolean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: CreatedIssue;  }> {
@@ -7548,7 +7548,7 @@ export class DefaultApi {
     /**
      * Creates issues and, where the option to create sub-tasks is enabled in Jira, sub-tasks. Transitions may be applied, to move the issues or sub-tasks to a workflow step other than the default start step, and issue properties set.  The content of each issue or sub-task is defined using `update` and `fields`. The fields that can be set in the issue or sub-task are determined using the [Get create issue metadata](#api-api-3-issue-createmeta-get). These are the same fields that appear on the issues' create screens.  Creating a sub-task differs from creating an issue as follows:  *   `issueType` must be set to a sub-task issue type (use [Get create issue metadata](#api-api-3-issue-createmeta-get) to find sub-task issue types). *   `parent` the must contain the ID or key of the parent issue.  **[Permissions](#permissions) required:** _Browse projects_ and _Create issues_ [project permissions](https://confluence.atlassian.com/x/yodKLg) for the project in which each issue or sub-task is created.
      * @summary Bulk issue create
-     * @param issuesUpdateBean 
+     * @param issuesUpdateBean
      */
     public comAtlassianJiraRestV2IssueIssueResourceCreateIssuesPost (issuesUpdateBean: IssuesUpdateBean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: CreatedIssues;  }> {
         const localVarPath = this.basePath + '/api/3/issue/bulk';
@@ -7605,7 +7605,7 @@ export class DefaultApi {
      * Creates or updates a remote issue link for an issue.  If a `globalId` is provided and a the remote issue link with that global ID exists it is updated. Any fields without values in the request are set to null. Otherwise, the remote issue link is created.  For more details on the content of the request body, see [Using fields in Remote Issue Links](https://developer.atlassian.com/server/jira/platform/using-fields-in-remote-issue-links/).  This operation requires [issue linking to be active](https://confluence.atlassian.com/x/yoXKM).  **[Permissions](#permissions) required:**  *   _Browse projects_ [project permission](https://confluence.atlassian.com/x/yodKLg) for the project that the issue is in. *   If configured, permission to see the issue granted by [issue-level security](https://confluence.atlassian.com/x/J4lKLg). *   _Link issues_ [project permission](https://confluence.atlassian.com/x/yodKLg) for the issue.
      * @summary Create or update remote issue link
      * @param issueIdOrKey The ID or key of the issue.
-     * @param remoteIssueLinkRequest 
+     * @param remoteIssueLinkRequest
      */
     public comAtlassianJiraRestV2IssueIssueResourceCreateOrUpdateRemoteIssueLinkPost (issueIdOrKey: string, remoteIssueLinkRequest: RemoteIssueLinkRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: RemoteIssueLinkIdentifies;  }> {
         const localVarPath = this.basePath + '/api/3/issue/{issueIdOrKey}/remotelink'
@@ -7855,7 +7855,7 @@ export class DefaultApi {
      * Performs an issue transition and, if the transition has a screen, updates the fields from the transition screen.  To update the fields on the transition screen, specify the fields in the `fields` or `update` parameters in the request body. Get details about the fields by calling `fields` by [Get transition](#api-api-3-issue-issueIdOrKey-transitions-get) and using the `transitions.fields` expand.  **[Permissions](#permissions) required:**  *   _Browse projects_ [project permission](https://confluence.atlassian.com/x/yodKLg) for the project that the issue is in. *   If configured, permission to see the issue granted by [issue-level security](https://confluence.atlassian.com/x/J4lKLg).  *   _Transition issues_ [project permission](https://confluence.atlassian.com/x/yodKLg) for the issue.
      * @summary Transition issue
      * @param issueIdOrKey The ID or key of the issue.
-     * @param issueUpdateDetails 
+     * @param issueUpdateDetails
      */
     public comAtlassianJiraRestV2IssueIssueResourceDoTransitionPost (issueIdOrKey: string, issueUpdateDetails: IssueUpdateDetails, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/issue/{issueIdOrKey}/transitions'
@@ -7917,7 +7917,7 @@ export class DefaultApi {
      * Edits an issue. A transition may be applied and issue properties updated as part of the edit.  The edits to the issue's fields are defined using `update` and `fields`. The fields that can be edited are determined using [Get edit issue metadata](#api-api-3-issue-issueIdOrKey-editmeta-get).  Connect app users with admin permissions (from user permissions and app scopes) can override the screen security configuration using `overrideScreenSecurity` and `overrideEditableFlag`.  **[Permissions](#permissions) required:**  *   _Browse projects_ [project permission](https://confluence.atlassian.com/x/yodKLg) for the project that the issue is in. *   If configured, permission to see the issue granted by [issue-level security](https://confluence.atlassian.com/x/J4lKLg).  *   _Edit issues_ [project permission](https://confluence.atlassian.com/x/yodKLg) for the issue.
      * @summary Edit issue
      * @param issueIdOrKey The ID or key of the issue.
-     * @param issueUpdateDetails 
+     * @param issueUpdateDetails
      * @param notifyUsers Indicates whether a notification email about the issue update is sent to all watchers. To disable the notification, administer Jira or administer project permissions are required. If the user doesn&#39;t have the necessary permission the request is ignored.
      * @param overrideScreenSecurity Indicates whether screen security should be overridden to enable hidden fields to be edited. Available to Connect app users with admin permissions.
      * @param overrideEditableFlag Indicates whether screen security should be overridden to enable uneditable fields to be edited. Available to Connect app users with admin permissions.
@@ -8784,7 +8784,7 @@ export class DefaultApi {
      * @summary Update remote issue link
      * @param issueIdOrKey The ID or key of the issue.
      * @param linkId The ID of the remote issue link.
-     * @param remoteIssueLinkRequest 
+     * @param remoteIssueLinkRequest
      */
     public comAtlassianJiraRestV2IssueIssueResourceUpdateRemoteIssueLinkPut (issueIdOrKey: string, linkId: string, remoteIssueLinkRequest: RemoteIssueLinkRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/issue/{issueIdOrKey}/remotelink/{linkId}'
@@ -9195,7 +9195,7 @@ export class DefaultApi {
      * @summary Set issue type property
      * @param issueTypeId The ID of the issue type.
      * @param propertyKey The key of the issue type property. The maximum length is 255 characters.
-     * @param body 
+     * @param body
      */
     public comAtlassianJiraRestV2IssueIssueTypePropertyResourceSetIssueTypePropertyPut (issueTypeId: string, propertyKey: string, body: any, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/issuetype/{issueTypeId}/properties/{propertyKey}'
@@ -9264,7 +9264,7 @@ export class DefaultApi {
      * @summary Load issue type avatar
      * @param id The ID of the issue type.
      * @param size The length of each side of the crop region.
-     * @param body 
+     * @param body
      * @param x The X coordinate of the top-left corner of the crop region.
      * @param y The Y coordinate of the top-left corner of the crop region.
      */
@@ -9345,7 +9345,7 @@ export class DefaultApi {
     /**
      * Creates an issue type and adds it to the default issue type scheme.  **[Permissions](#permissions) required:** _Administer Jira_ [global permission](https://confluence.atlassian.com/x/x4dKLg).
      * @summary Create issue type
-     * @param issueTypeCreateBean 
+     * @param issueTypeCreateBean
      */
     public comAtlassianJiraRestV2IssueIssueTypeResourceCreateIssueTypePost (issueTypeCreateBean: IssueTypeCreateBean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: IssueType;  }> {
         const localVarPath = this.basePath + '/api/3/issuetype';
@@ -9623,7 +9623,7 @@ export class DefaultApi {
      * Updates the issue type.  **[Permissions](#permissions) required:** _Administer Jira_ [global permission](https://confluence.atlassian.com/x/x4dKLg).
      * @summary Update issue type
      * @param id The ID of the issue type.
-     * @param issueTypeUpdateBean 
+     * @param issueTypeUpdateBean
      */
     public comAtlassianJiraRestV2IssueIssueTypeResourceUpdateIssueTypePut (id: string, issueTypeUpdateBean: IssueTypeUpdateBean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: IssueType;  }> {
         const localVarPath = this.basePath + '/api/3/issuetype/{id}'
@@ -9686,7 +9686,7 @@ export class DefaultApi {
      * Adds a worklog to an issue.  Time tracking must be enabled in Jira, otherwise this operation returns an error. For more information, see [Configuring time tracking](https://confluence.atlassian.com/x/qoXKM).  **[Permissions](#permissions) required:**  *   _Browse projects_ and _Work on issues_ [project permission](https://confluence.atlassian.com/x/yodKLg) for the project that the issue is in. *   If configured, permission to see the issue granted by [issue-level security](https://confluence.atlassian.com/x/J4lKLg).
      * @summary Add worklog
      * @param issueIdOrKey The ID or key the issue.
-     * @param worklog 
+     * @param worklog
      * @param notifyUsers Indicates whether users watching the issue are notified by email.
      * @param adjustEstimate Defines how to update the issue&#39;s time estimate, the options are:  *   &#x60;new&#x60; Sets the estimate to a specific value, defined in &#x60;newEstimate&#x60;. *   &#x60;leave&#x60; Leaves the estimate unchanged. *   &#x60;manual&#x60; Reduces the estimate by amount specified in &#x60;reduceBy&#x60;. *   &#x60;auto&#x60; Reduces the estimate by the value of &#x60;timeSpent&#x60; in the worklog.
      * @param newEstimate The value to set as the issue&#39;s remaining time estimate, as days (#d), hours (#h), or minutes (#m or #). For example, _2d_. Required when &#x60;adjustEstimate&#x60; is &#x60;new&#x60;.
@@ -10006,7 +10006,7 @@ export class DefaultApi {
      * @summary Update worklog
      * @param issueIdOrKey The ID or key the issue.
      * @param id The ID of the worklog.
-     * @param worklog 
+     * @param worklog
      * @param notifyUsers Indicates whether users watching the issue are notified by email.
      * @param adjustEstimate Defines how to update the issue&#39;s time estimate, the options are:  *   &#x60;new&#x60; Sets the estimate to a specific value, defined in &#x60;newEstimate&#x60;. *   &#x60;leave&#x60; Leaves the estimate unchanged. *   &#x60;auto&#x60; Updates the estimate by the difference between the original and updated value of &#x60;timeSpent&#x60; or &#x60;timeSpentSeconds&#x60;.
      * @param newEstimate The value to set as the issue&#39;s remaining time estimate, as days (#d), hours (#h), or minutes (#m or #). For example, _2d_. Required when &#x60;adjustEstimate&#x60; is &#x60;new&#x60;.
@@ -10370,7 +10370,7 @@ export class DefaultApi {
     /**
      * Creates a project category.  **[Permissions](#permissions) required:** _Administer Jira_ [global permission](https://confluence.atlassian.com/x/x4dKLg).
      * @summary Create project category
-     * @param projectCategory 
+     * @param projectCategory
      */
     public comAtlassianJiraRestV2IssueProjectCategoryResourceCreateProjectCategoryPost (projectCategory: ProjectCategory, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: ProjectCategory;  }> {
         const localVarPath = this.basePath + '/api/3/projectCategory';
@@ -10586,8 +10586,8 @@ export class DefaultApi {
     /**
      * Updates a project category.  **[Permissions](#permissions) required:** _Administer Jira_ [global permission](https://confluence.atlassian.com/x/x4dKLg).
      * @summary Update project category
-     * @param id 
-     * @param projectCategory 
+     * @param id
+     * @param projectCategory
      */
     public comAtlassianJiraRestV2IssueProjectCategoryResourceUpdateProjectCategoryPut (id: number, projectCategory: ProjectCategory, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: UpdatedProjectCategory;  }> {
         const localVarPath = this.basePath + '/api/3/projectCategory/{id}'
@@ -11280,7 +11280,7 @@ export class DefaultApi {
      * @summary Set project property
      * @param projectIdOrKey The project ID or project key (case sensitive).
      * @param propertyKey The key of the project property. The maximum length is 255 characters.
-     * @param body 
+     * @param body
      */
     public comAtlassianJiraRestV2IssueProjectPropertyResourceSetProjectPropertyPut (projectIdOrKey: string, propertyKey: string, body: any, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/project/{projectIdOrKey}/properties/{propertyKey}'
@@ -11348,7 +11348,7 @@ export class DefaultApi {
      * Loads an avatar for a project.  Specify the avatar's local file location in the body of the request. Also, include the following headers:  *   `X-Atlassian-Token: no-check` To prevent XSRF protection blocking the request, for more information see [Special Headers](#special-request-headers). *   `Content-Type: image/_image type_` Valid image types are JPEG, GIF, or PNG.  For example:   `curl --request POST `  `--user email@example.com:<api_token> `  `--header 'X-Atlassian-Token: no-check' `  `--header 'Content-Type: image/< image_type>' `  `--data-binary \"<@/path/to/file/with/your/avatar>\" `  `--url 'https://your-domain.atlassian.net/rest/api/3/project/{projectIdOrKey}/avatar2'`  The avatar is cropped to a square. If no crop parameters are specified, the square originates at the top left of the image. The length of the square's sides is set to the smaller of the height or width of the image.  The cropped image is then used to create avatars of 16x16, 24x24, 32x32, and 48x48 in size.  After creating the avatar use [Set project avatar](#api-api-3-project-projectIdOrKey-avatar-put) to set it as the project's displayed avatar.  **[Permissions](#permissions) required:** _Administer projects_ [project permission](https://confluence.atlassian.com/x/yodKLg).
      * @summary Load project avatar
      * @param projectIdOrKey The ID or (case-sensitive) key of the project.
-     * @param body 
+     * @param body
      * @param x The X coordinate of the top-left corner of the crop region.
      * @param y The Y coordinate of the top-left corner of the crop region.
      * @param size The length of each side of the crop region.
@@ -12199,7 +12199,7 @@ export class DefaultApi {
      * Sets the avatar displayed for a project.  Use [Load project avatar](#api-api-3-project-projectIdOrKey-avatar2-post) to store avatars against the project, before using this operation to set the displayed avatar.  **[Permissions](#permissions) required:** _Administer projects_ [project permission](https://confluence.atlassian.com/x/yodKLg).
      * @summary Set project avatar
      * @param projectIdOrKey The ID or (case-sensitive) key of the project.
-     * @param avatar 
+     * @param avatar
      */
     public comAtlassianJiraRestV2IssueProjectResourceUpdateProjectAvatarPut (projectIdOrKey: string, avatar: Avatar, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/project/{projectIdOrKey}/avatar'
@@ -12392,7 +12392,7 @@ export class DefaultApi {
      * Adds [default actors](#api-api-3-resolution-get) to the given role. You may add either groups or users, but you cannot add groups and users in the same request.  Changing a project role's default actors does not affect project role members for projects already created.  **[Permissions](#permissions) required:** _Administer Jira_ [global permission](https://confluence.atlassian.com/x/x4dKLg).
      * @summary Add default actors to project role
      * @param id The ID of the project role. Use [Get all project roles](#api-api-3-role-get) to get a list of project role IDs.
-     * @param actorInputBean 
+     * @param actorInputBean
      */
     public comAtlassianJiraRestV2IssueProjectRoleResourceAddProjectRoleActorsToRolePost (id: number, actorInputBean: ActorInputBean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: ProjectRole;  }> {
         const localVarPath = this.basePath + '/api/3/role/{id}/actors'
@@ -12452,7 +12452,7 @@ export class DefaultApi {
     /**
      * Creates a new project role with no [default actors](#api-api-3-resolution-get). You can use the [Add default actors to project role](#api-api-3-role-id-actors-post) the project method to add default actors to the project role after creating it.  _Note that although a new project role is available to all projects upon creation, any default actors that are associated with the project role are not added to projects that existed prior to the role being created._<  **[Permissions](#permissions) required:** _Administer Jira_ [global permission](https://confluence.atlassian.com/x/x4dKLg).
      * @summary Create project role
-     * @param createUpdateRoleRequestBean 
+     * @param createUpdateRoleRequestBean
      */
     public comAtlassianJiraRestV2IssueProjectRoleResourceCreateProjectRolePost (createUpdateRoleRequestBean: CreateUpdateRoleRequestBean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: ProjectRole;  }> {
         const localVarPath = this.basePath + '/api/3/role';
@@ -12629,7 +12629,7 @@ export class DefaultApi {
      * Update the project role's name and description. You must include both a name and a description in the request.  **[Permissions](#permissions) required:** _Administer Jira_ [global permission](https://confluence.atlassian.com/x/x4dKLg).
      * @summary Fully update project role
      * @param id The ID of the project role. Use [Get all project roles](#api-api-3-role-get) to get a list of project role IDs.
-     * @param createUpdateRoleRequestBean 
+     * @param createUpdateRoleRequestBean
      */
     public comAtlassianJiraRestV2IssueProjectRoleResourceFullyUpdateProjectRolePut (id: number, createUpdateRoleRequestBean: CreateUpdateRoleRequestBean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: ProjectRole;  }> {
         const localVarPath = this.basePath + '/api/3/role/{id}'
@@ -12851,7 +12851,7 @@ export class DefaultApi {
      * Update either the project role's name or its description.  You cannot update both the name and description at the same time using this method. If you send a request with both a name and a description, then only the name will be updated, regardless of the order of appearance in the body of the request.  **[Permissions](#permissions) required:** _Administer Jira_ [global permission](https://confluence.atlassian.com/x/x4dKLg).
      * @summary Partial update project role
      * @param id The ID of the project role. Use [Get all project roles](#api-api-3-role-get) to get a list of project role IDs.
-     * @param createUpdateRoleRequestBean 
+     * @param createUpdateRoleRequestBean
      */
     public comAtlassianJiraRestV2IssueProjectRoleResourcePartialUpdateProjectRolePost (id: number, createUpdateRoleRequestBean: CreateUpdateRoleRequestBean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: ProjectRole;  }> {
         const localVarPath = this.basePath + '/api/3/role/{id}'
@@ -13234,7 +13234,7 @@ export class DefaultApi {
      * @summary Add screen tab field
      * @param screenId The ID of the screen.
      * @param tabId The ID of the screen tab.
-     * @param addFieldBean 
+     * @param addFieldBean
      */
     public comAtlassianJiraRestV2IssueScreensResourceAddScreenTabFieldPost (screenId: number, tabId: number, addFieldBean: AddFieldBean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: ScreenableField;  }> {
         const localVarPath = this.basePath + '/api/3/screens/{screenId}/tabs/{tabId}/fields'
@@ -13303,7 +13303,7 @@ export class DefaultApi {
      * Creates a tab for a screen.  **[Permissions](#permissions) required:** _Administer Jira_ [global permission](https://confluence.atlassian.com/x/x4dKLg).
      * @summary Create screen tab
      * @param screenId The ID of the screen.
-     * @param screenableTab 
+     * @param screenableTab
      */
     public comAtlassianJiraRestV2IssueScreensResourceAddScreenTabPost (screenId: number, screenableTab: ScreenableTab, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: ScreenableTab;  }> {
         const localVarPath = this.basePath + '/api/3/screens/{screenId}/tabs'
@@ -13672,7 +13672,7 @@ export class DefaultApi {
      * @param screenId The ID of the screen.
      * @param tabId The ID of the screen tab.
      * @param id The ID of the field.
-     * @param moveFieldBean 
+     * @param moveFieldBean
      */
     public comAtlassianJiraRestV2IssueScreensResourceMoveScreenTabFieldPost (screenId: number, tabId: number, id: string, moveFieldBean: MoveFieldBean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/screens/{screenId}/tabs/{tabId}/fields/{id}/move'
@@ -13883,7 +13883,7 @@ export class DefaultApi {
      * @summary Update screen tab
      * @param screenId The ID of the screen.
      * @param tabId The ID of the screen tab.
-     * @param screenableTab 
+     * @param screenableTab
      */
     public comAtlassianJiraRestV2IssueScreensResourceRenameScreenTabPut (screenId: number, tabId: number, screenableTab: ScreenableTab, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: ScreenableTab;  }> {
         const localVarPath = this.basePath + '/api/3/screens/{screenId}/tabs/{tabId}'
@@ -14290,7 +14290,7 @@ export class DefaultApi {
      * @param type The type of the entity. Valid values are &#x60;project&#x60; and &#x60;issuetype&#x60;.
      * @param entityId The ID of the entity item.
      * @param size The length of each side of the crop region.
-     * @param body 
+     * @param body
      * @param x The X coordinate of the top-left corner of the crop region.
      * @param y The Y coordinate of the top-left corner of the crop region.
      */
@@ -14375,7 +14375,7 @@ export class DefaultApi {
     /**
      * Creates a user. This resource is retained for legacy compatibility. As soon as a more suitable alternative is available this resource will be deprecated.  The option is provided to set or generate a password for the user. When using the option to generate a password, by omitting `password` from the request, include `\"notification\": \"true\"` to ensure the user is sent an email advising them that their account has been created. This email includes a link for the user to set their password. If the notification isn't sent for a generated password, the user will need to be sent a reset password request from Jira.  **[Permissions](#permissions) required:** _Administer Jira_ [global permission](https://confluence.atlassian.com/x/x4dKLg).
      * @summary Create user
-     * @param userWriteBean 
+     * @param userWriteBean
      */
     public comAtlassianJiraRestV2IssueUserResourceCreateUserPost (userWriteBean: UserWriteBean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: User;  }> {
         const localVarPath = this.basePath + '/api/3/user';
@@ -15303,7 +15303,7 @@ export class DefaultApi {
     /**
      * Creates a project version.  **[Permissions](#permissions) required:** _Administer Jira_ [global permission](https://confluence.atlassian.com/x/x4dKLg) or _Administer Projects_ [project permission](https://confluence.atlassian.com/x/yodKLg).
      * @summary Create version
-     * @param version 
+     * @param version
      */
     public comAtlassianJiraRestV2IssueVersionResourceCreateVersionPost (version: Version, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Version;  }> {
         const localVarPath = this.basePath + '/api/3/version';
@@ -15360,7 +15360,7 @@ export class DefaultApi {
      * Deletes a project version.  Alternative versions can be provided to update issues that use the deleted version in `fixVersion`, `affectedVersion`, or any version picker custom fields. If alternatives are not provided, occurrences of `fixVersion`, `affectedVersion`, and any version picker custom field, that contain the deleted version, are cleared. Any replacement version must be in the same project as the version being deleted and cannot be the version being deleted.  **[Permissions](#permissions) required:** _Administer Jira_ [global permission](https://confluence.atlassian.com/x/x4dKLg) or _Administer Projects_ [project permission](https://confluence.atlassian.com/x/yodKLg).
      * @summary Delete and replace version
      * @param id The ID of the version.
-     * @param deleteAndReplaceVersionBean 
+     * @param deleteAndReplaceVersionBean
      */
     public comAtlassianJiraRestV2IssueVersionResourceDeleteAndReplaceVersionPost (id: string, deleteAndReplaceVersionBean: DeleteAndReplaceVersionBean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/version/{id}/removeAndSwap'
@@ -15722,7 +15722,7 @@ export class DefaultApi {
      * Modifies the version's sequence within the project, which affects the display order of the versions in Jira.  **[Permissions](#permissions) required:** _Administer Jira_ [global permission](https://confluence.atlassian.com/x/x4dKLg) or _Administer Projects_ [project permission](https://confluence.atlassian.com/x/yodKLg).
      * @summary Move version
      * @param id The ID of the version to be moved.
-     * @param versionMoveBean 
+     * @param versionMoveBean
      */
     public comAtlassianJiraRestV2IssueVersionResourceMoveVersionPost (id: string, versionMoveBean: VersionMoveBean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Version;  }> {
         const localVarPath = this.basePath + '/api/3/version/{id}/move'
@@ -15785,7 +15785,7 @@ export class DefaultApi {
      * Modifies a project version.  **[Permissions](#permissions) required:** _Administer Jira_ [global permission](https://confluence.atlassian.com/x/x4dKLg) or _Administer Projects_ [project permission](https://confluence.atlassian.com/x/yodKLg).
      * @summary Update version
      * @param id The ID of the version.
-     * @param version 
+     * @param version
      */
     public comAtlassianJiraRestV2IssueVersionResourceUpdateVersionPut (id: string, version: Version, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Version;  }> {
         const localVarPath = this.basePath + '/api/3/version/{id}'
@@ -16052,7 +16052,7 @@ export class DefaultApi {
      * @param issueIdOrKey The ID or key of the issue.
      * @param worklogId The ID of the worklog.
      * @param propertyKey The key of the issue property. The maximum length is 255 characters.
-     * @param body 
+     * @param body
      */
     public comAtlassianJiraRestV2IssueWorklogPropertyResourceSetWorklogPropertyPut (issueIdOrKey: string, worklogId: string, propertyKey: string, body: any, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/issue/{issueIdOrKey}/worklog/{worklogId}/properties/{propertyKey}'
@@ -16662,7 +16662,7 @@ export class DefaultApi {
     /**
      * Returns all the projects where the user is granted a list of project permissions.  **[Permissions](#permissions) required:** Permission to access Jira.
      * @summary Get permitted projects
-     * @param permissionsKeysBean 
+     * @param permissionsKeysBean
      */
     public comAtlassianJiraRestV2PermissionPermissionsResourceGetPermittedProjectsPost (permissionsKeysBean: PermissionsKeysBean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: PermittedProjects;  }> {
         const localVarPath = this.basePath + '/api/3/permissions/project';
@@ -16719,7 +16719,7 @@ export class DefaultApi {
      * Associates a permission scheme with a particular project. See [Managing project permissions](https://confluence.atlassian.com/x/yodKLg) for more information about permission schemes.  **[Permissions](#permissions) required:** _Administer Jira_ [global permission](https://confluence.atlassian.com/x/x4dKLg)
      * @summary Assign permission scheme
      * @param projectKeyOrId The project ID or project key (case sensitive).
-     * @param idBean 
+     * @param idBean
      * @param expand Use [expand](#expansion) to include additional information in the response. This parameter accepts multiple values separated by a comma. Note that permissions are included when you specify any value:  *   &#x60;all&#x60; Returns all expandable information. *   &#x60;field&#x60; Returns information about the custom field granted the permission. *   &#x60;group&#x60; Returns information about the group that is granted the permission. *   &#x60;permissions&#x60; Returns all permission grants for each permission scheme. *   &#x60;projectRole&#x60; Returns information about the project role granted the permission. *   &#x60;user&#x60; Returns information about the user who is granted the permission.
      */
     public comAtlassianJiraRestV2PermissionProjectPermissionSchemeResourceAssignPermissionSchemePut (projectKeyOrId: string, idBean: IdBean, expand?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: PermissionScheme;  }> {
@@ -17331,7 +17331,7 @@ export class DefaultApi {
      * Deletes a property value from multiple issues. The issues to be updated can be specified by filter criteria.  The criteria the filter used to identify eligible issues are:  *   `entityIds` Only issues from this list are eligible. *   `currentValue` Only issues with the property set to this value are eligible.  If both criteria is specified, they are joined with the logical _AND_: only issues that satisfy both criteria are considered eligible.  If no filter criteria are specified, all the issues visible to the user and where the user has the EDIT_ISSUES permission for the issue are considered eligible.  This operation is:  *   transactional, either the property is deleted from all eligible issues or, when errors occur, no properties are deleted. *   [asynchronous](#async). Follow the `location` link in the response to determine the status of the task and use [Get task](#api-api-3-task-taskId-get) to obtain subsequent updates.  **[Permissions](#permissions) required:**  *   _Browse projects_ [project permission](https://confluence.atlassian.com/x/yodKLg) for each project containing issues. *   If configured, permission to see granted by [issue-level security](https://confluence.atlassian.com/x/J4lKLg) for each issue.  *   _Edit issues_ [project permission](https://confluence.atlassian.com/x/yodKLg) for each issue.
      * @summary Bulk delete issue property
      * @param propertyKey The key of the property.
-     * @param issueFilterForBulkPropertyDelete 
+     * @param issueFilterForBulkPropertyDelete
      */
     public comAtlassianJiraRestV2PropertyIssuePropertyBulkUpdateResourceBulkDeleteIssuePropertyDelete (propertyKey: string, issueFilterForBulkPropertyDelete: IssueFilterForBulkPropertyDelete, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/issue/properties/{propertyKey}'
@@ -17393,7 +17393,7 @@ export class DefaultApi {
      * Sets a property value on multiple issues. The issues to be updated can be specified by a filter.  The filter identifies issues eligible for update using these criteria:  *   `entityIds` Only issues from this list are eligible. *   `currentValue` Only issues with the property set to this value are eligible. *   `hasProperty`:     *   If _true_, only issues with the property are eligible.     *   If _false_, only issues without the property are eligible.  If more than one criteria is specified, they are joined with the logical _AND_: only issues that satisfy all criteria are eligible.  If an invalid combination of criteria is provided, an error is returned. For example, specifying a `currentValue` and `hasProperty` as _false_ would not match any issues (because without the property the property cannot have a value).  The filter is optional. Without the filter all the issues visible to the user and where the user has the EDIT_ISSUES permission for the issue are considered eligible.  This operation is:  *   transactional, either all eligible issues are updated or, when errors occur, none are updated. *   [asynchronous](#async). Follow the `location` link in the response to determine the status of the task and use [Get task](#api-api-3-task-taskId-get) to obtain subsequent updates.  **[Permissions](#permissions) required:**  *   _Browse projects_ [project permission](https://confluence.atlassian.com/x/yodKLg) for each project containing issues. *   If configured, permission to see granted by [issue-level security](https://confluence.atlassian.com/x/J4lKLg) for each issue.  *   _Edit issues_ [project permission](https://confluence.atlassian.com/x/yodKLg) for each issue.
      * @summary Bulk set issue property
      * @param propertyKey The key of the property. The maximum length is 255 characters.
-     * @param bulkIssuePropertyUpdateRequest 
+     * @param bulkIssuePropertyUpdateRequest
      */
     public comAtlassianJiraRestV2PropertyIssuePropertyBulkUpdateResourceBulkSetIssuePropertyPut (propertyKey: string, bulkIssuePropertyUpdateRequest: BulkIssuePropertyUpdateRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body?: any;  }> {
         const localVarPath = this.basePath + '/api/3/issue/properties/{propertyKey}'
@@ -17455,7 +17455,7 @@ export class DefaultApi {
      * Add a share permissions to a filter. If you add a global share permission (one for all logged-in users or the public) it will overwrite all share permissions for the filter.  Be aware that this method uses different objects for updating share permissions compared to [Update filter](#api-api-3-filter-id-put).  **[Permissions](#permissions) required:** _Share dashboards and filters_ [global permission](https://confluence.atlassian.com/x/x4dKLg) and the user must own the filter.
      * @summary Add share permission
      * @param id The ID of the filter.
-     * @param sharePermissionInputBean 
+     * @param sharePermissionInputBean
      */
     public comAtlassianJiraRestV2SearchFilterResourceAddSharePermissionPost (id: number, sharePermissionInputBean: SharePermissionInputBean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: Array<SharePermission>;  }> {
         const localVarPath = this.basePath + '/api/3/filter/{id}/permission'
@@ -18422,7 +18422,7 @@ export class DefaultApi {
     /**
      * Sets the default sharing for new filters and dashboards for a user.  **[Permissions](#permissions) required:** Permission to access Jira.
      * @summary Set default share scope
-     * @param defaultShareScope 
+     * @param defaultShareScope
      */
     public comAtlassianJiraRestV2SearchFilterResourceSetDefaultShareScopePut (defaultShareScope: DefaultShareScope, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: DefaultShareScope;  }> {
         const localVarPath = this.basePath + '/api/3/filter/defaultShareScope';
@@ -18607,7 +18607,7 @@ export class DefaultApi {
     /**
      * Converts one or more JQL queries with user identifiers (username or user key) to equivalent JQL queries with account IDs.  You may wish to use this operation if your system stores JQL queries and you want to make them GDPR-compliant. For more information about GDPR-related changes, see the [migration guide](https://developer.atlassian.com/cloud/jira/platform/deprecation-notice-user-privacy-api-migration-guide/).  **[Permissions](#permissions) required:** Permission to access Jira.
      * @summary Convert user identifiers to account IDs in JQL queries
-     * @param jQLPersonalDataMigrationRequest 
+     * @param jQLPersonalDataMigrationRequest
      */
     public comAtlassianJiraRestV2SearchJQLPersonalDataMigrationResourceMigrateQueriesPost (jQLPersonalDataMigrationRequest: JQLPersonalDataMigrationRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: ConvertedJQLQueries;  }> {
         const localVarPath = this.basePath + '/api/3/jql/pdcleaner';
@@ -19639,7 +19639,7 @@ export class DefaultApi {
      * Sets the value of a user's property. Use this resource to store custom data against a user.  **[Permissions](#permissions) required:**  *   _Administer Jira_ [global permission](https://confluence.atlassian.com/x/x4dKLg), to set a property on any user. *   Access to Jira, to set a property on the calling user's record.  Note: These user properties are unrelated to the [Jira properties](https://confluence.atlassian.com/x/8YxjL) that can be set in Jira.
      * @summary Set user property
      * @param propertyKey The key of the user&#39;s property. The maximum length is 255 characters.
-     * @param body 
+     * @param body
      * @param accountId The accountId of the user, which uniquely identifies the user across all Atlassian products. For example, _384093:32b4d9w0-f6a5-3535-11a3-9c8c88d10192_. Required, unless &#x60;username&#x60; or &#x60;userKey&#x60; is specified.
      * @param userKey This parameter has been deprecated due to privacy changes. Use &#x60;accountId&#x60; instead. See the [migration guide](https://developer.atlassian.com/cloud/jira/platform/deprecation-notice-user-privacy-api-migration-guide/) for details.  The key of the user. Required, unless &#x60;accountId&#x60; or &#x60;username&#x60; is specified.
      * @param username This parameter has been deprecated due to privacy changes. Use &#x60;accountId&#x60; instead. See the [migration guide](https://developer.atlassian.com/cloud/jira/platform/deprecation-notice-user-privacy-api-migration-guide/) for details.  The username of the user. Required, unless &#x60;accountId&#x60; or &#x60;userKey&#x60; is specified.
